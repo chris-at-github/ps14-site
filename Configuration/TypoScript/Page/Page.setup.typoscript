@@ -1,0 +1,51 @@
+page {
+#	includeCSS {
+#		application = /assets/css/xna.css
+#
+#		print = /assets/css/print.css
+#		print.media = print
+#	}
+
+#	includeJSFooter {
+#		application = /assets/js/xna.js
+#		application.forceOnTop = 1
+#	}
+
+#	// Eigene Farbangaben
+#	headerData {
+#		1567860045.wrap = <link rel="mask-icon" href="|icons/safari-pinned-tab.svg" color="#000">
+#		1567860047.value = <meta name="msapplication-TileColor" content="#000">
+#	}
+
+	10 {
+		layoutRootPaths {
+			20 = EXT:ps14_site/Resources/Private/Layouts/Page/
+		}
+
+		templateRootPaths {
+			20 = EXT:ps14_site/Resources/Private/Templates/Page/
+		}
+
+		partialRootPaths {
+			20 = EXT:ps14_site/Resources/Private/Partials/Page/
+		}
+
+		dataProcessing {
+
+			// Navigationen
+#			10 < navigation.main
+#			20 < navigation.footer
+			30 < navigation.breadcrumb
+#			40 < navigation.language
+#			50 < navigation.meta
+
+			// Page DataProcessing
+#			100 < dataProcessing.settings
+#			110 < dataProcessing.pageLayout
+#			120 < dataProcessing.flash
+#			130 < dataProcessing.providerData
+#			140 < dataProcessing.site
+#			150 < dataProcessing.pageResource
+		}
+	}
+}
