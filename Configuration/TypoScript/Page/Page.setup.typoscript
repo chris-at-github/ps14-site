@@ -30,12 +30,16 @@ page {
 			20 = EXT:ps14_site/Resources/Private/Partials/Page/
 		}
 
+		variables {
+			breadcrumb < navigation.breadcrumb
+		}
+
 		dataProcessing {
 
 			// Navigationen
 #			10 < navigation.main
 #			20 < navigation.footer
-			30 < navigation.breadcrumb
+#			30 < navigation.breadcrumb
 #			40 < navigation.language
 #			50 < navigation.meta
 
