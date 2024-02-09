@@ -32,6 +32,7 @@ page {
 
 		variables {
 			breadcrumb < navigation.breadcrumb
+			navigationMain < navigation.main
 		}
 
 		dataProcessing {
