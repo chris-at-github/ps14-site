@@ -37,6 +37,8 @@ page {
 		}
 
 		dataProcessing {
+			150 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+
 
 			// Navigationen
 #			10 < navigation.main
