@@ -33,6 +33,7 @@ page {
 		variables {
 			breadcrumb < navigation.breadcrumb
 			navigationMain < navigation.main
+			navigationMeta < navigation.meta
 			navigationFooter < navigation.footer
 		}
 
