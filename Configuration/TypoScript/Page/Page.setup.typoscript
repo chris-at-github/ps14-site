@@ -35,6 +35,7 @@ page {
 			navigationMain < navigation.main
 			navigationMeta < navigation.meta
 			navigationFooter < navigation.footer
+			navigationLanguage < navigation.language
 		}
 
 		dataProcessing {
