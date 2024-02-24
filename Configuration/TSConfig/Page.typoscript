@@ -1,1 +1,5 @@
 @import 'EXT:ps14_foundation/Configuration/TSConfig/Page.typoscript'
+
+RTE {
+	default.preset = siteDefault
+}

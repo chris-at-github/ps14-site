@@ -1,0 +1,23 @@
+editor:
+  config:
+    stylesSet:
+      - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.download', element: 'a', attributes: { class: 'link--download' } }
+      - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.cta', element: 'a', attributes: { class: 'link--cta' } }
+      - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.text.small', element: 'span', attributes: { class: 'text--small' } }
+      - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.text.large', element: 'span', attributes: { class: 'text--large' } }
+
+buttons:
+  link:
+    properties:
+      class:
+        allowedClasses:
+          - 'link--cta'
+
+classesAnchor:
+  linkCtaInternal:
+    class: 'link--cta'
+    type: 'page'
+
+  linkCtaMail:
+    class: 'link--cta'
+    type: 'mail'
