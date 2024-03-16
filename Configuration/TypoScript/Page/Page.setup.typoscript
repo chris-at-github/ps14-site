@@ -1,15 +1,15 @@
 page {
-#	includeCSS {
-#		application = /assets/css/xna.css
-#
+	includeCSS {
+		application = /assets/css/site.css
+
 #		print = /assets/css/print.css
 #		print.media = print
-#	}
+	}
 
-#	includeJSFooter {
-#		application = /assets/js/xna.js
-#		application.forceOnTop = 1
-#	}
+	includeJSFooter {
+		application = /assets/js/site.js
+		application.forceOnTop = 1
+	}
 
 #	// Eigene Farbangaben
 #	headerData {
@@ -39,8 +39,18 @@ page {
 		}
 
 		dataProcessing {
-			150 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+			140 = Ps14\Foundation\DataProcessing\PageResourceProcessor
+			140 {
+				inlineCss {
+					10 = /assets/css/site-inline.css
+				}
 
+				inlineJs {
+					10 = assets/js/site-inline.js
+				}
+			}
+
+			150 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
 
 			// Navigationen
 #			10 < navigation.main
