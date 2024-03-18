@@ -13,3 +13,4 @@
 #@import 'EXT:ps14_site/Configuration/TypoScript/DataProcessing/*.setup.typoscript'
 #@import 'EXT:ps14_site/Configuration/TypoScript/Extensions/*.setup.typoscript'
 @import 'EXT:ps14_site/Configuration/TypoScript/Page/*.setup.typoscript'
+@import 'EXT:ps14_site/Configuration/TypoScript/DataProcessing/Modules/*.setup.typoscript'
