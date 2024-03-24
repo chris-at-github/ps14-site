@@ -27,7 +27,7 @@ page {
 		}
 
 		partialRootPaths {
-			20 = EXT:ps14_site/Resources/Private/Partials/Page/
+			20 = EXT:ps14_site/Resources/Private/Partials/
 		}
 
 		variables {
