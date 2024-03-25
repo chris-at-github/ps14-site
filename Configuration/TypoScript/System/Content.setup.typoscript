@@ -10,6 +10,6 @@ lib.contentElement {
 	}
 
 	partialRootPaths {
-		110 = EXT:ps14_site/Resources/Private/Partials/Content/
+		110 = EXT:ps14_site/Resources/Private/Partials/
 	}
 }
