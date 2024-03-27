@@ -2,8 +2,8 @@ page {
 	includeCSS {
 		application = /assets/css/site.css
 
-#		print = /assets/css/print.css
-#		print.media = print
+		print = /assets/css/print.css
+		print.media = print
 	}
 
 	includeJSFooter {
