@@ -1,0 +1,11 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Icon Font
+// 1: Variablen aus dem node Package (siehe _icons.scss)
+$create-font-face: false !default;
+$create-icon-classes: false !default;
+$icon-prefix: 'icon-' !default;
+$icon-public-path: '/assets/fonts/' !default;
+
+// 2: Eigene Variablen zur Steuerung
+$iconfont-create-font-face: true !default;
+$iconfont-create-icon-class: true !default;
