@@ -35,6 +35,7 @@ $EM_CONF[$_EXTKEY] = [
 			'ps14_timeline' => '2.0.0-2.9.99',
 			'ps14_kist_values' => '1.0.0-1.9.99',
 			'ps14_marker' => '2.0.0-2.9.99',
+			'ps14_container' => '2.0.0-2.9.99',
 		],
 	],
 ];
