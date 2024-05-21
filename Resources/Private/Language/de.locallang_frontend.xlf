@@ -3,8 +3,20 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2024-03-147T16:00:00Z" product-name="ps14_site" target-language="de">
 		<header/>
 		<body>
-			<trans-unit id="example.key">
-				<target>Beispiel Key</target>
+			<trans-unit id="sticky.print-pdf">
+				<target>Als PDF drucken</target>
+			</trans-unit>
+			<trans-unit id="teaser.technology.title-prefix">
+				<target>Die Technologie</target>
+			</trans-unit>
+			<trans-unit id="teaser.technology.readmore">
+				<target>Zur Technologie</target>
+			</trans-unit>
+			<trans-unit id="filter.action.submit">
+				<target>Anwenden</target>
+			</trans-unit>
+			<trans-unit id="filter.action.reset">
+				<target>Alle Filter zurücksetzen</target>
 			</trans-unit>
 		</body>
 	</file>

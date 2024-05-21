@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2024-05-21T22:00:00Z" product-name="ps14_site">
+		<header/>
+		<body>
+			<trans-unit id="link.download">
+				<source>Download Link</source>
+			</trans-unit>
+			<trans-unit id="link.cta">
+				<source>Call-to-Action Link</source>
+			</trans-unit>
+
+			<trans-unit id="text.small">
+				<source>Small Text</source>
+			</trans-unit>
+			<trans-unit id="text.large">
+				<source>Large Text</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
