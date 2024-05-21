@@ -3,66 +3,65 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2024-05-21T22:00:00Z" product-name="ps14_site">
 		<header/>
 		<body>
-			<!--
-			<trans-unit id="tx_xna_backend_layout.product.title">
+
+			<trans-unit id="backend-layout.product.title">
 				<source>Product</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_backend_layout.product.main">
+			<trans-unit id="backend-layout.product.main">
 				<source>Main</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_backend_layout.product.product">
+			<trans-unit id="backend-layout.product.product">
 				<source>Product</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_backend_layout.product.footer">
+			<trans-unit id="backend-layout.product.footer">
 				<source>Footer</source>
 			</trans-unit>
 
-			<trans-unit id="tx_xna_backend_layout.footer.title">
+			<trans-unit id="backend-layout.footer.title">
 				<source>Footer</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_backend_layout.footer.middle">
+			<trans-unit id="backend-layout.footer.middle">
 				<source>Middle</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_backend_layout.footer.right">
+			<trans-unit id="backend-layout.footer.right">
 				<source>Right</source>
 			</trans-unit>
 
-			<trans-unit id="tx_xna_pages.layout.4">
+			<trans-unit id="pages.layout.4">
 				<source>Product</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_pages.layout.5">
+			<trans-unit id="pages.layout.5">
 				<source>Without Footer</source>
 			</trans-unit>
 
-			<trans-unit id="tx_xna_pages.tx_xo_navigation_layout.product">
+			<trans-unit id="pages.navigation-layout.product">
 				<source>Product</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_pages.tx_xo_navigation_layout.card">
+			<trans-unit id="pages.navigation-layout.card">
 				<source>Card</source>
 			</trans-unit>
 
-			<trans-unit id="tx_xna_tt_content.tx_xo_variant.menu.1">
+			<trans-unit id="tt_content.variant.menu.1">
 				<source>Links with Arrows</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_tt_content.tx_xo_variant.teaser.1">
+			<trans-unit id="tt_content.variant.teaser.1">
 				<source>Blue Background (Technology)</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_tt_content.tx_xo_variant.teaser.2">
+			<trans-unit id="tt_content.variant.teaser.2">
 				<source>Grey Container / Transparent Images (Technology)</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_tt_content.tx_xo_variant.powermail.1">
+			<trans-unit id="tt_content.variant.powermail.1">
 				<source>Newsletter</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_tt_content.layout.4">
+			<trans-unit id="tt_content.layout.4">
 				<source>Wide</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_tt_content.frame_class.2">
+			<trans-unit id="tt_content.frame-class.2">
 				<source>Blue</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_tt_content.frame_class.3">
+			<trans-unit id="tt_content.frame-class.3">
 				<source>Darkblue</source>
 			</trans-unit>
-			-->
 			<trans-unit id="tt_content.wkhtmltopdf.enabled">
 				<source>Display PDF print link for current page</source>
 			</trans-unit>
