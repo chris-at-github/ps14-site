@@ -1,10 +1,10 @@
 editor:
   config:
-    stylesSet:
-      - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.download', element: 'a', attributes: { class: 'link--download' } }
-      - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.cta', element: 'a', attributes: { class: 'link--cta' } }
-      - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.text.small', element: 'span', attributes: { class: 'text--small' } }
-      - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.text.large', element: 'span', attributes: { class: 'text--large' } }
+    style:
+      definitions:
+        - { name: 'LLL:EXT:ps14_site/Resources/Private/Language/locallang_rte.xlf:link.cta', element: 'a', classes: [ 'link--cta' ] }
+        - { name: 'LLL:EXT:ps14_site/Resources/Private/Language/locallang_rte.xlf:text.small', element: 'span', classes: [ 'text--small' ] }
+        - { name: 'LLL:EXT:ps14_site/Resources/Private/Language/locallang_rte.xlf:text.large', element: 'span', classes: [ 'text--large' ] }
 
 buttons:
   link:
@@ -12,12 +12,3 @@ buttons:
       class:
         allowedClasses:
           - 'link--cta'
-
-classesAnchor:
-  linkCtaInternal:
-    class: 'link--cta'
-    type: 'page'
-
-  linkCtaMail:
-    class: 'link--cta'
-    type: 'mail'
