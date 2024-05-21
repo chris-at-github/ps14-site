@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2024-05-21T22:00:00Z" product-name="ps14_site">
+		<header/>
+		<body>
+			<!--
+			<trans-unit id="tx_xna_backend_layout.product.title">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_backend_layout.product.main">
+				<source>Main</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_backend_layout.product.product">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_backend_layout.product.footer">
+				<source>Footer</source>
+			</trans-unit>
+
+			<trans-unit id="tx_xna_backend_layout.footer.title">
+				<source>Footer</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_backend_layout.footer.middle">
+				<source>Middle</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_backend_layout.footer.right">
+				<source>Right</source>
+			</trans-unit>
+
+			<trans-unit id="tx_xna_pages.layout.4">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_pages.layout.5">
+				<source>Without Footer</source>
+			</trans-unit>
+
+			<trans-unit id="tx_xna_pages.tx_xo_navigation_layout.product">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_pages.tx_xo_navigation_layout.card">
+				<source>Card</source>
+			</trans-unit>
+
+			<trans-unit id="tx_xna_tt_content.tx_xo_variant.menu.1">
+				<source>Links with Arrows</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.tx_xo_variant.teaser.1">
+				<source>Blue Background (Technology)</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.tx_xo_variant.teaser.2">
+				<source>Grey Container / Transparent Images (Technology)</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.tx_xo_variant.powermail.1">
+				<source>Newsletter</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.layout.4">
+				<source>Wide</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.frame_class.2">
+				<source>Blue</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.frame_class.3">
+				<source>Darkblue</source>
+			</trans-unit>
+			-->
+			<trans-unit id="tt_content.wkhtmltopdf.enabled">
+				<source>Display PDF print link for current page</source>
+			</trans-unit>
+			<trans-unit id="tt_content.wkhtmltopdf.title">
+				<source>PDF Print Linktitle</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
