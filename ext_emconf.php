@@ -28,7 +28,6 @@ $EM_CONF[$_EXTKEY] = [
 		],
 		'conflicts' => [],
 		'suggests' => [
-			'ps14_modulor' => '2.0.0-2.9.99',
 			'ps14_accordion' => '2.0.0-2.9.99',
 			'ps14_downloads' => '2.0.0-2.9.99',
 			'ps14_hero' => '2.0.0-2.9.99',
