@@ -1,0 +1,13 @@
+block.contentProduct = CONTENT
+block.contentProduct {
+	table = tt_content
+	select {
+		orderBy = sorting
+		where = colPos = 15
+		languageField = sys_language_uid
+	}
+}
+
+block.contentFooter {
+	slide = -1
+}

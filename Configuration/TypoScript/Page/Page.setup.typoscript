@@ -1,3 +1,5 @@
+PageLayout.setup.typoscript
+
 page {
 	includeCSS {
 		application = /assets/css/site.css
@@ -36,17 +38,21 @@ page {
 			navigationMeta < navigation.meta
 			navigationFooter < navigation.footer
 			navigationLanguage < navigation.language
+			pageLayout {
+				4 = TEXT
+				4.value = Product
+			}
 		}
 
 		dataProcessing {
 			140 = Ps14\Foundation\DataProcessing\PageResourceProcessor
 			140 {
 				inlineCss {
-					10 = /assets/css/site-inline.css
+					10 = /assets/css/xna-inline.css
 				}
 
 				inlineJs {
-					10 = assets/js/site-inline.js
+					10 = assets/js/xna-inline.js
 				}
 			}
 

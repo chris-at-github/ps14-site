@@ -1,0 +1,21 @@
+block.contentFooterMiddle = CONTENT
+block.contentFooterMiddle {
+	table = tt_content
+	select {
+		orderBy = sorting
+		where = colPos = 0
+		languageField = sys_language_uid
+		pidInList = {$pages.footerContent}
+	}
+}
+
+block.contentFooterRight = CONTENT
+block.contentFooterRight {
+	table = tt_content
+	select {
+		orderBy = sorting
+		where = colPos = 2
+		languageField = sys_language_uid
+		pidInList = {$pages.footerContent}
+	}
+}
