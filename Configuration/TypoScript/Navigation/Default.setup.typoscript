@@ -10,4 +10,28 @@ navigation.default {
 	partialRootPaths {
 		20 = EXT:ps14_site/Resources/Private/Partials/
 	}
+
+	settings {
+		picture {
+			width = 280
+			cropVariant = desktop
+			mediaQueries {
+				992 {
+					width = 260
+					cropVariant = desktop
+					mediaQuery = (min-width: 992px)
+				}
+				576 {
+					width = 280
+					cropVariant = mobile
+					mediaQuery = (min-width: 576px)
+				}
+				0 {
+					width = 280
+					cropVariant = mobile
+					mediaQuery = (min-width: 0px)
+				}
+			}
+		}
+	}
 }
