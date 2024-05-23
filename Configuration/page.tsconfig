@@ -1,0 +1,234 @@
+TCEFORM {
+	pages {
+		layout {
+			addItems {
+				4 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:pages.layout.4
+				5 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:pages.layout.5
+			}
+		}
+
+		tx_foundation_navigation_layout {
+			addItems {
+				product = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:pages.navigation-layout.product
+				card = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:pages.navigation-layout.card
+			}
+		}
+	}
+
+	tt_content {
+		frame_class {
+			addItems {
+				2 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.frame-class.2
+				3 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.frame-class.3
+			}
+		}
+	}
+}
+
+mod.web_layout.BackendLayouts {
+	default {
+		config {
+			backend_layout {
+				rowCount = 2
+				rows {
+					2 {
+						columns {
+							1 {
+								name = LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_tca.xlf:backend-layout.default.footer
+								colPos = 20
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	product {
+		title = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:backend-layout.product.title
+		config {
+			backend_layout {
+				colCount = 1
+				rowCount = 3
+				rows {
+					1 {
+						columns {
+							1 {
+								name = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:backend-layout.product.main
+								colPos = 0
+							}
+						}
+					}
+
+					2 {
+						columns {
+							1 {
+								name = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:backend-layout.product.product
+								colPos = 15
+							}
+						}
+					}
+
+					3 {
+						columns {
+							1 {
+								name = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:backend-layout.product.footer
+								colPos = 20
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+[187 in tree.rootLineIds]
+	mod.web_layout.BackendLayouts {
+		footer {
+			title = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:backend-layout.footer.title
+			#		icon = EXT:example_extension/Resources/Public/Images/BackendLayouts/default.gif
+			config {
+				backend_layout {
+					colCount = 2
+					rowCount = 1
+					rows {
+						1 {
+							columns {
+								1 {
+									name = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:backend-layout.footer.middle
+									colPos = 0
+								}
+								2 {
+									name = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:backend-layout.footer.right
+									colPos = 2
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	TCAdefaults.tt_content {
+		header_layout = container
+		tx_xo_no_frame = 0
+		space_before_class = auto
+		space_after_class = auto
+	}
+[END]
+
+[246 in tree.rootLineIds]
+	TCAdefaults.tx_news_domain_model_news {
+		tx_ps14_layout = 1
+	}
+[END]
+
+[249 in tree.rootLineIds]
+	TCAdefaults.tx_news_domain_model_news {
+		type = 3
+		tx_ps14_no_detail = 1
+	}
+[END]
+
+[186 in tree.rootLineIds]
+	TCAdefaults.tt_content {
+		header_layout = container
+		tx_xo_no_frame = 0
+		space_before_class = auto
+		space_after_class = auto
+	}
+[END]
+
+[field('CType') === 'header']
+	TCAdefaults.tt_content {
+		space_before_class = auto
+		space_after_class = auto
+	}
+[END]
+
+[field('CType') === 'text']
+	TCAdefaults.tt_content {
+		layout = 1
+	}
+[END]
+
+[field('CType') === 'menu_pages' || field('CType') === 'menu_subpages']
+	TCEFORM.tt_content {
+		tx_foundation_variant {
+			addItems {
+				1 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.variant.menu.1
+			}
+		}
+	}
+[END]
+
+[field('CType') === 'ps14_hero' || field('CType') === 'ps14_hero_slider']
+	TCEFORM.tt_content {
+		layout {
+			addItems {
+				4 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.layout.4
+			}
+		}
+	}
+
+	TCAdefaults.tt_content {
+		header_layout = 100
+		space_before_class = auto
+		space_after_class = auto
+		layout = 4
+	}
+[END]
+
+[irre('parent') === 'tx_foundation_domain_model_elements' && irre('field') === 'content']
+	TCAdefaults.tt_content {
+		space_before_class = small
+		space_after_class = auto
+	}
+
+	TCEFORM.tt_content {
+		colPos {
+			removeItems = 0,10,20
+		}
+	}
+[END]
+
+[field('list_type') === 'ps14teaser_frontend']
+	TCAdefaults.tt_content {
+		space_before_class = medium
+	}
+
+	TCEFORM.tt_content {
+		tx_xo_variant {
+			addItems {
+				1 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.variant.teaser.1
+				2 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.variant.teaser.2
+			}
+		}
+	}
+[END]
+
+[field('list_type') === 'entityproduct_keyfact' || field('CType') === 'entityproduct_keyfacts']
+	TCAdefaults.tt_content {
+		frame_class = 2
+		space_before_class = medium
+		space_after_class = large
+	}
+[END]
+
+[field('list_type') === 'entityproduct_teaser']
+	TCAdefaults.tt_content {
+		space_before_class = medium
+	}
+[END]
+
+[field('list_type') === 'powermail_pi1']
+	TCEFORM.tt_content {
+		tx_xo_variant {
+			addItems {
+				1 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.variant.powermail.1
+			}
+		}
+	}
+[END]
