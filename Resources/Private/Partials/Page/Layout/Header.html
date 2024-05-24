@@ -10,9 +10,7 @@
           <f:render partial="Page/Layout/Search" section="Field" arguments="{settings: '{fo:settings.get(extension: \'Ps14Foundation\')}'}" />
 
           <f:if condition="{navigationLanguage}">
-            <nav class="language-navigation">
-              <f:render partial="Page/Navigation/Language" section="Main" arguments="{navigation: navigationLanguage}" />
-            </nav>
+            <f:render partial="Page/Navigation/Language" section="Main" arguments="{_all}" />
           </f:if>
 
           <f:comment>
