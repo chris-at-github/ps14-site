@@ -15,8 +15,6 @@
 									<f:render partial="Navigation/Default/Listing" section="Main" arguments="{navigation: item.children}" />
 								</f:render>
 
-								<f:debug>{item}</f:debug>
-
 								<f:if condition="{item.content}">
 									<div class="navigation-item--content"><f:format.raw>{item.content}</f:format.raw></div>
 								</f:if>
