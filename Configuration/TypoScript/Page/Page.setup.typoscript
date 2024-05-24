@@ -27,6 +27,13 @@ page {
 		variables {
 			breadcrumb < navigation.breadcrumb
 			navigationMain < navigation.main
+			navigationMain {
+				templateName = Main
+				dataProcessing {
+					10.levels = 4
+				}
+			}
+
 			navigationMeta < navigation.meta
 			navigationFooter < navigation.footer
 			navigationLanguage < navigation.language

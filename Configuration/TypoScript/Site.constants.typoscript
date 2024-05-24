@@ -2,6 +2,10 @@
 @import 'EXT:ps14_foundation/Configuration/TypoScript/Extensions/*.constants.typoscript'
 @import 'EXT:ps14_site/Configuration/TypoScript/Extensions/*.constants.typoscript'
 
+navigation {
+	main = 4
+}
+
 pages {
 
 	# cat=pages; type=int+; label=PID for footer content

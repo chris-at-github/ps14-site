@@ -13,18 +13,11 @@
             <f:render partial="Page/Navigation/Language" section="Main" arguments="{_all}" />
           </f:if>
 
-          <f:comment>
           <f:if condition="{navigationMain}">
-            <nav class="navigation main-navigation">
-              <f:render partial="Navigation/MegaDropdown" section="Main" arguments="{navigation: navigationMain}" />
-              <script>
-                xna.l10n.navigation = {
-                  prev: '<f:translate key="LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.prev" />'
-                };
-              </script>
-            </nav>
+            <f:render partial="Page/Navigation/Main" section="Main" arguments="{_all}" />
           </f:if>
 
+          <f:comment>
           <f:if condition="{navigationMeta}">
             <nav class="navigation meta-navigation">
               <f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationMeta}" />
