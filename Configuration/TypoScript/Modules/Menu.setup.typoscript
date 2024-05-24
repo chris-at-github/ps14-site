@@ -1,0 +1,5 @@
+tt_content.menu_pages.dataProcessing {
+	10 {
+		includeNotInMenu = 1
+	}
+}
