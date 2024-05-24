@@ -1,23 +1,15 @@
-PageLayout.setup.typoscript
-
 page {
 	includeCSS {
-		application = /assets/css/site.css
+		application = /assets/css/xna.css
 
 		print = /assets/css/print.css
 		print.media = print
 	}
 
 	includeJSFooter {
-		application = /assets/js/site.js
+		application = /assets/js/xna.js
 		application.forceOnTop = 1
 	}
-
-#	// Eigene Farbangaben
-#	headerData {
-#		1567860045.wrap = <link rel="mask-icon" href="|icons/safari-pinned-tab.svg" color="#000">
-#		1567860047.value = <meta name="msapplication-TileColor" content="#000">
-#	}
 
 	10 {
 		layoutRootPaths {
