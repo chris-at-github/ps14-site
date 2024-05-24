@@ -17,13 +17,9 @@
             <f:render partial="Page/Navigation/Main" section="Main" arguments="{_all}" />
           </f:if>
 
-          <f:comment>
           <f:if condition="{navigationMeta}">
-            <nav class="navigation meta-navigation">
-              <f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationMeta}" />
-            </nav>
+            <f:render partial="Page/Navigation/Meta" section="Main" arguments="{_all}" />
           </f:if>
-          </f:comment>
         </div>
       </div>
     </div>

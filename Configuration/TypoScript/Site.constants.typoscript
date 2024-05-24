@@ -4,6 +4,8 @@
 
 navigation {
 	main = 4
+	footer = 5
+	meta = 112
 }
 
 pages {
