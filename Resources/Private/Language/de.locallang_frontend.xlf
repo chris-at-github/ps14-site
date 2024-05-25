@@ -6,6 +6,12 @@
 			<trans-unit id="sticky.print-pdf">
 				<target>Als PDF drucken</target>
 			</trans-unit>
+			<trans-unit id="sticky.contact">
+				<target>Direktkontakt</target>
+			</trans-unit>
+			<trans-unit id="sticky.to-top">
+				<target>Zum Seitenanfang</target>
+			</trans-unit>
 			<trans-unit id="teaser.technology.title-prefix">
 				<target>Die Technologie</target>
 			</trans-unit>

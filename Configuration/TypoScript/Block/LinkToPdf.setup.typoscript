@@ -1,0 +1,12 @@
+block.linkToPdf = TEXT
+block.linkToPdf {
+	typolink {
+		parameter.data = TSFE:id
+		addQueryString = 1
+		addQueryString.method = GET
+		addQueryString.exclude = type
+		additionalParams = &type=8080
+		useCacheHash = 1
+		returnLast = url
+	}
+}

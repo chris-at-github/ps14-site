@@ -6,6 +6,12 @@
 			<trans-unit id="sticky.print-pdf">
 				<source>Print as PDF</source>
 			</trans-unit>
+			<trans-unit id="sticky.contact">
+				<source>Direct contact</source>
+			</trans-unit>
+			<trans-unit id="sticky.to-top">
+				<source>Scroll to top</source>
+			</trans-unit>
 			<trans-unit id="teaser.technology.title-prefix">
 				<source>Technology</source>
 			</trans-unit>

@@ -1,0 +1,82 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<f:if condition="{data.tx_foundation_no_sticky} == 0">
+			<f:render partial="Page/Layout/Sticky" section="Container" arguments="{_all}" />
+		</f:if>
+
+		<div id="footer" class="page-footer">
+			<div class="container-outer page-footer--content">
+				<div class="container-inner">
+					<f:comment>
+						<f:render partial="Page/Logo" section="Svg" arguments="{_all}" />
+
+						<div class="row">
+							<div class="col-12 col-lg-4">
+								<f:render section="Address" arguments="{_all}" />
+							</div>
+
+							<div class="col-12 col-sm-6 col-lg-4">
+								<f:cObject typoscriptObjectPath="block.contentFooterMiddle" />
+							</div>
+
+							<div class="col-12 col-sm-6 col-lg-4">
+								<f:cObject typoscriptObjectPath="block.contentFooterRight" />
+							</div>
+						</div>
+					</f:comment>
+				</div>
+			</div>
+
+			<div class="container-outer page-footer--navigation">
+				<div class="container-inner">
+					<f:if condition="{navigationFooter}">
+						<f:comment>
+							<nav class="navigation">
+								<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationFooter}" />
+							</nav>
+						</f:comment>
+					</f:if>
+				</div>
+			</div>
+		</div>
+
+		<f:comment>
+			<f:render partial="Page/FooterScript" section="Main" />
+		</f:comment>
+	</f:section>
+
+	<f:section name="Address">
+		<f:if condition="{providerData.0}">
+			<address class="address">
+				<f:render partial="Components/Address" section="Name" arguments="{address: providerData.0}" />
+
+				<div class="address--item-group">
+					<f:render partial="Components/Address" section="Location" arguments="{address: providerData.0}" />
+				</div>
+
+				<f:render partial="Components/Address" section="Phone" arguments="{address: providerData.0}" />
+				<f:render partial="Components/Address" section="Mail" arguments="{address: providerData.0}" />
+
+				<div class="address--item-group address--social">
+					<header><f:translate key="LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_address.social" /></header>
+
+					<f:if condition="{providerData.0.facebook} || {providerData.0.instagram} || {providerData.0.youtube}">
+						<ul>
+							<f:if condition="{providerData.0.facebook}">
+								<li class="address--item address--facebook"><f:link.typolink parameter="{providerData.0.facebook}"><fo:svg.inline source="assets/svg/facebook.svg" /></f:link.typolink></li>
+							</f:if>
+
+							<f:if condition="{providerData.0.instagram}">
+								<li class="address--item address--instagram"><f:link.typolink parameter="{providerData.0.instagram}"><fo:svg.inline source="assets/svg/instagram.svg" /></f:link.typolink></li>
+							</f:if>
+
+							<f:if condition="{providerData.0.youtube}">
+								<li class="address--item address--youtube"><f:link.typolink parameter="{providerData.0.youtube}"><fo:svg.inline source="assets/svg/youtube.svg" /></f:link.typolink></li>
+							</f:if>
+						</ul>
+					</f:if>
+				</div>
+			</address>
+		</f:if>
+	</f:section>
+</div>
