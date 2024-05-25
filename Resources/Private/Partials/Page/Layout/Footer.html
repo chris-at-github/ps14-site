@@ -1,6 +1,6 @@
 <div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
 	<f:section name="Main">
-		<f:if condition="{data.tx_foundation_no_sticky} == 0">
+		<f:if condition="{data.tx_foundation_disable_sticky} == 0">
 			<f:render partial="Page/Layout/Sticky" section="Container" arguments="{_all}" />
 		</f:if>
 
