@@ -28,19 +28,11 @@
 			<div class="container-outer page-footer--navigation">
 				<div class="container-inner">
 					<f:if condition="{navigationFooter}">
-						<f:comment>
-							<nav class="navigation">
-								<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationFooter}" />
-							</nav>
-						</f:comment>
+						<f:render partial="Page/Navigation/Footer" section="Main" arguments="{_all}" />
 					</f:if>
 				</div>
 			</div>
 		</div>
-
-		<f:comment>
-			<f:render partial="Page/FooterScript" section="Main" />
-		</f:comment>
 	</f:section>
 
 	<f:section name="Address">
