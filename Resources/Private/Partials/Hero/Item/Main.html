@@ -1,0 +1,9 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+	<f:section name="Main">
+		<div class="hero {f:if(condition: '{fo:media.isImage(file: media)}', then: 'hero--image')}{f:if(condition: '{fo:media.isVideo(file: media)}', then: 'hero--video hero--video-played')}">
+			<f:render partial="Hero/Item/Content" section="Main" arguments="{_all}" />
+			<f:render partial="Hero/Item/Media" section="Main" arguments="{_all}" />
+		</div>
+	</f:section>
+</html>

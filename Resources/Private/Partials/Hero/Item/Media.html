@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<f:if condition="{media.extension -> fo:format.toLower()} == 'mp4'">
+			<f:then>
+				<f:render section="Video" arguments="{_all}" />
+			</f:then>
+			<f:else>
+				<f:render section="Image" arguments="{
+					file: media,
+					settings: '{fo:settings.get(extension: \'Ps14Hero\', path: \'images\')}'
+				}" />
+			</f:else>
+		</f:if>
+	</f:section>
+
+	<f:section name="Video">
+		<f:render partial="Media/Rendering/Video" arguments="{
+				file: media,
+				options: {
+					autoplay: 1,
+					controls: 0,
+					loop: 1
+				},
+				cssClass: 'hero__media'
+			}" />
+	</f:section>
+
+	<f:section name="Image">
+		<f:render partial="Media/Rendering/Picture" arguments="{
+			file: file,
+			sizes: settings.mediaQueries,
+			settings: settings,
+			cssClass: 'hero__media'
+		}" />
+	</f:section>
+</html>
