@@ -124,7 +124,7 @@ $stylesheet-context: 'screen' !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Module
 .ce-accordion {
-	&.ce-frame--variant-0 {
+	&.ce-frame--variant-default {
 		.accordion--header button {
 			font-size: rem(21px);
 		}
@@ -132,7 +132,7 @@ $stylesheet-context: 'screen' !default;
 
 	// >= 768px
 	@include media-breakpoint-up(md) {
-		&.ce-frame--variant-0 {
+		&.ce-frame--variant-default {
 			.accordion--header button {
 				font-size: rem(26px);
 			}
