@@ -1,0 +1,290 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Variablen
+$ce-hero--use-css: true !default;
+$ce-hero--layout-default: true !default;
+$ce-hero--layout-slider: true !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & XNA
+@import '../functions';
+@import '../variables';
+@import '../mixins';
+@import '../definitions';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Definitions
+%hero--title {
+	& {
+		margin: rem(35px) 0 0 0;
+	}
+
+	&, h1, h2, h3, h4, h5, h6 {
+		font-size: rem(34px);
+		font-weight: $headings-font-weight;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+@if($ce-hero--use-css) {
+	@if($ce-hero--layout-default) {
+		.ce-hero {
+			.hero--title {
+				@extend %hero--title;
+			}
+
+			.hero--image {
+				img {
+					@extend %image-responsive;
+				}
+			}
+		}
+	}
+
+	.ce-hero--16-9 {
+		.hero--image {
+			& {
+				position: relative;
+				padding-top: 56.25%;
+			}
+
+			img {
+				position: absolute;
+				top: 0; left: 0; right: 0;
+			}
+		}
+	}
+
+	.ce-hero--layout-fullwidth {
+		.hero {
+			& {
+				min-height: rem(500px);
+				padding-top: 0.1px;
+				padding-bottom: 0.1px;
+				background-position: center center;
+				background-size: cover;
+				position: relative;
+				z-index: 5;
+			}
+
+			.container-inner {
+				margin-top: rem(35px);
+			}
+		}
+	}
+
+	@if($ce-hero--layout-slider) {
+		.ce-hero-slider {
+			.hero--image {
+				img {
+					@extend %image-responsive;
+				}
+			}
+
+			// ---------------------------------------------------------------------------------------------------------------
+			// Allgemeine Slider-Angaben
+			.slider {
+				position: relative;
+				overflow: hidden; // 1
+			}
+
+			.slider--container {
+				& {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					background: #fff;
+				}
+
+				& > li {
+					display: block;
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			.slider--item + .slider--item {
+				visibility: hidden; // 1
+			}
+
+			.slider--controls {
+				& {
+					position: absolute;
+					top: 0;
+					width: 100%;
+					display: none; // erst auf hoehren Breakpoints anzeigen -> dann steht rechts / links mehr Platz zur Verfuegung
+				}
+
+				.container-inner {
+					position: relative;
+				}
+			}
+
+			.slider--prev, .slider--next {
+				& {
+					position: absolute;
+					z-index: 10;
+					display: flex;
+					align-items: center;
+				}
+
+				button {
+					& {
+						width: $spacing-medium;
+						height: 100px;
+					}
+
+					&:hover {
+						svg {
+							fill: $link-color-hover;
+						}
+					}
+				}
+
+				svg {
+					width: 35px;
+					fill: $theme-color-primary;
+					transition: fill 0.35s;
+				}
+			}
+
+			// Padding von .container-outer wieder aufheben
+			.slider--prev {
+				left: -$spacing-medium;
+			}
+
+			.slider--next {
+				right: -$spacing-medium;
+			}
+
+			.slider--navigation {
+				position: absolute;
+				bottom: rem(46px);
+				z-index: 10;
+				width: 100%;
+			}
+
+			// ---------------------------------------------------------------------------------------------------------------
+			// Layout 16:9
+			&.ce-hero--16-9 {
+				.slider {
+					@extend %slider-navigation;
+					padding: 56.25% 0 0 0;
+				}
+
+				.slider--container {
+					position: absolute;
+					top: 0; left: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			// ---------------------------------------------------------------------------------------------------------------
+			// Layout Fullwidth
+			&.ce-hero--layout-fullwidth {
+				.slider, .slider--prev, .slider--next {
+					min-height: rem(400px);
+				}
+			}
+
+			.slider--initialized {
+				.slider--item + .slider--item {
+					visibility: visible;
+				}
+			}
+
+			@include media-breakpoint-up(md) {
+				&.ce-hero--layout-fullwidth {
+					.slider, .slider--prev, .slider--next, .hero {
+						height: rem(500px);
+					}
+				}
+			}
+
+			@include media-breakpoint-up(lg) {
+				&.ce-hero--layout-fullwidth {
+					.slider, .slider--prev, .slider--next, .hero {
+						height: rem(600px);
+					}
+				}
+			}
+
+			@include media-breakpoint-up(xl) {
+				.slider--controls {
+					display: block;
+				}
+
+				.slider--prev, .slider--next {
+					button {
+						width: rem(50px);
+						height: 100px;
+					}
+				}
+
+				// Padding von .container-outer wieder aufheben
+				.slider--prev {
+					left: rem(-50px);
+				}
+
+				.slider--next {
+					right: rem(-50px);
+				}
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Site Override
+.ce-header + .ce-hero, .ce-header + .ce-hero-slider {
+	&.ce-frame--space-before-auto {
+		margin-top: rem(35px);
+	}
+}
+
+.ce-hero-slider {
+	.slider {
+		@extend %slider-navigation--dashed;
+	}
+
+	.slider--item.tns-fadeOut {
+		z-index: 1;
+	}
+
+	.slider--navigation {
+		& {
+			bottom: rem(30px);
+		}
+
+		ul {
+			justify-content: center;
+		}
+	}
+}
+
+// >= 1200px
+@include media-breakpoint-up(xl) {
+	.ce-hero.ce-frame--space-after-auto, .ce-hero-slider.ce-frame--space-after-auto {
+		& + .ce-frame--class-1, & + .ce-frame--class-2, & + .ce-frame--class-3 {
+			margin-top: rem(35px);
+		}
+	}
+
+	.ce-hero-slider {
+		.slider .slider--navigation {
+			& {
+				bottom: rem(46px);
+			}
+
+			ul li {
+				width: rem(60px);
+				height: rem(9px);
+			}
+		}
+	}
+}
