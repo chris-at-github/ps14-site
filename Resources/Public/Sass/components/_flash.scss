@@ -1,0 +1,34 @@
+.ce-flash {
+	& {
+		margin: rem(20px 0);
+		padding: rem(10px 15px);
+		background: #f7f7f7;
+	}
+
+	.ce-header {
+		font-weight: $font-weight-bold;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(md) {
+	.ce-flash--container {
+		@include clearfix();
+	}
+
+	.ce-flash {
+		width: rem(400px);
+		float: right;
+		margin: rem(10px 0 10px 20px);
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 992px
+@include media-breakpoint-up(lg) {
+	.ce-flash {
+		margin-left: rem(30px);
+		padding: rem(20px 30px);
+	}
+}

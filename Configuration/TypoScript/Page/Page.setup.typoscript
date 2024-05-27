@@ -1,6 +1,7 @@
 page {
 	includeCSS {
 		application = /assets/css/xna.css
+		site = /assets/css/site.css
 
 		print = /assets/css/print.css
 		print.media = print
@@ -48,6 +49,7 @@ page {
 			140 {
 				inlineCss {
 					10 = /assets/css/xna-inline.css
+					20 = /assets/css/site-inline.css
 				}
 
 				inlineJs {

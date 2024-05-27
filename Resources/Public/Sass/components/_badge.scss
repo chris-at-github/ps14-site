@@ -1,0 +1,16 @@
+.badge {
+	display: inline-block;
+	padding: rem(0 5px);
+	line-height: $line-height-base;
+	font-size: rem(14px);
+	font-weight: $font-weight-bold;
+	border-radius: $border-radius-small;
+	white-space: nowrap;
+	vertical-align: middle;
+	margin-top: rem(-3px);
+}
+
+.badge--default {
+	background: $theme-color-primary;
+	color: #fff;
+}

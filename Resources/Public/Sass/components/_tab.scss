@@ -1,0 +1,47 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & XNA
+@import '../../functions';
+@import '../../variables';
+@import '../../mixins';
+@import '../../definitions';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Tabs
+.tab--container {
+	& {
+		@extend %tab--container;
+	}
+
+	button {
+		& {
+			@extend %tab--item;
+		}
+
+		&.active, &:hover, .focusable &:focus {
+			@extend %tab--item-active;
+		}
+	}
+
+	& + .tab--content {
+		margin: rem(30px 0 0 0);
+	}
+}
+
+.tab--content {
+	.tab--pane {
+		& {
+			display: none;
+			transition: opacity 0.15s linear;
+		}
+
+		&.active {
+			display: block;
+			opacity: 1;
+		}
+
+		&:not(.show) {
+			opacity: 0;
+		}
+	}
+}
+

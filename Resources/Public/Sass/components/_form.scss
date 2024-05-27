@@ -1,14 +1,33 @@
 // ---------------------------------------------------------------------------------------------------------------------
-// Define Variables
-$stylesheet-context: 'screen', 'embed' !default;
+// Form Elements
+.form-item {
+	@extend %form-item;
+}
+
+.form-label {
+	@extend %form-label;
+}
+
+.form-field {
+	@extend %form-field;
+}
+
+.form-action {
+	@extend %form-action;
+}
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Bootstrap & XNA
-@import 'functions';
-@import 'variables';
-@import 'mixins';
-@import 'definitions';
+// Button
+.button {
+	@extend %button;
+
+	&:disabled {
+		@extend %button--disabled;
+	}
+}
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Components
-@import 'components/collapse';
+// Layouts
+.form--layout-0 {
+	@extend %form--layout-0;
+}

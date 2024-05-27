@@ -1,0 +1,95 @@
+.link--external {
+	& {
+		@include iconfont(external);
+		position: relative;
+		padding: rem(0 0 0 19px);
+	}
+
+	&:before {
+		position: absolute;
+		top: rem(5px); left: rem(1px);
+		font-size: rem(11px);
+	}
+}
+
+.link--download {
+	& {
+		@include iconfont(download);
+		position: relative;
+		padding: rem(0 0 0 24px);
+	}
+
+	&:before {
+		position: absolute;
+		top: rem(0px); left: rem(1px);
+		font-size: rem(16px);
+		transform: translate(0, 0);
+		transition: transform 0.15s;
+	}
+
+	&:hover, .focusable &:focus {
+		& {
+			background: none;
+		}
+
+		&:before {
+			transform: translate(0, 3px);
+		}
+	}
+}
+
+.link--phone {
+	&, &:hover, .focusable &:focus {
+		color: $font-color-base;
+		text-decoration: none;
+	}
+}
+
+.link--cta {
+	& {
+		@extend %button;
+		@include iconfont(arrow-right);
+		padding-right: rem(58px);
+	}
+
+	&:before {
+		position: absolute;
+		top: 17px; right: 30px;
+		font-size: rem(12px);
+		transition: transform $transition-duration;
+	}
+
+	&:hover, .focusable &:focus {
+		&:before {
+			transform: translate(5px, 0);
+		}
+	}
+}
+
+.link--arrow {
+	& {
+		display: inline;
+	}
+
+	&:after {
+		display: inline;
+		content: iconfont-item(arrow-right);
+		margin-left: rem(12px);
+		padding-right: rem(5px);
+		font-family: $font-family-icon;
+		font-size: rem(12px);
+		transition-property: margin, padding;
+		transition-duration: $transition-duration;
+	}
+
+	&:hover, .focusable &:focus {
+		& {
+			background-size: 0;
+		}
+
+		&:after {
+			margin-left: rem(17px);
+			padding-right: 0;
+		}
+	}
+}

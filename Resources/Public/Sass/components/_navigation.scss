@@ -1,0 +1,39 @@
+.navigation {
+	ul {
+		@include list-unstyled();
+	}
+
+	li {
+		display: block;
+	}
+
+	a, li > span  {
+		display: block;
+		padding: 3px 10px;
+		text-decoration: none;
+		font-weight: $font-weight-normal;
+	}
+
+	a {
+		& {
+			background: none;
+		}
+
+		& > span {
+			@extend %link--animation;
+			display: inline;
+		}
+
+		&:hover, .focusable &:focus {
+			& {
+				text-decoration: none;
+			}
+
+			& > span {
+				//transform: scaleX(1);
+				//transform-origin: bottom left;
+				background-size: 100% 1px;
+			}
+		}
+	}
+}
