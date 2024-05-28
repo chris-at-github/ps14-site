@@ -1,0 +1,175 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Variablen
+$stylesheet-context: 'screen' !default;
+
+$ce-marker--use-css: true !default;
+$ce-marker--layout-aside: true !default;
+$ce-marker--layout-above: true !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & XNA
+@import '../functions';
+@import '../variables';
+@import '../mixins';
+@import '../definitions';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+@include stylesheet-context($stylesheet-context-screen) {
+	@if($ce-marker--use-css) {
+
+		// -------------------------------------------------------------------------------------------------------------------
+		// Component
+		.marker {
+			.marker--media {
+				img {
+					@extend %image-responsive;
+				}
+			}
+
+			.marker--legend {
+				& {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+				}
+
+				& > li {
+					position: relative;
+					margin: rem(30px 0 0 0);
+					padding: rem(0 0 0 50px);
+				}
+			}
+
+			.marker--legend-item-index {
+				& {
+					position: absolute;
+					top: -3px; left: 0;
+					width: rem(35px);
+					height: rem(35px);
+					line-height: rem(35px);
+					text-align: center;
+					font-weight: $font-weight-bold;
+					color: #fff;
+				}
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0; left: 0;
+					z-index: -1;
+					width: 100%;
+					height: 100%;
+					background: $theme-color-secondary;
+					border-radius: 50%;
+				}
+			}
+
+			.marker--legend-item-title {
+				&, h1, h2, h3, h4 {
+					margin-top: 0;
+					font-size: rem(20px);
+					font-weight: $font-weight-normal;
+				}
+
+				& + p {
+					margin-top: rem(10px);
+				}
+			}
+		}
+
+		// -------------------------------------------------------------------------------------------------------------------
+		// >= 768px
+		@include media-breakpoint-up(md) {
+			@if($ce-marker--layout-above) {
+				.marker--layout-1 {
+					.marker--legend {
+						padding-right: percentage(2 / 12);
+					}
+				}
+			}
+		}
+
+		// -------------------------------------------------------------------------------------------------------------------
+		// >= 992px
+		@include media-breakpoint-up(lg) {
+			@if($ce-marker--layout-aside) {
+				.marker--layout-0 {
+					.marker--legend {
+						margin-top: rem(-15px);
+						padding: rem(0 0 0 35px);
+					}
+				}
+			}
+
+			@if($ce-marker--layout-above) {
+				.marker--layout-1 {
+					.marker--legend {
+						margin-top: rem(45px);
+					}
+				}
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Print
+@include stylesheet-context($stylesheet-context-print) {
+	.marker {
+		& {
+			display: block;
+		}
+
+		& > .col-lg-6 {
+			flex: 0;
+			max-width: 100%;
+		}
+
+		.marker--legend {
+			& {
+				list-style-type: none;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+
+			.marker--legend-item {
+				margin: 0 !important;
+				padding: 30px 0 0 50px;
+				page-break-inside: avoid;
+			}
+
+			.marker--legend-item-index {
+				& {
+					top: 29px;
+					width: 32px;
+					height: 32px;
+					line-height: 32px;
+				}
+
+				&:before {
+					border: 16px solid $theme-color-secondary;
+					background: none;
+					color: #fff !important;
+				}
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// PDF
+@include stylesheet-context($stylesheet-context-pdf) {
+	.marker {
+		.marker--legend {
+			//	& {
+			//
+			//	}
+			//
+
+			.marker--legend-item-index:before {
+				top: -2px;
+			}
+		}
+	}
+}
