@@ -7,10 +7,9 @@
 			'label' => 'LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.wkhtmltopdf.enabled',
 			'config' => [
 				'type' => 'check',
+				'renderType' => 'checkboxToggle',
 				'items' => [
-					'1' => [
-						'0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
-					]
+					[0 => '']
 				],
 				'default' => 0,
 			]
@@ -27,14 +26,27 @@
 		],
 	]);
 
+	// ---------------------------------------------------------------------------------------------------------------------
+	// Download
+	$GLOBALS['TCA']['tt_content']['types']['ps14_downloads']['showitem'] = \Ps14\Site\Service\TcaService::getShowitem(
+		['general', 'appearance', 'language', 'access', 'categories', 'notes', 'extended'],
+		[
+			'general' => '--palette--;;general, --palette--;;headers, --palette--;;foundation_identifier, bodytext, tx_foundation_file, tx_site_wkhtmltopdf_enabled, tx_site_wkhtmltopdf_title,'
+		]
+	);
 
-/*
+	$GLOBALS['TCA']['tt_content']['types']['ps14_downloads']['columnsOverrides']['tx_site_wkhtmltopdf_enabled']['onChange'] = 'reload';
+
+
+	/*
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Allgemeine Ueberschreibungen
 // sinnloses Label entfernen -> weitere Infos stehen in den Tabs
 	$GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['label'] = ' ';
 	$GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['pi_flexform']['l10n_mode'] = 'exclude';
+
+
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Text Image (Textpic)
@@ -153,23 +165,6 @@
 			'selectedRatio' => '16_9',
 		],
 	];
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Download
-	$GLOBALS['TCA']['tt_content']['types']['ce_downloads'] = [
-		'showitem' => '
-			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general;general,
-			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.header;xoHeader, tx_xo_file, tx_xna_wkhtmltopdf_enabled, tx_xna_wkhtmltopdf_title,
-		--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.appearance,
-			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.frames;frames,
-		--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.access,
-			--palette--;;hidden,
-			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.visibility;visibility,
-			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.access;access,
-		--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.extended
-	',
-	];
-	$GLOBALS['TCA']['tt_content']['types']['ce_downloads']['columnsOverrides']['tx_xna_wkhtmltopdf_enabled']['onChange'] = 'reload';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Marker
