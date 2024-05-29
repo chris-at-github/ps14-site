@@ -21,10 +21,13 @@ plugin.tx_powermail {
 	}
 }
 
-tt_content.list.dataProcessing.200 {
-	powermail_pi1 {
-		importCss {
-			10 = /assets/css/modules/powermail.css
+tt_content.powermail_pi1 {
+	dataProcessing {
+		200 = Ps14\Foundation\DataProcessing\ModuleProcessor
+		200 {
+			importCss {
+				10 = /assets/css/modules/powermail.css
+			}
 		}
 	}
 }
