@@ -223,7 +223,7 @@ mod.web_layout.BackendLayouts {
 	}
 [END]
 
-[field('list_type') === 'powermail_pi1']
+[field('CType') === 'powermail_pi1']
 	TCEFORM.tt_content {
 		tx_foundation_variant {
 			addItems {
