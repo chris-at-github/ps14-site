@@ -1,0 +1,30 @@
+@import 'EXT:powermail/Configuration/TypoScript/Main/setup.typoscript'
+
+// @see: https://www.forestlake.de/2018/07/12/powermail-link-in-label/
+plugin.tx_powermail.settings.setup.misc.htmlForLabels = 1
+
+plugin.tx_powermail {
+	view {
+		layoutRootPaths {
+			10 = EXT:ps14_site/Resources/Private/Extensions/Powermail/Layouts/
+		}
+
+		templateRootPaths {
+			10 = EXT:ps14_site/Resources/Private/Extensions/Powermail/Templates/
+		}
+
+		partialRootPaths {
+			10 = EXT:ps14_site/Resources/Private/Extensions/Powermail/Partials/
+			20 = EXT:ps14_foundation/Resources/Private/Partials/
+			30 = EXT:ps14_site/Resources/Private/Partials/
+		}
+	}
+}
+
+tt_content.list.dataProcessing.200 {
+	powermail_pi1 {
+		importCss {
+			10 = /assets/css/modules/powermail.css
+		}
+	}
+}

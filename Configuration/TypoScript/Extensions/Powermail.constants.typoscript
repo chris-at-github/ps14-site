@@ -1,0 +1,13 @@
+@import 'EXT:powermail/Configuration/TypoScript/Main/constants.typoscript'
+
+plugin.tx_powermail {
+	settings {
+		spamshield.enable = 0
+		validation.client = 0
+		db.enable = 0
+
+		javascript {
+			addAdditionalJavaScript = 0
+		}
+	}
+}
