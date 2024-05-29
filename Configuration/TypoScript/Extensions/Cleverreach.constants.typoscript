@@ -1,0 +1,17 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:cleverreach/Configuration/TypoScript/constants.typoscript">
+
+plugin.tx_cleverreach {
+	clientId = 281210
+	login = newsletter@kist-escherich.com
+	password = On1JLLflopEmbXHPRI4R
+	formId = 389114
+	groupId = 619215
+	debug = 1
+}
+
+[siteLanguage("languageId") == "1"]
+	plugin.tx_cleverreach {
+		formId = 315431
+		groupId = 576512
+	}
+[END]

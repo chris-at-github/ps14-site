@@ -83,6 +83,21 @@ mod.web_layout.BackendLayouts {
 	}
 }
 
+tx_powermail.flexForm.addField.settings\.flexform\.main\.cleverreach.config.items.0 {
+	label = ---
+	value =
+}
+
+tx_powermail.flexForm.addField.settings\.flexform\.main\.cleverreach.config.items.1 {
+	label = Anmelden
+	value = optin
+}
+
+tx_powermail.flexForm.addField.settings\.flexform\.main\.cleverreach.config.items.2 {
+	label = Abmelden
+	value = optout
+}
+
 [187 in tree.rootLineIds]
 	mod.web_layout.BackendLayouts {
 		footer {
