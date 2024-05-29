@@ -1,6 +1,18 @@
 <?php
 
 (function() {
+	// -------------------------------------------------------------------------------------------------------------------
+	// Allgemeine Ueberschreibungen
+
+	// Falls bodytext im Plugin verwendet wird -> verwende die richtige CKEditor Konfiguration
+	$GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['bodytext']['config'] = [
+		'enableRichtext' => true,
+		'richtextConfiguration' => 'ps14Default',
+	];
+
+	// sinnloses Label entfernen -> weitere Infos stehen in den Tabs
+	$GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['label'] = ' ';
+
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', [
 		'tx_site_wkhtmltopdf_enabled' => [
 			'exclude' => true,
@@ -42,11 +54,7 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Allgemeine Ueberschreibungen
-// sinnloses Label entfernen -> weitere Infos stehen in den Tabs
-	$GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['label'] = ' ';
 	$GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['pi_flexform']['l10n_mode'] = 'exclude';
-
-
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Text Image (Textpic)
