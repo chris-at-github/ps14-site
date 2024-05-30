@@ -31,6 +31,73 @@
 					</f:if>
 
 					<time class="article-header__date" itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+						<f:format.date format="{f:translate(key: 'LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:date.format.date')}">{newsItem.datetime}</f:format.date>
+					</time>
+				</header>
+			</div>
+		</div>
+
+		<div class="ce-frame ce-frame--layout-0 ce-frame--class-0 ce-frame--outer ce-frame--space-before-medium ce-frame--space-after-auto">
+			<div class="ce-frame--inner article__body">
+				<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
+					<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
+
+					<div class="article__bodytext" itemprop="articleBody">
+						<f:format.html>{newsItem.bodytext}</f:format.html>
+					</div>
+
+					<f:if condition="{newsItem.contentElements}">
+						<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+					</f:if>
+				</n:renderMedia>
+			</div>
+		</div>
+
+		<f:if condition="{newsItem.relatedFiles}">
+			<div class="ce-frame ce-frame--layout-1 ce-frame--class-0 ce-frame--outer ce-frame--space-before-medium ce-frame--space-after-auto">
+				<div class="ce-frame--inner">
+					<ul class="downloads--container">
+						<f:for each="{newsItem.relatedFiles}" as="file">
+							<li class="download--item">
+								<f:render partial="Downloads/Item" section="Main" arguments="{file: file.originalResource}" />
+							</li>
+						</f:for>
+					</ul>
+				</div>
+			</div>
+		</f:if>
+	</f:if>
+</f:section>
+
+<f:section name="ALT">
+	<f:if condition="{newsItem}">
+		<n:format.nothing>
+			<n:excludeDisplayedNews newsItem="{newsItem}" />
+
+			<f:if condition="{settings.detail.showMetaTags}">
+				<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
+			</f:if>
+
+			<f:if condition="{newsItem.alternativeTitle}">
+				<f:then>
+					<n:titleTag><f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode></n:titleTag>
+				</f:then>
+				<f:else>
+					<n:titleTag><f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode></n:titleTag>
+				</f:else>
+			</f:if>
+		</n:format.nothing>
+
+		<div class="ce-frame ce-frame--layout-1 ce-frame--class-0 ce-header ce-frame--outer ce-frame--space-before-auto ce-frame--space-after-auto">
+			<div class="ce-frame--inner">
+				<header class="ce-header article-header">
+					<h1 itemprop="headline">{newsItem.title}</h1>
+
+					<f:if condition="{newsItem.teaser}">
+						<p class="ce-subheader article-header__subheader" role="doc-subtitle" itemprop="description">{newsItem.teaser}</p>
+					</f:if>
+
+					<time class="article-header__date" itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
 						<f:format.date format="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_date.format.date')}">{newsItem.datetime}</f:format.date>
 					</time>
 
