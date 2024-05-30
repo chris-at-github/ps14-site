@@ -24,15 +24,9 @@
       </div>
     </div>
 
-    <f:comment>
-    <f:if condition="{breadcrumb} && {data.tx_xo_no_breadcrumb} == 0">
-      <div id="breadcrumb" class="container-outer breadcrumb">
-        <div class="container-inner">
-          <f:render partial="Navigation/Breadcrumb" section="Main" arguments="{navigation: breadcrumb}" />
-        </div>
-      </div>
+    <f:if condition="{breadcrumb} && {data.tx_foundation_disable_breadcrumb} == 0">
+      <f:render partial="Page/Navigation/Breadcrumb" section="Main" arguments="{_all}" />
     </f:if>
-    </f:comment>
   </f:section>
 
   <f:section name="Hamburger">

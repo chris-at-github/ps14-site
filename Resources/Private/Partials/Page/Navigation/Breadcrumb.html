@@ -1,0 +1,11 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<f:if condition="{breadcrumb} && {data.tx_foundation_disable_breadcrumb} == 0">
+			<f:spaceless>
+				<nav id="breadcrumb" class="container container-outer breadcrumb" aria-label="{f:translate(key: 'LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:navigation.label.breadcrumb')}">
+					<div class="container-inner"><f:format.raw>{breadcrumb}</f:format.raw></div>
+				</nav>
+			</f:spaceless>
+		</f:if>
+	</f:section>
+</html>
