@@ -83,6 +83,18 @@ plugin.tx_news {
 	}
 }
 
+tt_content.news_newsdetail {
+	dataProcessing {
+		200 = Ps14\Foundation\DataProcessing\ModuleProcessor
+		200 {
+			importCss {
+				10 = /assets/css/modules/news.css
+				20 = /assets/css/modules/downloads.css
+			}
+		}
+	}
+}
+
 #tt_content.list.dataProcessing {
 #	200 {
 #		news_pi1 {
