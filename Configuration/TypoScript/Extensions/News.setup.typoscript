@@ -1,4 +1,5 @@
 @import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/SeoSitemap/setup.typoscript'
 @import 'EXT:ps14_kist_news/Configuration/TypoScript/setup.typoscript'
 
 plugin.tx_news {
@@ -95,17 +96,20 @@ tt_content.news_newsdetail {
 	}
 }
 
-#tt_content.list.dataProcessing {
-#	200 {
-#		news_pi1 {
-#			importCss {
-#				10 = /assets/css/modules/news.css
-#				20 = /assets/css/modules/downloads.css
-#			}
-#		}
-#	}
-#}
-
+plugin.tx_seo {
+	config {
+		xmlSitemap {
+			sitemaps {
+				news {
+					config {
+						excludedTypes = 1,2,3
+						additionalWhere = tx_kist_news_no_detail = 0
+					}
+				}
+			}
+		}
+	}
+}
 #plugin.tx_seo {
 #	config {
 #		xmlSitemap {
