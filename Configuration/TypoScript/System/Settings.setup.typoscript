@@ -1,0 +1,6 @@
+plugin.tx_ps14foundation.settings {
+	pages {
+		contact = {$pages.contact}
+		individualProduct = {$pages.individualProduct}
+	}
+}

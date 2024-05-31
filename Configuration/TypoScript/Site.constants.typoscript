@@ -10,6 +10,9 @@ navigation {
 
 pages {
 
+	# cat=pages; type=int+; label=UID for contact page
+	contact = 111
+
 	# cat=pages; type=int+; label=PID for footer content
 	footerContent = 187
 
