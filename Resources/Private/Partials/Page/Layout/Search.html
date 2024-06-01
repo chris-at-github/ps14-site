@@ -7,7 +7,8 @@
 
 	<f:section name="Field">
 		<form action="{f:uri.page(pageUid: settings.pages.search)}" class="search-widget search-widget--field" id="search-widget--field">
-			<input type="text" class="search-widget--keyword" name="q" aria-label="{f:translate(key: 'LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:search.placeholder')}" placeholder="{f:translate(key: 'LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:search.placeholder')}" tabindex="-1" />
+			<input type="hidden" name="tx_kesearch_pi1[page]" value="1">
+			<input type="text" class="search-widget--keyword" name="tx_kesearch_pi1[sword]" aria-label="{f:translate(key: 'LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:search.placeholder')}" placeholder="{f:translate(key: 'LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:search.placeholder')}" tabindex="-1" />
 			<button class="search-widget--submit" type="submit" aria-label="{f:translate(key: 'LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:search.submit')}" tabindex="-1">
 				<fo:svg.inline source="assets/svg/search.svg" />
 			</button>

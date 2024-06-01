@@ -15,7 +15,14 @@ plugin.tx_kesearch_pi1 {
 			20 = EXT:ps14_foundation/Resources/Private/Partials/
 			30 = EXT:ps14_site/Resources/Private/Partials/
 		}
+	}
+}
 
+plugin.tx_kesearch_pi2 {
+	view {
+		layoutRootPaths < plugin.tx_kesearch_pi1.view.layoutRootPaths
+		templateRootPaths < plugin.tx_kesearch_pi1.view.templateRootPaths
+		partialRootPaths < plugin.tx_kesearch_pi1.view.partialRootPaths
 	}
 }
 

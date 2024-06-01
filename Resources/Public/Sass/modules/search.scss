@@ -164,8 +164,15 @@ $stylesheet-context: 'screen' !default;
 	}
 
 	.current {
-		color: $theme-color-primary;
+		display: block;
 		background: #fff;
+		color: $theme-color-primary;
+		width: rem(34px);
+		height: rem(34px);
+		border: 2px solid $theme-color-primary;
+		border-radius: 50%;
+		text-align: center;
+		line-height: rem(30px);
 		font-weight: $font-weight-bold;
 		cursor: default;
 	}
@@ -208,8 +215,14 @@ $stylesheet-context: 'screen' !default;
 			margin: rem(75px 0 0 0);
 		}
 
-		.search--result-list-item-title a {
-			font-weight: $font-weight-base;
+		.search--result-list-item-title {
+			& {
+				font-size: rem(22px);
+			}
+
+			a {
+				font-weight: $font-weight-base;
+			}
 		}
 	}
 }
