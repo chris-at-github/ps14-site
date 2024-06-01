@@ -1,0 +1,17 @@
+@import 'EXT:ke_search/Configuration/TypoScript/setup.typoscript'
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ke_search/Configuration/TypoScript/setup.typoscript">
+
+plugin.tx_kesearch_pi1.cssFile >
+plugin.tx_kesearch_pi2.cssFile >
+
+tt_content.list.dataProcessing.200 {
+	ke_search_pi1 {
+		importCss {
+			10 = /assets/css/modules/search.css
+		}
+
+		importJs {
+			10 = /assets/js/modules/search.js
+		}
+	}
+}
