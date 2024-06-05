@@ -2,10 +2,11 @@
 
 namespace Ps14\Site\Service;
 
-use Ps\Xo\Filter\DataProvider\AbstractDataProvider;
+use Ps14\Site\Filter\DataProvider\AbstractDataProvider;
 use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Mvc\Web\Request;
+use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
+use TYPO3\CMS\Extbase\Mvc\Request;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
@@ -18,53 +19,53 @@ class FilterService {
 //	 */
 //	protected $objectManager;
 //
-//	/**
-//	 * Plugin TypoScript Settings
-//	 *
-//	 * @var array $settings
-//	 */
-//	protected $settings;
-//
-//	/**
-//	 * Filtereintrag (wird als Argument an den Konstruktor uebergeben)
-//	 *
-//	 * @var string $name
-//	 */
-//	protected $name;
-//
-//	/**
-//	 * @var Request $request
-//	 */
-//	protected $request;
-//
-//	/**
-//	 * @var ContentObjectRenderer
-//	 */
-//	protected $contentObject;
-//
-//	/**
-//	 * Fix Parameter, die immer gelten und nicht durch den Anwender ueberschrieben werden koennen.
-//	 * Diese dienen ebenfalls DataProvidern um ihre Suchkriterien einzugrenzen z.B. Jahresauswahl von News
-//	 *
-//	 * @var array
-//	 */
-//	protected $persists = [];
-//
-//	/**
-//	 * @param string $name
-//	 * @param Request $request
-//	 * @param ContentObjectRenderer $contentObject
-//	 * @param array $settings
-//	 * @return void
-//	 */
-//	public function __construct(string $name, Request $request, ContentObjectRenderer $contentObject, array $settings = []) {
-//		$this->name = $name;
-//		$this->request = $request;
-//		$this->contentObject = $contentObject;
-//
-//		$this->initializeSettings($settings);
-//		$this->initializePersists();
-//	}
+	/**
+	 * Plugin TypoScript Settings
+	 *
+	 * @var array $settings
+	 */
+	protected $settings;
+
+	/**
+	 * Filtereintrag (wird als Argument an den Konstruktor uebergeben)
+	 *
+	 * @var string $name
+	 */
+	protected $name;
+
+	/**
+	 * @var Request $request
+	 */
+	protected $request;
+
+	/**
+	 * @var ContentObjectRenderer
+	 */
+	protected $contentObject;
+
+	/**
+	 * Fix Parameter, die immer gelten und nicht durch den Anwender ueberschrieben werden koennen.
+	 * Diese dienen ebenfalls DataProvidern um ihre Suchkriterien einzugrenzen z.B. Jahresauswahl von News
+	 *
+	 * @var array
+	 */
+	protected $persists = [];
+
+	/**
+	 * @param string $name
+	 * @param Request $request
+	 * @param ContentObjectRenderer $contentObject
+	 * @param array $settings
+	 * @return void
+	 */
+	public function __construct(string $name, Request $request, ContentObjectRenderer $contentObject, array $settings = []) {
+		$this->name = $name;
+		$this->request = $request;
+		$this->contentObject = $contentObject;
+
+		$this->initializeSettings($settings);
+		$this->initializePersists();
+	}
 //
 //	/**
 //	 * return an instance of objectManager
@@ -78,45 +79,49 @@ class FilterService {
 //
 //		return $this->objectManager;
 //	}
-//
-//	/**
-//	 * liefert die TypoScript Plugin Einstellungen
-//	 *
-//	 * @param array $override
-//	 * @return array
-//	 */
-//	public function initializeSettings($override = []) {
-//		if(isset($this->settings) === false) {
-//			$this->settings = $this->getObjectManager()->get(\TYPO3\CMS\Extbase\Configuration\ConfigurationManager::class)->getConfiguration(
-//				\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'Xo'
-//			);
-//
-//			ArrayUtility::mergeRecursiveWithOverrule($this->settings, $override, true, false);
-//		}
-//
-//		return $this->settings;
-//	}
-//
-//	/**
-//	 * @return void
-//	 */
-//	public function initializePersists() {
-//		if(isset($this->settings['filter'][$this->name]['persists']) === true) {
-//			foreach($this->settings['filter'][$this->name]['persists'] as $persistName => $persistValue) {
-//				$this->persists[$persistName] = $persistValue;
-//
-//				if(strpos($persistValue, ',') !== false) {
-//					$this->persists[$persistName] = GeneralUtility::trimExplode(',', $persistValue);
-//				}
-//			}
-//		}
-//	}
-//
-//	/**
-//	 * @return array
-//	 */
-//	public function get() {
-//		$return = [];
+
+	/**
+	 * liefert die TypoScript Plugin Einstellungen
+	 *
+	 * @param array $override
+	 * @return array
+	 */
+	public function initializeSettings($override = []) {
+		if(isset($this->settings) === false) {
+
+			/** @var ConfigurationManager $configurationManager */
+			$configurationManager = GeneralUtility::makeInstance(ConfigurationManager::class);
+			$this->settings = $configurationManager->getConfiguration(
+				\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS,
+				'Ps14Site'
+			);
+
+			ArrayUtility::mergeRecursiveWithOverrule($this->settings, $override, true, false);
+		}
+
+		return $this->settings;
+	}
+
+	/**
+	 * @return void
+	 */
+	public function initializePersists() {
+		if(isset($this->settings['filter'][$this->name]['persists']) === true) {
+			foreach($this->settings['filter'][$this->name]['persists'] as $persistName => $persistValue) {
+				$this->persists[$persistName] = $persistValue;
+
+				if(strpos($persistValue, ',') !== false) {
+					$this->persists[$persistName] = GeneralUtility::trimExplode(',', $persistValue);
+				}
+			}
+		}
+	}
+
+	/**
+	 * @return array
+	 */
+	public function get() {
+		$return = [];
 //
 //		if(isset($this->settings['filter'][$this->name]) === true) {
 //
@@ -207,205 +212,205 @@ class FilterService {
 //				}
 //			}
 //		}
-//
-//		return $return;
-//	}
-//
-//	/**
-//	 * @param array $data
-//	 * @param array $properties
-//	 */
-//	protected function getWhitelist($data, $properties) {
-//		$whitelist = [];
-//
-//		if(isset($properties['whitelist']) === true) {
-//			if(is_array($properties['whitelist']) === true) {
-//				$whitelist = $properties['whitelist'];
-//
-//			} else {
-//				$whitelist = GeneralUtility::intExplode(',', $properties['whitelist'], true);
-//			}
-//		}
-//
-//		if(isset($properties['whitelistProvider']) === true) {
-//
-//			/** @var AbstractDataProvider $dataProvider */
-//			$dataProvider = GeneralUtility::makeInstance($properties['whitelistProvider']);
-//			$dataProvider->setFilter($this);
-//
-//			ArrayUtility::mergeRecursiveWithOverrule($whitelist, $dataProvider->provide($data, $properties));
-//		}
-//
-//		return $whitelist;
-//	}
-//
-//	/**
-//	 * @param array $data
-//	 * @param array $properties
-//	 */
-//	protected function getBlacklist($data, $properties) {
-//		$blacklist = [];
-//
-//		if(isset($properties['blacklist']) === true) {
-//			if(is_array($properties['blacklist']) === true) {
-//				$blacklist = $properties['blacklist'];
-//
-//			} else {
-//				$blacklist = GeneralUtility::intExplode(',', $properties['blacklist'], true);
-//			}
-//		}
-//
-//		if(isset($properties['blacklistProvider']) === true) {
-//
-//			/** @var AbstractDataProvider $dataProvider */
-//			$dataProvider = GeneralUtility::makeInstance($properties['blacklistProvider']);
-//			$dataProvider->setFilter($this);
-//
-//			ArrayUtility::mergeRecursiveWithOverrule($blacklist, $dataProvider->provide($data, $properties));
-//		}
-//
-//		return $blacklist;
-//	}
-//
-//	/**
-//	 * @param bool $dataProcessing
-//	 * @return array
-//	 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchArgumentException
-//	 */
-//	public function getArguments($dataProcessing = false) {
-//		$arguments = [];
-//
-//		// Verarbeite fixierte Argumente (werden nicht durch Parameter ueberschrieben -> es wird geprueft ob dieser Eintrag
-//		// bereits existiert)
-//		$persists = $this->getPersists();
-//
-//		foreach($persists as $persistName => $persistValue) {
-//			$arguments[$persistName] = $persistValue;
-//		}
-//
-//		if($this->request->hasArgument($this->getIdentifier()) === true) {
-//			$request = $this->request->getArgument($this->getIdentifier());
-//
-//			foreach($this->settings['filter'][$this->name]['items'] as $itemName => $itemProperties) {
-//				if(isset($request[$itemName]) === true && isset($arguments[$itemName]) === false) {
-//					$arguments[$itemName] = $request[$itemName];
-//				}
-//			}
-//
-//			// Verarbeite Default-Variablen
-//		} else {
-//			foreach($this->settings['filter'][$this->name]['items'] as $itemName => $itemProperties) {
-//				if(isset($itemProperties['default']) === true && isset($arguments[$itemName]) === false) {
-//					$arguments[$itemName] = $itemProperties['default'];
-//
-//					if(gettype($arguments[$itemName]) === 'string' && strpos($arguments[$itemName], ',') !== false) {
-//						$arguments[$itemName] = GeneralUtility::trimExplode(',', $arguments[$itemName]);
-//					}
-//				}
-//			}
-//		}
-//
-//		if($dataProcessing === true) {
-//			foreach($this->settings['filter'][$this->name]['items'] as $itemName => $itemProperties) {
-//
-//				// DataProcessor
-//				if(isset($itemProperties['dataProcessor']) === true) {
-//					foreach($itemProperties['dataProcessor'] as $dataProcessorFqcn => $dataProcessorProperties) {
-//						$dataProcessor = $this->getObjectManager()->get($dataProcessorFqcn);
-//						$dataProcessor->setFilter($this);
-//						$dataProcessor->setSettings($this->settings['filter']);
-//
-//						$arguments[$itemName] = $dataProcessor->process($arguments[$itemName], $dataProcessorProperties, $itemProperties);
-//					}
-//				}
-//			}
-//		}
-//
-//		return $arguments;
-//	}
-//
-//	/**
-//	 * Erzeugt einen eindeutigen Identifier fuer die Formularelemente, falls mehrere Filter auf einer Seite vorhanden sind
-//	 *
-//	 * @return string
-//	 */
-//	public function getIdentifier() {
-//
-//		// String Prefix muss vorhanden sein -> reiner Zahlenwert wirft Exception nach dem Absenden
-//		// @see: https://wiki.typo3.org/Exception/CMS/1210858767
-//		return md5($this->contentObject->data['uid']);
-//	}
-//
-//	/**
-//	 * @return array
-//	 */
-//	public function getPersists() {
-//		return $this->persists;
-//	}
-//
-//	/**
-//	 * @param array $persists
-//	 */
-//	public function setPersists(array $persists) {
-//		$this->persists = $persists;
-//	}
-//
-//	/**
-//	 * Setzt ein neues fixiertes Argument
-//	 *
-//	 * @param string $name
-//	 * @param mixed $value
-//	 */
-//	public function addPersits($name, $value) {
-//		$this->persists[$name] = $value;
-//	}
-//
-//	/**
-//	 * Fuegt einen Defaultwert, falls dieser nicht ueber TS gesetzt werden kann, hinzu
-//	 *
-//	 * @param string $name
-//	 * @param mixed $value
-//	 */
-//	public function setDefaultArgument($name, $value) {
-//		if(isset($this->settings['filter'][$this->name]['items'][$name]) === true) {
-//			$this->settings['filter'][$this->name]['items'][$name]['default'] = $value;
-//		}
-//	}
-//
-//	public function getDefaultArgument($name){
-//		if(isset($this->settings['filter'][$this->name]['items'][$name]) === true) {
-//			return $this->settings['filter'][$this->name]['items'][$name]['default'];
-//		}else return null;
-//	}
-//	/**
-//	 * Entfernt einen Defaultwert
-//	 *
-//	 * @param string $name
-//	 */
-//	public function resetDefaultArgument($name) {
-//		if(isset($this->settings['filter'][$this->name]['items'][$name]['default']) === true) {
-//			unset($this->settings['filter'][$this->name]['items'][$name]['default']);
-//		}
-//	}
-//
-//	/**
-//	 * @return ContentObjectRenderer
-//	 */
-//	public function getContentObject(): ContentObjectRenderer {
-//		return $this->contentObject;
-//	}
-//
-//	/**
-//	 * @param ContentObjectRenderer $contentObject
-//	 */
-//	public function setContentObject(ContentObjectRenderer $contentObject): void {
-//		$this->contentObject = $contentObject;
-//	}
-//
-//	/**
-//	 * @return array
-//	 */
-//	public function getSettings(): array {
-//		return $this->settings;
-//	}
+
+		return $return;
+	}
+
+	/**
+	 * @param array $data
+	 * @param array $properties
+	 */
+	protected function getWhitelist($data, $properties) {
+		$whitelist = [];
+
+		if(isset($properties['whitelist']) === true) {
+			if(is_array($properties['whitelist']) === true) {
+				$whitelist = $properties['whitelist'];
+
+			} else {
+				$whitelist = GeneralUtility::intExplode(',', $properties['whitelist'], true);
+			}
+		}
+
+		if(isset($properties['whitelistProvider']) === true) {
+
+			/** @var AbstractDataProvider $dataProvider */
+			$dataProvider = GeneralUtility::makeInstance($properties['whitelistProvider']);
+			$dataProvider->setFilter($this);
+
+			ArrayUtility::mergeRecursiveWithOverrule($whitelist, $dataProvider->provide($data, $properties));
+		}
+
+		return $whitelist;
+	}
+
+	/**
+	 * @param array $data
+	 * @param array $properties
+	 */
+	protected function getBlacklist($data, $properties) {
+		$blacklist = [];
+
+		if(isset($properties['blacklist']) === true) {
+			if(is_array($properties['blacklist']) === true) {
+				$blacklist = $properties['blacklist'];
+
+			} else {
+				$blacklist = GeneralUtility::intExplode(',', $properties['blacklist'], true);
+			}
+		}
+
+		if(isset($properties['blacklistProvider']) === true) {
+
+			/** @var AbstractDataProvider $dataProvider */
+			$dataProvider = GeneralUtility::makeInstance($properties['blacklistProvider']);
+			$dataProvider->setFilter($this);
+
+			ArrayUtility::mergeRecursiveWithOverrule($blacklist, $dataProvider->provide($data, $properties));
+		}
+
+		return $blacklist;
+	}
+
+	/**
+	 * @param bool $dataProcessing
+	 * @return array
+	 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchArgumentException
+	 */
+	public function getArguments($dataProcessing = false) {
+		$arguments = [];
+
+		// Verarbeite fixierte Argumente (werden nicht durch Parameter ueberschrieben -> es wird geprueft ob dieser Eintrag
+		// bereits existiert)
+		$persists = $this->getPersists();
+
+		foreach($persists as $persistName => $persistValue) {
+			$arguments[$persistName] = $persistValue;
+		}
+
+		if($this->request->hasArgument($this->getIdentifier()) === true) {
+			$request = $this->request->getArgument($this->getIdentifier());
+
+			foreach($this->settings['filter'][$this->name]['items'] as $itemName => $itemProperties) {
+				if(isset($request[$itemName]) === true && isset($arguments[$itemName]) === false) {
+					$arguments[$itemName] = $request[$itemName];
+				}
+			}
+
+			// Verarbeite Default-Variablen
+		} else {
+			foreach($this->settings['filter'][$this->name]['items'] as $itemName => $itemProperties) {
+				if(isset($itemProperties['default']) === true && isset($arguments[$itemName]) === false) {
+					$arguments[$itemName] = $itemProperties['default'];
+
+					if(gettype($arguments[$itemName]) === 'string' && strpos($arguments[$itemName], ',') !== false) {
+						$arguments[$itemName] = GeneralUtility::trimExplode(',', $arguments[$itemName]);
+					}
+				}
+			}
+		}
+
+		if($dataProcessing === true) {
+			foreach($this->settings['filter'][$this->name]['items'] as $itemName => $itemProperties) {
+
+				// DataProcessor
+				if(isset($itemProperties['dataProcessor']) === true) {
+					foreach($itemProperties['dataProcessor'] as $dataProcessorFqcn => $dataProcessorProperties) {
+						$dataProcessor = GeneralUtility::makeInstance($dataProcessorFqcn);
+						$dataProcessor->setFilter($this);
+						$dataProcessor->setSettings($this->settings['filter']);
+
+						$arguments[$itemName] = $dataProcessor->process($arguments[$itemName], $dataProcessorProperties, $itemProperties);
+					}
+				}
+			}
+		}
+
+		return $arguments;
+	}
+
+	/**
+	 * Erzeugt einen eindeutigen Identifier fuer die Formularelemente, falls mehrere Filter auf einer Seite vorhanden sind
+	 *
+	 * @return string
+	 */
+	public function getIdentifier() {
+
+		// String Prefix muss vorhanden sein -> reiner Zahlenwert wirft Exception nach dem Absenden
+		// @see: https://wiki.typo3.org/Exception/CMS/1210858767
+		return md5($this->contentObject->data['uid']);
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getPersists() {
+		return $this->persists;
+	}
+
+	/**
+	 * @param array $persists
+	 */
+	public function setPersists(array $persists) {
+		$this->persists = $persists;
+	}
+
+	/**
+	 * Setzt ein neues fixiertes Argument
+	 *
+	 * @param string $name
+	 * @param mixed $value
+	 */
+	public function addPersits($name, $value) {
+		$this->persists[$name] = $value;
+	}
+
+	/**
+	 * Fuegt einen Defaultwert, falls dieser nicht ueber TS gesetzt werden kann, hinzu
+	 *
+	 * @param string $name
+	 * @param mixed $value
+	 */
+	public function setDefaultArgument($name, $value) {
+		if(isset($this->settings['filter'][$this->name]['items'][$name]) === true) {
+			$this->settings['filter'][$this->name]['items'][$name]['default'] = $value;
+		}
+	}
+
+	public function getDefaultArgument($name){
+		if(isset($this->settings['filter'][$this->name]['items'][$name]) === true) {
+			return $this->settings['filter'][$this->name]['items'][$name]['default'];
+		}else return null;
+	}
+	/**
+	 * Entfernt einen Defaultwert
+	 *
+	 * @param string $name
+	 */
+	public function resetDefaultArgument($name) {
+		if(isset($this->settings['filter'][$this->name]['items'][$name]['default']) === true) {
+			unset($this->settings['filter'][$this->name]['items'][$name]['default']);
+		}
+	}
+
+	/**
+	 * @return ContentObjectRenderer
+	 */
+	public function getContentObject(): ContentObjectRenderer {
+		return $this->contentObject;
+	}
+
+	/**
+	 * @param ContentObjectRenderer $contentObject
+	 */
+	public function setContentObject(ContentObjectRenderer $contentObject): void {
+		$this->contentObject = $contentObject;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getSettings(): array {
+		return $this->settings;
+	}
 }
