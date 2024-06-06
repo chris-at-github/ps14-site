@@ -2,7 +2,7 @@
 	<f:section name="Main">
 		<ol class="marker--legend">
 			<f:for each="{elements}" as="element" iteration="iterator">
-				<f:render section="Item" arguments="{data: data, element: element.data, iterator: iterator}" />
+				<f:render section="Item" arguments="{data: data, element: element.data, iterator: iterator, headerLayout: data.tx_foundation_elements_header}" />
 			</f:for>
 		</ol>
 	</f:section>
@@ -13,7 +13,7 @@
 
 			<f:if condition="{element.title}">
 				<div class="marker--legend-item-title">
-					<f:render partial="Header/Header" arguments="{header: element.title, layout: data.tx_foundation_elements_header}" />
+					<f:render partial="Header/Header" arguments="{header: element.title, layout: headerLayout}" />
 				</div>
 			</f:if>
 
