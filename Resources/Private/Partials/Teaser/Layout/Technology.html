@@ -23,7 +23,7 @@
 
 <f:section name="Item">
 	<div class="col-12 col-md-6">
-		<f:render partial="Teaser/Layout/Aside" section="MediaContainer" arguments="{page: page, settings: settings.xo.modules.teaser.pictureSettings.aside}" />
+		<f:render partial="Teaser/Layout/Aside" section="MediaContainer" arguments="{page: page, settings: settings: '{fo:settings.get(extension: \'Ps14Teaser\', path: \'media.aside\')}'}" />
 	</div>
 
 	<div class="col-12 col-md-6">
