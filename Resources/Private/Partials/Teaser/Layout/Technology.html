@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+	<f:if condition="{pages -> f:count()} == 1">
+		<f:then>
+			<f:for each="{pages}" as="page">
+				<div class="row teaser teaser--layout-aside teaser--layout-technology">
+					<f:render section="Item" arguments="{page: page, settings: settings}" />
+				</div>
+			</f:for>
+		</f:then>
+		<f:else>
+			<ul class="teaser--container">
+				<f:for each="{pages}" as="page">
+					<li class="row teaser teaser--layout-aside teaser--layout-technology">
+						<f:render section="Item" arguments="{page: page, settings: settings}" />
+					</li>
+				</f:for>
+			</ul>
+		</f:else>
+	</f:if>
+</f:section>
+
+<f:section name="Item">
+	<div class="col-12 col-md-6">
+		<f:render partial="Teaser/Layout/Aside" section="MediaContainer" arguments="{page: page, settings: settings.xo.modules.teaser.pictureSettings.aside}" />
+	</div>
+
+	<div class="col-12 col-md-6">
+		<div class="teaser--body">
+			<header class="teaser--title ce-header ce-header--layout-2">
+				<h2><f:link.page pageUid="{page.uid}"><f:translate key="LLL:EXT:ps14_site/Resources/Private/Language/locallang_frontend.xlf:teaser.technology.title-prefix" /> <strong>{page.teaserTitle}</strong></f:link.page></h2>
+			</header>
+
+			<f:render partial="Teaser/Layout/Aside" section="Abstract" arguments="{page: page, settings: settings}" />
+			<f:link.page class="link--cta teaser--readmore" pageUid="{page.uid}" tabindex="-1"><f:translate key="LLL:EXT:ps14_site/Resources/Private/Language/locallang_frontend.xlf:teaser.technology.readmore" /></f:link.page>
+		</div>
+	</div>
+</f:section>
+</html>
