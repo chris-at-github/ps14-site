@@ -224,7 +224,7 @@ tx_powermail.flexForm.addField.settings\.flexform\.main\.cleverreach.config.item
 	}
 [END]
 
-[field('list_type') === 'entityproduct_keyfact' || field('CType') === 'entityproduct_keyfacts']
+[field('CType') === 'entityproduct_keyfacts']
 	TCAdefaults.tt_content {
 		frame_class = 2
 		space_before_class = medium
