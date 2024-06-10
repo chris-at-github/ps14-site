@@ -22,6 +22,3 @@ pages {
 	# cat=pages; type=int+; label=UID of page for individual product
 	individualProduct = 183
 }
-
-// Sonderfaelle fur Module -> Dateien muessen als letztes geladen werden, damit alle Einstellungen bereits gesetzt sind
-#@import 'EXT:ps14_site/Configuration/TypoScript/Extensions/EntityProduct.constants.typoscript'
