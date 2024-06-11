@@ -10,6 +10,26 @@ $stylesheet-context: 'screen', 'embed' !default;
 @import 'definitions';
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Root
+@import 'reboot';
+@import 'type';
+@import 'font';
+@import 'iconfont';
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Components
 @import 'components/collapse';
 @import 'components/tab';
+@import 'components/accessibility';
+@import 'components/card';
+@import 'components/navigation';
+@import 'components/navigation/breadcrumb';
+@import 'components/navigation/language';
+@import 'components/layout/hamburger';
+@import 'components/layout/search-widget';
+@import 'components/layout/flash';
+@import 'components/layout/sticky';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Layout
+@import 'layout/layout-inline';

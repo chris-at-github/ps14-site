@@ -1,6 +1,5 @@
 page {
 	includeCSS {
-		application = /assets/css/xna.css
 		site = /assets/css/site.css
 
 		print = /assets/css/print.css
@@ -8,7 +7,7 @@ page {
 	}
 
 	includeJSFooter {
-		application = /assets/js/xna.js
+		application = /assets/js/site.js
 		application.forceOnTop = 1
 	}
 
@@ -48,31 +47,15 @@ page {
 			140 = Ps14\Foundation\DataProcessing\PageResourceProcessor
 			140 {
 				inlineCss {
-					10 = /assets/css/xna-inline.css
 					20 = /assets/css/site-inline.css
 				}
 
 				inlineJs {
-					10 = assets/js/xna-inline.js
+					10 = assets/js/site-inline.js
 				}
 			}
 
 			150 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
-
-			// Navigationen
-#			10 < navigation.main
-#			20 < navigation.footer
-#			30 < navigation.breadcrumb
-#			40 < navigation.language
-#			50 < navigation.meta
-
-			// Page DataProcessing
-#			100 < dataProcessing.settings
-#			110 < dataProcessing.pageLayout
-#			120 < dataProcessing.flash
-#			130 < dataProcessing.providerData
-#			140 < dataProcessing.site
-#			150 < dataProcessing.pageResource
 		}
 	}
 }

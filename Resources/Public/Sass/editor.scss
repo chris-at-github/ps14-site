@@ -1,0 +1,85 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & Xo
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Definitions
+@import 'definitions';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Reboot & Type
+@import 'reboot';
+@import 'type';
+@import 'iconfont';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Components
+@import 'components/link';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CKE
+body {
+	& {
+		margin: 10px;
+	}
+
+	& > *:first-child {
+		margin-top: 0;
+	}
+}
+
+ul {
+	@include list-default-ul;
+}
+
+ol {
+	@include list-default-ol;
+}
+
+table {
+	@include table--layout-0;
+}
+
+.cke_editable {
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+}
+
+// Styles in der Formatauswahl zuruecksetzen
+.cke_panel_container {
+	body {
+		font-size: 13px;
+	}
+
+	.h1, .h2, .h3, .h4 {
+		margin-top: 0;
+	}
+
+	li {
+		& {
+			position: static;
+			padding: 0;
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+
+	& + li {
+		margin: 0;
+	}
+}
+
+.cke_panel_listItem {
+	a {
+		outline: 0;
+	}
+
+	a:hover, a:focus {
+		text-decoration: none;
+		outline: 0;
+	}
+}
