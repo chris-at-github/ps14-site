@@ -11,7 +11,7 @@ $stylesheet-context: 'screen' !default;
 @import '../variables';
 @import '../mixins';
 @import '../definitions';
-//@import '../iconfont';
+@import '../iconfont';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Register
@@ -49,7 +49,7 @@ $stylesheet-context: 'screen' !default;
 
 		span {
 			& {
-				//@include iconfont(check);
+				@include iconfont(check);
 			}
 
 			&:before {
