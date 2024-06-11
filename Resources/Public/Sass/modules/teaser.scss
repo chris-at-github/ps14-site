@@ -13,6 +13,7 @@ $tx-teaser-frontend--use-css: true !default;
 @import '../variables';
 @import '../mixins';
 @import '../definitions';
+@import '../iconfont';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // CSS
@@ -128,15 +129,6 @@ $tx-teaser-frontend--use-css: true !default;
 
 			span {
 				background: none;
-			}
-
-			svg {
-				width: 14px;
-				height: 11px;
-				margin: rem(8px 0 0 12px);
-				flex-shrink: 0;
-				fill: $theme-color-primary;
-				transition: transform $transition-duration;
 			}
 		}
 	}
