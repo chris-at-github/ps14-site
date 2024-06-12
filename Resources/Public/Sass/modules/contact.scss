@@ -158,32 +158,34 @@ $tx-contact--layout-search: true !default;
 		}
 	}
 
-	button {
-		&:before {
-			border-color: $color-grey-lighten;
-		}
-
-		svg {
-			fill: $color-grey;
-		}
-
-		&:not([disabled]) {
+	.contact-search--submit {
+		button {
 			&:before {
-				border-color: $theme-color-primary;
+				border-color: $color-grey-lighten;
 			}
 
 			svg {
-				fill: #fff;
-			}
-		}
-
-		&:hover:not([disabled]), .focusable &:focus:not([disabled]) {
-			&:before {
-				background: #fff;
+				fill: $color-grey;
 			}
 
-			svg {
-				fill: $theme-color-primary;
+			&:not([disabled]) {
+				&:before {
+					border-color: $theme-color-primary;
+				}
+
+				svg {
+					fill: #fff;
+				}
+			}
+
+			&:hover:not([disabled]), .focusable &:focus:not([disabled]) {
+				&:before {
+					background: #fff;
+				}
+
+				svg {
+					fill: $theme-color-primary;
+				}
 			}
 		}
 	}
@@ -203,19 +205,21 @@ $tx-contact--layout-search: true !default;
 		}
 	}
 
-	button {
-		& {
-			@extend %button--rounded-icon--inverted;
-		}
+	.contact-search--submit {
+		button {
+			& {
+				@extend %button--rounded-icon--inverted;
+			}
 
-		&:before {
-			border: 3px solid $theme-color-primary-dark;
-		}
-
-		&:hover:not([disabled]), .focusable &:focus:not([disabled]) {
 			&:before {
-				border-color: #fff;
-				background: $theme-color-primary-dark;
+				border: 3px solid $theme-color-primary-dark;
+			}
+
+			&:hover:not([disabled]), .focusable &:focus:not([disabled]) {
+				&:before {
+					border-color: #fff;
+					background: $theme-color-primary-dark;
+				}
 			}
 		}
 	}
