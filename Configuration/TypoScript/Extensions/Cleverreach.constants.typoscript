@@ -7,6 +7,7 @@ plugin.tx_cleverreach {
 	formId = 389114
 	groupId = 619215
 	debug = 1
+	authMode = bearer
 }
 
 [siteLanguage("languageId") == "1"]
