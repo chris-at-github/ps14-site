@@ -1,0 +1,16 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Global
+@import "../../../../ps14_theme/Resources/Public/Sass/variables";
+@import "../../../../ps14_theme/Resources/Public/Sass/functions";
+@import "../../../../ps14_theme/Resources/Public/Sass/mixins";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap
+@import "../../../../ps14_theme/Resources/Public/Sass/bootstrap/root";
+@import "../../../../ps14_theme/Resources/Public/Sass/bootstrap/normalize";
+@import "../../../../ps14_theme/Resources/Public/Sass/bootstrap/font";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Layout
+@import "../../../../ps14_theme/Resources/Public/Sass/layout/container";
+@import "../../../../ps14_theme/Resources/Public/Sass/layout/main";
