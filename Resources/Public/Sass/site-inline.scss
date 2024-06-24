@@ -11,6 +11,11 @@
 @import "../../../../ps14_theme/Resources/Public/Sass/bootstrap/font";
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Components
+@import "../../../../ps14_theme/Resources/Public/Sass/components/header";
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Layout
 @import "../../../../ps14_theme/Resources/Public/Sass/layout/container";
 @import "../../../../ps14_theme/Resources/Public/Sass/layout/main";
+@import "../../../../ps14_theme/Resources/Public/Sass/layout/modules";
