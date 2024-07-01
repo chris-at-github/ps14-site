@@ -101,10 +101,8 @@
 				<f:if condition="{mediaElement.originalResource.type} == 2 || {mediaElement.originalResource.type} == 5">
 					<f:render partial="Media/Rendering/Picture" arguments="{
 						file: mediaElement.originalResource,
-						settings: {
-							sizes: settings.mediaQueries,
-							settings: settings,
-						}
+						sizes: settings.pictureSettings.card.mediaQueries,
+						settings: settings.pictureSettings.card
 					}" />
 				</f:if>
 				<f:if condition="{mediaElement.originalResource.type} == 4">
