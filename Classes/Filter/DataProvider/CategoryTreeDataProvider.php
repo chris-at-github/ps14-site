@@ -111,7 +111,7 @@ class CategoryTreeDataProvider extends AbstractDataProvider {
 
 			// Eintraege vorselektieren
 			$selected = false;
-			if(is_array($data['selected'][$groupIdentifier]) === true && in_array($row['uid'], $data['selected'][$groupIdentifier]) === true) {
+			if(isset($data['selected'][$groupIdentifier]) === true && is_array($data['selected'][$groupIdentifier]) === true && in_array($row['uid'], $data['selected'][$groupIdentifier]) === true) {
 				$selected = true;
 			}
 

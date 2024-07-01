@@ -151,9 +151,11 @@ class FilterService {
 			}
 
 			// Title durch Language-Datei gesetzt?
-			$return['title'] = $this->settings['filter'][$this->name]['title'];
-			if(empty($return['title']) === false && strpos($return['title'], 'LLL') !== false) {
-				$return['title'] = \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate($return['title']);
+			if(isset($this->settings['filter'][$this->name]['title']) === true) {
+				$return['title'] = $this->settings['filter'][$this->name]['title'];
+				if(empty($return['title']) === false && strpos($return['title'], 'LLL') !== false) {
+					$return['title'] = \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate($return['title']);
+				}
 			}
 
 			// Items
