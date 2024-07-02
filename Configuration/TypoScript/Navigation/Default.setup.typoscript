@@ -15,9 +15,10 @@ navigation.default {
 		picture {
 			width = 280
 			cropVariant = desktop
+			mediaQueries >
 			mediaQueries {
 				992 {
-					width = 260
+					width = 256
 					cropVariant = desktop
 					mediaQuery = (min-width: 992px)
 				}
