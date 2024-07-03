@@ -2,7 +2,9 @@
 // Variablen
 $ce-hero--use-css: true !default;
 $ce-hero--layout-default: true !default;
+$ce-hero--layout-video: true !default;
 $ce-hero--layout-slider: true !default;
+$ce-hero--layout-container: true !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Bootstrap & XNA
@@ -45,6 +47,91 @@ $ce-hero--layout-slider: true !default;
 		}
 	}
 
+	@if($ce-hero--layout-video) {
+		.hero--video {
+			video {
+				max-width: 100%;
+			}
+
+			.hero--video-control-play {
+				@extend %button--rounded-icon;
+				position: absolute;
+				bottom: rem(10px);
+				left: rem(10px);
+			}
+
+			.hero--video-control-play-default {
+				left: 2px;
+			}
+
+			.hero--video-control-play-large,
+			.hero--video-control-pause-large {
+				display: none;
+			}
+
+			&.hero--video-played {
+				.hero--video-control-play-default {
+					display: none;
+				}
+			}
+
+			&.hero--video-paused {
+				.hero--video-control-pause-default {
+					display: none;
+				}
+			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			.hero--video {
+				cursor: pointer;
+		//		--button--rounded-icon-size: #{rem(96px)};
+				--button--rounded-icon-svg-size: #{rem(21px)};
+		//
+				.hero--video-control-play {
+					bottom: rem(15px);
+					left: rem(35px);
+					//opacity: 0;
+					transition: opacity $transition-duration;
+				}
+		//
+		//		.hero--video-control-play-default,
+		//		.hero--video-control-pause-default {
+		//			display: none;
+		//		}
+		//
+		//		.hero--video-control-play-large {
+		//			left: 3px;
+		//		}
+		//
+		//		&.hero--video-played {
+		//			.hero--video-control-pause-large {
+		//				display: block;
+		//			}
+		//		}
+		//
+		//		&.hero--video-paused {
+		//			.hero--video-control-play-large {
+		//				display: block;
+		//			}
+		//		}
+		//
+				&:hover, .focusable &:focus {
+					.hero--video-control-play {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		//
+		//@include media-breakpoint-up(lg) {
+		//	.hero--video {
+		//		--button--rounded-icon-size: #{rem(128px)};
+		//		--button--rounded-icon-svg-size: #{rem(40px)};
+		//	}
+		//}
+	}
+
 	.ce-hero--16-9 {
 		.hero--image {
 			& {
@@ -55,6 +142,21 @@ $ce-hero--layout-slider: true !default;
 			img {
 				position: absolute;
 				top: 0; left: 0; right: 0;
+			}
+		}
+
+		.hero--video {
+			& {
+				position: relative;
+				padding-top: 56.25%;
+				outline: 2px solid #fff;
+				outline-offset: -2px;
+			}
+
+			video {
+				position: absolute;
+				top: 0; left: 0; right: 0;
+				z-index: -1;
 			}
 		}
 	}
@@ -74,6 +176,16 @@ $ce-hero--layout-slider: true !default;
 			.container-inner {
 				margin-top: rem(35px);
 			}
+		}
+
+		.hero--background {
+			position: absolute;
+			top: -1px; bottom: -1px;
+			left: 0;
+			width: 100%;
+			z-index: -1;
+			background-position: center center;
+			background-size: cover;
 		}
 	}
 
