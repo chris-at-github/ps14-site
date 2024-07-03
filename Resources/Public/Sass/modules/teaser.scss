@@ -273,6 +273,12 @@ $tx-teaser-frontend--use-css: true !default;
 			}
 		}
 
+		.teaser--layout-technology {
+			.media-container {
+				height: 100%;
+			}
+		}
+
 		.ce-teaser-frontend.ce-frame--variant-1 {
 			.ce-frame--inner {
 				&:before {
