@@ -1,0 +1,45 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Global
+@import "../../../../ps14_theme/Resources/Public/Sass/variables";
+@import "../../../../ps14_theme/Resources/Public/Sass/functions";
+@import "../../../../ps14_theme/Resources/Public/Sass/mixins";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap
+@import "../../../../ps14_theme/Resources/Public/Sass/bootstrap/root";
+@import "../../../../ps14_theme/Resources/Public/Sass/bootstrap/normalize";
+@import "../../../../ps14_theme/Resources/Public/Sass/bootstrap/font";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Components
+@import "../../../../ps14_theme/Resources/Public/Sass/components/header";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// HTML
+body {
+	padding: 20px;
+	font-family: var(--font-family-primary);
+	font-size: var(--font-size-default);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--font-line-height);
+	color: var(--color-font);
+	text-align: left;
+}
+
+a {
+	& {
+		color: var(--color-interactive);
+	}
+
+	&:hover {
+		color: var(--color-interactive-hover);
+	}
+
+	&:focus-visible {
+		color: var(--color-interactive-focus);
+		outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
+		outline-offset: var(--focus-outline-offset);
+	}
+}
+
+@include bodytext();
