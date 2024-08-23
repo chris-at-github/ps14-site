@@ -450,6 +450,12 @@ $tx-product-frontend--layout-show: true !default;
 			}
 		}
 
+		.product--media {
+			video {
+				z-index: 5;
+			}
+		}
+
 		.product--air-consumption-fallback {
 			height: 0;
 			overflow: hidden;
