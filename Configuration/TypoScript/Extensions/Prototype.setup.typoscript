@@ -1,0 +1,18 @@
+@import 'EXT:datamints_prototype/Configuration/TypoScript/setup.typoscript'
+
+tt_content {
+	datamints_prototype {
+		layoutRootPaths {
+			20 = EXT:ps14_site/Resources/Private/Extensions/Modulor/Layouts/
+		}
+
+		templateRootPaths {
+			20 = EXT:ps14_site/Resources/Private/Extensions/Modulor/Templates/
+		}
+
+		partialRootPaths {
+			30 = EXT:ps14_foundation/Resources/Private/Partials/
+			40 = EXT:ps14_site/Resources/Private/Partials/
+		}
+	}
+}
