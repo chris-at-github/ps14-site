@@ -17,15 +17,15 @@
 	padding: rem(3px 18px);
 	border: 2px solid $theme-color-primary;
 	border-radius: $border-radius-default;
-	background: $theme-color-primary;
+	background: #fff;
 	font-size: rem(15px);
 	font-weight: $font-weight-bold;
-	color: #fff;
+	color: $theme-color-primary;
 	cursor: pointer;
 	transition: all $transition-duration;
 }
 
 %tab--item-active {
-	background: #fff;
-	color: $theme-color-primary;
+	background: $theme-color-primary;
+	color: #fff;
 }
