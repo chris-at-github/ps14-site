@@ -42,6 +42,7 @@ $EM_CONF[$_EXTKEY] = [
 			'ps14_kist_news' => '2.0.0-2.9.99',
 			'ke_search' => '5.5.0-5.5.99',
 			'entity_product' => '2.0.0-2.9.99',
+			'ps14_textmedia' => '1.0.0-1.9.99',
 		],
 	],
 ];
