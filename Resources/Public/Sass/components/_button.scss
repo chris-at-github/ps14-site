@@ -1,0 +1,51 @@
+%play-button--paused {
+	.play-button__play {
+		opacity: 0;
+	}
+
+	.play-button__pause {
+		opacity: 1;
+	}
+}
+
+%play-button--active {
+	&:before {
+		border-color: $theme-color-primary-dark;
+		background: $theme-color-primary-dark;
+	}
+
+	svg {
+		fill: #fff;
+	}
+}
+
+.play-button {
+	--button--rounded-icon-svg-size: #{rem(22px)};
+
+	& {
+		@extend %button--rounded-icon;
+		position: relative;
+		display: grid;
+	}
+
+	&:hover, .focusable &:focus {
+		@extend %play-button--active;
+	}
+
+	&__play {
+		grid-area: 1 / 1;
+		opacity: 1;
+	}
+
+	&__pause {
+		grid-area: 1 / 1;
+		opacity: 0;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.play-button {
+		--button--rounded-icon-size: #{rem(80px)};
+		--button--rounded-icon-svg-size: #{rem(26px)};
+	}
+}
