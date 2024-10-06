@@ -14,23 +14,14 @@
 	</f:section>
 
 	<f:section name="Video">
-		<f:render partial="Media/Rendering/Video" arguments="{
-				file: media,
-				options: {
-					autoplay: 1,
-					controls: 0,
-					loop: 1
-				},
-				cssClass: 'hero-video--{media.uid}',
-				id: ''
-			}" />
-
-		<button class="hero--video-control-play" aria-controls="hero-video--{media.uid}" aria-label="{f:translate(key: 'LLL:EXT:ps14_hero/Resources/Private/Language/locallang_frontend.xlf:video.control-play')}">
-			<fo:svg.inline class="hero--video-control-play-default" source="assets/svg/play.svg" />
-			<fo:svg.inline class="hero--video-control-play-large" source="assets/svg/play-large.svg" />
-			<fo:svg.inline class="hero--video-control-pause-default" source="assets/svg/pause.svg" />
-			<fo:svg.inline class="hero--video-control-pause-large" source="assets/svg/pause-large.svg" />
-		</button>
+		<f:render partial="Media/Rendering/Video" section="Main" arguments="{
+			media: media,
+			options: {
+				autoplay: media.properties.autoplay,
+				controls: media.properties.tx_textmedia_controls,
+				loop: media.properties.tx_textmedia_loop
+			}
+		}" />
 	</f:section>
 
 	<f:section name="Image">
