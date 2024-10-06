@@ -53,8 +53,20 @@
 			<trans-unit id="tt_content.variant.powermail.1">
 				<source>Newsletter</source>
 			</trans-unit>
+			<trans-unit id="tt_content.layout.1">
+				<source>Indent Right</source>
+			</trans-unit>
+			<trans-unit id="tt_content.layout.2">
+				<source>Fullwidth</source>
+			</trans-unit>
 			<trans-unit id="tt_content.layout.4">
 				<source>Wide</source>
+			</trans-unit>
+			<trans-unit id="tt_content.frame-class.0">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="tt_content.frame-class.1">
+				<source>Gray</source>
 			</trans-unit>
 			<trans-unit id="tt_content.frame-class.2">
 				<source>Blue</source>

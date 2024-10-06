@@ -10,6 +10,7 @@ plugin.tx_ps14foundation_addressrecord {
 
 		partialRootPaths {
 			20 = EXT:ps14_site/Resources/Private/Extensions/Foundation/Partials/
+			25 = EXT:ps14_site/Resources/Private/Partials/
 		}
 	}
 

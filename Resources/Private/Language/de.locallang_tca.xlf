@@ -51,14 +51,26 @@
 			<trans-unit id="tt_content.variant.powermail.1">
 				<target>Newsletter</target>
 			</trans-unit>
+			<trans-unit id="tt_content.layout.1">
+				<target>Eingerückt Rechts</target>
+			</trans-unit>
+			<trans-unit id="tt_content.layout.2">
+				<target>Volle Breite</target>
+			</trans-unit>
 			<trans-unit id="tt_content.layout.4">
 				<target>Weite Laufweite</target>
 			</trans-unit>
+			<trans-unit id="tt_content.frame-class.0">
+				<target>Default</target>
+			</trans-unit>
+			<trans-unit id="tt_content.frame-class.1">
+				<target>Grau</target>
+			</trans-unit>
 			<trans-unit id="tt_content.frame-class.2">
-				<target>Blue</target>
+				<target>Blau</target>
 			</trans-unit>
 			<trans-unit id="tt_content.frame-class.3">
-				<target>Darkblue</target>
+				<target>Dunkelblau</target>
 			</trans-unit>
 			<trans-unit id="tt_content.wkhtmltopdf.enabled">
 				<source>Zeige einen PDF Printlink für die aktuelle Seite</source>

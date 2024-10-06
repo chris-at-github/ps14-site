@@ -16,11 +16,23 @@ TCEFORM {
 	}
 
 	tt_content {
+		layout {
+			altLabels {
+				1 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.layout.1
+				2 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.layout.2
+			}
+
+			removeItems = 3
+		}
+
 		frame_class {
 			addItems {
+				0 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.frame-class.0
+				1 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.frame-class.1
 				2 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.frame-class.2
 				3 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.frame-class.3
 			}
+			removeItems = default, primary, ruler-before, ruler-after, indent, indent-left, indent-right, none
 		}
 	}
 }
@@ -193,6 +205,16 @@ tx_powermail.flexForm.addField.settings\.flexform\.main\.cleverreach.config.item
 		space_before_class = auto
 		space_after_class = auto
 		layout = 4
+	}
+[END]
+
+[field('CType') === 'textmedia']
+	TCEFORM.tt_content {
+		layout {
+			addItems {
+				4 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.layout.4
+			}
+		}
 	}
 [END]
 
