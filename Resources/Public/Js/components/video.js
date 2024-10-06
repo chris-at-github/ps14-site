@@ -5,29 +5,6 @@
 	'use strict';
 
 	xna.on('documentLoaded', function() {
-
-		// document.addEventListener('scrolllock.toggle', function(event) {
-		//
-		// 	// Breite der Scrollbars ausrechnen
-		// 	let scrollbarWidth = window.innerWidth - document.body.clientWidth;
-		//
-		// 	if(document.body.classList.contains('is--scroll-lock') === true) {
-		// 		document.body.classList.remove('is--scroll-lock');
-		// 		xna.fireEvent('scrolllock.deactivate');
-		//
-		// 	} else {
-		// 		document.body.classList.add('is--scroll-lock');
-		// 		xna.fireEvent('scrolllock.activate', { scrollbarWidth: scrollbarWidth });
-		// 	}
-		// });
-
-		// // gesetzte Paddings (per Style-Attribute) entfernen
-		// document.addEventListener('scrolllock.deactivate', function(event) {
-		// 	document.querySelectorAll('.container-outer, .ce-frame--outer').forEach(function(node) {
-		// 		node.removeAttribute('style');
-		// 	});
-		// });
-
 		document.querySelectorAll('.video').forEach(function(container) {
 			const player = container.querySelector('.video__source');
 			const playButton = container.querySelector('.video__play-button');
