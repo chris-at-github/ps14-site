@@ -94,8 +94,12 @@ class CategoryTreeDataProvider extends AbstractDataProvider {
 				$row = $this->getFrontend()->sys_page->getRecordOverlay(
 					'sys_category',
 					$row,
-					$this->getLanguageAspect()->getContentId()
+					$this->getLanguageAspect()
 				);
+
+				if($row === null) {
+					continue;
+				}
 			}
 
 			// Identifier erstellen
