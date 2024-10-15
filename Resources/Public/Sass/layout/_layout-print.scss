@@ -1,0 +1,92 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Layout
+.hamburger, .off-canvas, #breadcrumb, #content--footer, .sticky--container, #footer {
+	display: none !important;
+}
+
+.page--layout-0, .page--layout-4, .page--layout-5 {
+	#header + .ce-content, #header + #breadcrumb + .ce-content {
+		.container-outer:first-child .container-inner, .ce-frame--outer:first-child > .ce-frame--inner {
+			padding-top: 15px !important;
+		}
+	}
+}
+
+.ce-frame--space-before-medium, .ce-frame--space-before-large {
+	.ce-frame--inner {
+		margin-top: 30px !important;
+	}
+}
+
+.ce-frame--space-after-medium, .ce-frame--space-after-large {
+	.ce-frame--inner {
+		margin-bottom: 30px !important;
+	}
+}
+
+.ce-frame--class-1, .ce-frame--class-2, .ce-frame--class-3 {
+	background: none !important;
+}
+
+.ce-frame--class-2, .ce-frame--class-3 {
+	&, a {
+		color: $font-color-base !important;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// XO print settings fields
+.print--break-before {
+	page-break-before: always;
+}
+
+.print--break-after {
+	page-break-after: always;
+}
+
+.print--visibility-hidden {
+	display: none !important;
+}
+
+.print--visibility-visible {
+	display: block !important;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Header
+.page-header {
+	& {
+		position: relative !important;
+	}
+
+	.is--sticky-header & {
+		border-bottom: 0;
+	}
+
+	.container-inner {
+		display: block !important;
+	}
+
+	.logo {
+		width: 208px;
+		height: 56px;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// HTML Elements | Basic Styles
+h1, .h1 {
+	margin-top: 40px !important;
+}
+
+table {
+	page-break-inside: avoid;
+}
+
+.link--cta {
+	display: none;
+}
+
+.tobii {
+	display: none !important;
+}
