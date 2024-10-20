@@ -5,9 +5,10 @@
 
 		document.querySelectorAll('.chart--line-chart').forEach(function(node) {
 			const identifier = node.getAttribute('data-identifier');
-			const settings = xna.settings.charts[identifier];
+			const data = xna.settings.charts[identifier].data;
+			const options = xna.settings.charts[identifier].options;
 
-			const animationDelay = 45;
+			const animationDelay = options.animationDelay;
 			const animations = {
 				x: {
 					type: 'number',
@@ -69,10 +70,10 @@
 								},
 								callbacks: {
 									title: function(context) {
-										var title = settings.axis.x.label + ': ' + context[0].label;
+										var title = data.axis.x.label + ': ' + context[0].label;
 
-										if(settings.axis.x.unit !== '') {
-											title += ' ' + settings.axis.x.unit;
+										if(data.axis.x.unit !== '') {
+											title += ' ' + data.axis.x.unit;
 										}
 
 										return title;
@@ -89,8 +90,8 @@
 												minimumFractionDigits: 2
 											}).format(context.parsed.y);
 
-											if(settings.axis.y.unit !== '') {
-												label += ' ' + settings.axis.y.unit;
+											if(data.axis.y.unit !== '') {
+												label += ' ' + data.axis.y.unit;
 											}
 										}
 
@@ -104,7 +105,7 @@
 								display: true,
 								title: {
 									display: true,
-									text: settings.axis.x.label + ' (' + settings.axis.x.unit + ')',
+									text: data.axis.x.label + ' (' + data.axis.x.unit + ')',
 									color: '#003865',
 									font: {
 										family: "'Carlito', 'Calibri', sans-serif",
@@ -129,7 +130,7 @@
 								display: true,
 								title: {
 									display: true,
-									text: settings.axis.y.label + ' (' + settings.axis.y.unit + ')',
+									text: data.axis.y.label + ' (' + data.axis.y.unit + ')',
 									color: '#003865',
 									font: {
 										family: "'Carlito', 'Calibri', sans-serif",
@@ -154,8 +155,12 @@
 				});
 
 				setTimeout(function() {
-					chart.data.labels = settings.labels;
-					chart.data.datasets = settings.datasets;
+					chart.data.labels = data.labels;
+					chart.data.datasets = data.datasets;
+
+					if(options.autoUpdate === true) {
+						chart.update();
+					}
 				}, 100);
 			}
 		});

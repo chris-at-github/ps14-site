@@ -118,23 +118,23 @@ $tx-chart--layout-default: true !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Print
-@include stylesheet-context($stylesheet-context-print) {
-	.chart--legend {
-		& {
-			flex: 0;
-			max-width: 100%;
-		}
-
-		.chart--legend-title {
-			margin-top: 0;
-		}
-
-		ul {
-			display: -webkit-box;
-		}
-	}
-
-	.chart--description {
-		display: none;
-	}
-}
+//@include stylesheet-context($stylesheet-context-print) {
+//	.chart--legend {
+//		& {
+//			flex: 0;
+//			max-width: 100%;
+//		}
+//
+//		.chart--legend-title {
+//			margin-top: 0;
+//		}
+//
+//		ul {
+//			display: -webkit-box;
+//		}
+//	}
+//
+//	.chart--description {
+//		display: none;
+//	}
+//}
