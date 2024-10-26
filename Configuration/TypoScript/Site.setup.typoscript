@@ -11,3 +11,5 @@
 @import 'EXT:ps14_site/Configuration/TypoScript/Modules/*.setup.typoscript'
 @import 'EXT:ps14_site/Configuration/TypoScript/Extensions/*.setup.typoscript'
 @import 'EXT:ps14_site/Configuration/TypoScript/Page/*.setup.typoscript'
+
+@import 'EXT:ps14_kist_pdf/Configuration/TypoScript/setup.typoscript'
