@@ -74,6 +74,9 @@
 			<trans-unit id="tt_content.frame-class.3">
 				<source>Darkblue</source>
 			</trans-unit>
+			<trans-unit id="tt_content.frame-class.4">
+				<source>Lightblue</source>
+			</trans-unit>
 			<trans-unit id="tt_content.wkhtmltopdf.enabled">
 				<source>Display PDF print link for current page</source>
 			</trans-unit>

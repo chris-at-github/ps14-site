@@ -182,6 +182,10 @@ p, ul, ol, table {
 	background: $theme-color-primary-dark;
 }
 
+%container-class-4 {
+	background: #eff2f6;
+}
+
 %container-class-2, %container-class-3 {
 	&, h3, a {
 		color: #fff;

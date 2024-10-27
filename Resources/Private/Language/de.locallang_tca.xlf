@@ -72,6 +72,9 @@
 			<trans-unit id="tt_content.frame-class.3">
 				<target>Dunkelblau</target>
 			</trans-unit>
+			<trans-unit id="tt_content.frame-class.4">
+				<target>Hellblau</target>
+			</trans-unit>
 			<trans-unit id="tt_content.wkhtmltopdf.enabled">
 				<source>Zeige einen PDF Printlink für die aktuelle Seite</source>
 			</trans-unit>

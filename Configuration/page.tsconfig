@@ -31,6 +31,7 @@ TCEFORM {
 				1 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.frame-class.1
 				2 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.frame-class.2
 				3 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.frame-class.3
+				4 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.frame-class.4
 			}
 			removeItems = default, primary, ruler-before, ruler-after, indent, indent-left, indent-right, none
 		}
