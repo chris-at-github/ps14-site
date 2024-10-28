@@ -191,6 +191,60 @@ $tx-contact--layout-search: true !default;
 	}
 }
 
+.ce-frame--class-4 {
+	.contact-search--form {
+		.form-field {
+			& {
+				border: 2px solid #a2b0bb;
+				background: #fff;
+			}
+
+			&:focus {
+				border-color: $theme-color-primary;
+			}
+
+			&[disabled] {
+				border-color: #dee2e7;
+				background: #dee2e7;
+			}
+		}
+	}
+
+	.contact-search--submit {
+		button {
+			&:before {
+				border-color: #dee2e7;
+				background: #dee2e7;
+			}
+
+			svg {
+				fill: #a2b0bb;
+			}
+
+			&:not([disabled]) {
+				&:before {
+					border-color: $theme-color-primary;
+					background: $theme-color-primary;
+				}
+
+				svg {
+					fill: #fff;
+				}
+			}
+
+			&:hover:not([disabled]), .focusable &:focus:not([disabled]) {
+				&:before {
+					background: #fff;
+				}
+
+				svg {
+					fill: $theme-color-primary;
+				}
+			}
+		}
+	}
+}
+
 .ce-frame--class-2 {
 	.contact-search--form {
 		.form-field {
