@@ -42,11 +42,11 @@ $iconfont-create-icon-class: false !default;
 	}
 }
 
-.ce-frame--class-1, .ce-frame--class-2, .ce-frame--class-3 {
+.ce-frame--class-1, .ce-frame--class-2, .ce-frame--class-3, .ce-frame--class-4 {
 	background: none !important;
 }
 
-.ce-frame--class-2, .ce-frame--class-3 {
+.ce-frame--class-2, .ce-frame--class-3, .ce-frame--class-4 {
 	&, a {
 		color: $font-color-base !important;
 	}
