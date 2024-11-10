@@ -126,15 +126,29 @@ $tx-product-key-fact--use-css: true !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Print
 @include stylesheet-context($stylesheet-context-print) {
-	.product--key-facts {
-		& {
-			display: block;
-			list-style-type: none;
+	.ce-entityproduct-keyfact {
+		.ce-frame--inner {
+			flex-direction: column;
+			margin-bottom: 0 !important;
 		}
 
-		& > li {
-			flex: 0;
-			max-width: 100%;
+		.product--key-facts-header {
+			h2, h3 {
+				width: 100% !important;
+				font-size: 22px !important;
+			}
+		}
+
+		.product--key-facts {
+			& {
+				width: 100%;
+				margin-top: 15px;
+			}
+
+			& > li svg {
+				width: 15px;
+				top: 6px;
+			}
 		}
 	}
 }

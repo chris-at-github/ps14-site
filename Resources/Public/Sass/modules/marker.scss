@@ -134,20 +134,17 @@ $ce-marker--layout-above: true !default;
 
 		.marker--legend {
 			& {
-				list-style-type: none;
-				margin: 0 !important;
-				padding: 0 !important;
+				//list-style-type: none;
+				//margin: 0 !important;
+				//padding: 0 !important;
 			}
 
 			.marker--legend-item {
-				margin: 0 !important;
-				padding: 30px 0 0 50px;
 				page-break-inside: avoid;
 			}
 
 			.marker--legend-item-index {
 				& {
-					top: 29px;
 					width: 32px;
 					height: 32px;
 					line-height: 32px;
@@ -158,23 +155,6 @@ $ce-marker--layout-above: true !default;
 					background: none;
 					color: #fff !important;
 				}
-			}
-		}
-	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// PDF
-@include stylesheet-context($stylesheet-context-pdf) {
-	.marker {
-		.marker--legend {
-			//	& {
-			//
-			//	}
-			//
-
-			.marker--legend-item-index:before {
-				top: -2px;
 			}
 		}
 	}

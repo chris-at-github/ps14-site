@@ -371,4 +371,9 @@ $tx-teaser-frontend--use-css: true !default;
 			}
 		}
 	}
+
+	.ce-entityproduct-teaser,
+	.ce-teaser-frontend--default {
+		display: none;
+	}
 }

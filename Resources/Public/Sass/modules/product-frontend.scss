@@ -894,18 +894,26 @@ $tx-product-frontend--layout-show: true !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Print
 @include stylesheet-context($stylesheet-context-print) {
-	.product--accordion {
-		& {
-			padding-top: 40px;
-		}
+	.product--variant-navigation {
+		display: none;
+	}
 
+	.product--accordion {
 		& > li {
 			margin-bottom: 60px;
 		}
+
+		.accordion--header button {
+			font-size: 22px !important;
+		}
 	}
 
-	.product--downloads, .product--related, .product--applications {
+	.product--downloads, .product--related, .product--applications, .product--media {
 		display: none;
+	}
+
+	.product--long-description {
+		page-break-before: always;
 	}
 
 	.product--technical-data {
@@ -915,6 +923,7 @@ $tx-product-frontend--layout-show: true !default;
 
 		table {
 			width: 100%;
+			font-size: 12px;
 		}
 	}
 
@@ -923,69 +932,91 @@ $tx-product-frontend--layout-show: true !default;
 	}
 
 	.product--technical-drawings {
+		& {
+			page-break-before: always;
+		}
+
 		.tab--container, .product--technical-drawing-enlarge {
 			display: none;
 		}
 
 		.tab--content {
-			@include clearfix();
-			margin-top: -45px;
+			//@include clearfix();
+			margin-top: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 45px;
 		}
 
 		.tab--pane {
-			float: left;
-			height: 345px;
-			max-width: 100%;
-			padding: 0 20px 0 0;
+			display: block !important;
+			opacity: 1 !important;
+			//float: left;
+			//height: 345px;
+			//max-width: 100%;
+			//padding: 0 20px 0 0;
 		}
 
 		.product--technical-drawing {
 			& {
 				margin: 0;
-				padding: 45px 0 0 0;
 				display: block !important;
-				line-height: 300px;
+				pointer-events: none;
 			}
 
 			img {
-				display: inline-block;
-				max-height: 300px !important;
+				display: block;
+				max-height: 415px !important;
+				//display: inline-block;
+				//
 			}
 		}
 	}
 
-	//.product--air-consumption {
-	//	& {
-	//		page-break-inside: avoid;
-	//	}
-	//
-	//	.chart {
-	//		display: block;
-	//	}
-	//
-	//	.chart--container {
-	//		padding-top: 20px;
-	//		flex: 0;
-	//		max-width: 100%;
-	//		height: 425px;
-	//	}
-	//
-	//	//.chart--canvas {
-	//	//	display: none !important;
-	//	//}
-	//	//
-	//	//.product--air-consumption-fallback-media {
-	//	//	display: block;
-	//	//	width: 700px;
-	//	//	height: 425px;
-	//	//}
-	//}
+	.product--air-consumption {
+		& {
+			page-break-inside: avoid;
+		}
 
-	.product--system-installation {
+		.chart {
+			display: block;
+		}
+
+		.chart--legend {
+			& {
+				max-width: 100%;
+			}
+
+			ul {
+				flex-direction: row;
+			}
+
+			.chart--legend-item-color {
+				top: 6px;
+			}
+		}
+
+		.chart--container {
+			max-width: 760px;
+			height: 425px;
+			margin: 20px 0 0 0;
+		}
+
+	}
+
+	.product--system-installation,
+	.product--options {
 		page-break-inside: avoid;
 	}
 
-	//.product--technical-features {
+	.product--technical-features {
+		.technical-feature {
+			&__title {
+				&, h1, h2, h3, h4, h5 {
+					font-size: rem(18px);
+				}
+			}
+		}
 	//	.technical-features--listing {
 	//		display: block;
 	//		margin-top: -20px;
@@ -1014,5 +1045,5 @@ $tx-product-frontend--layout-show: true !default;
 	//	.technical-feature--title {
 	//		margin-top: 0;
 	//	}
-	//}
+	}
 }
