@@ -326,54 +326,54 @@ $tx-teaser-frontend--use-css: true !default;
 		}
 	}
 
-	.ce-teaser-frontend--technology {
-		.row {
-			display: block;
-		}
+	//.ce-teaser-frontend--technology {
+	//	.row {
+	//		display: block;
+	//	}
+	//
+	//	[class*="col-"] {
+	//		flex: 0 0 100%;
+	//		max-width: 100%;
+	//	}
+	//
+	//	&.ce-frame--variant-1 {
+	//		.ce-frame--inner {
+	//			& {
+	//				border-radius: 0;
+	//				color: $font-color-base;
+	//			}
+	//
+	//			&:before {
+	//				display: none;
+	//			}
+	//		}
+	//
+	//		.teaser--body {
+	//			padding-left: 0;
+	//			padding-right: 0;
+	//		}
+	//
+	//		.teaser--title {
+	//			&, a, strong {
+	//				color: $font-color-base;
+	//			}
+	//		}
+	//
+	//		.teaser--media {
+	//			& {
+	//				height: auto;
+	//			}
+	//
+	//			img {
+	//				object-fit: initial;
+	//				height: auto;
+	//			}
+	//		}
+	//	}
+	//}
 
-		[class*="col-"] {
-			flex: 0 0 100%;
-			max-width: 100%;
-		}
-
-		&.ce-frame--variant-1 {
-			.ce-frame--inner {
-				& {
-					border-radius: 0;
-					color: $font-color-base;
-				}
-
-				&:before {
-					display: none;
-				}
-			}
-
-			.teaser--body {
-				padding-left: 0;
-				padding-right: 0;
-			}
-
-			.teaser--title {
-				&, a, strong {
-					color: $font-color-base;
-				}
-			}
-
-			.teaser--media {
-				& {
-					height: auto;
-				}
-
-				img {
-					object-fit: initial;
-					height: auto;
-				}
-			}
-		}
-	}
-
-	.ce-entityproduct-teaser,
-	.ce-teaser-frontend--default {
-		display: none;
-	}
+	//.ce-entityproduct-teaser,
+	//.ce-teaser-frontend--default {
+	//	display: none;
+	//}
 }
