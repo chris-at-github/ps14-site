@@ -6,6 +6,9 @@
 			<trans-unit id="tt_content.hue.secondary-100">
 				<source>Beige (Dark)</source>
 			</trans-unit>
+			<trans-unit id="tt_content.hue.primary-600">
+				<source>Red (Primary)</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
