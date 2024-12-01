@@ -3,11 +3,14 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2024-11-28T23:00:00Z" product-name="ps14_site">
 		<header/>
 		<body>
+			<trans-unit id="tt_content.hue.primary-600">
+				<source>Red (Primary)</source>
+			</trans-unit>
 			<trans-unit id="tt_content.hue.secondary-100">
 				<source>Beige (Dark)</source>
 			</trans-unit>
-			<trans-unit id="tt_content.hue.primary-600">
-				<source>Red (Primary)</source>
+			<trans-unit id="tt_content.hue.secondary-800">
+				<source>Brown (Dark)</source>
 			</trans-unit>
 		</body>
 	</file>
