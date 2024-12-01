@@ -1,1 +1,12 @@
 @import 'EXT:ps14_foundation/Configuration/TSConfig/Page.tsconfig'
+
+TCEFORM {
+	tt_content {
+		frame_class {
+			removeItems = ruler-before, ruler-after, indent, indent-left, indent-right, none, primary
+			addItems {
+				secondary-100 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.hue.secondary-100
+			}
+		}
+	}
+}
