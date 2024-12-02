@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<f:if condition="{address.address}">
+			<div class="address__item address__item--street">{address.address}</div>
+		</f:if>
+		<f:if condition="{address.zip} && {address.city}">
+			<div class="address__item-group address__item-group--zip-city">
+				<span class="address__item address__item--zip">{address.zip}</span>
+				<span class="address__item address__item--city">{address.city}</span>
+			</div>
+		</f:if>
+		<f:render partial="Components/Address" section="GoogleMapsLink" arguments="{_all}" />
+	</f:section>
+</html>

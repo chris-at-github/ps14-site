@@ -1,0 +1,27 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Theme
+@import "../../../../../ps14_theme/Resources/Public/Sass/modules/address";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Module (Default)
+.ce-address-record--default {
+	.ce-address-record__body {
+		border-radius: var(--border-radius-medium);
+	}
+
+ 	.address {
+		padding: var(--spacing-500);
+	}
+
+	.address__header {
+		--header-2-font-size: var(--font-size-400);
+		--header-font-weight: var(--font-weight-semibold);
+	}
+
+	.address__item {
+		&--street,
+		&--google-maps-link {
+			margin-top: var(--spacing-400);
+		}
+	}
+}

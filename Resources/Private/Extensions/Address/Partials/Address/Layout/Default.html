@@ -1,0 +1,45 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<div class="ce-address-record__body hue-container hue-container--primary-600">
+			<address class="address ce-bodytext">
+				<f:if condition="{settings.display.name} == 1">
+					<f:render partial="Components/Address" section="Name" arguments="{_all}" />
+				</f:if>
+
+				<div class="address__header">
+					<f:render partial="Header/Header" arguments="{header: record.header, layout: record.header_layout}" />
+				</div>
+
+				<f:if condition="{settings.display.description} == 1">
+					<f:render partial="Components/Address" section="Description" arguments="{_all}" />
+				</f:if>
+
+				<f:if condition="{settings.display.location} == 1">
+					<div class="address__item-group">
+						<f:render partial="Components/Address" section="Location" arguments="{_all}" />
+					</div>
+				</f:if>
+
+				<f:if condition="{settings.display.contact} == 1">
+					<f:render partial="Components/Address" section="Contact" arguments="{_all}" />
+				</f:if>
+
+				<f:if condition="{settings.display.openingHours} == 1">
+					<f:render partial="Components/Address" section="OpeningHours" arguments="{_all}" />
+				</f:if>
+
+				<f:if condition="{settings.display.description} == 1">
+					<f:render partial="Components/Address" section="AdditionalDescription" arguments="{_all}" />
+				</f:if>
+
+				<f:if condition="{settings.display.image} == 1">
+					<f:render partial="Components/Address" section="Image" arguments="{_all}" />
+				</f:if>
+
+				<f:if condition="{settings.structuredDataType} == 'localBusiness'">
+					<fo:jsonLd.localBusiness address="{address}" openingHoursCategory="{settings.structuredDataOpeningHoursCategory}" />
+				</f:if>
+			</address>
+		</div>
+	</f:section>
+</html>
