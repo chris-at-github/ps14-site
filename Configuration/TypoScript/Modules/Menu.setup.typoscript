@@ -3,3 +3,14 @@ tt_content.menu_pages.dataProcessing {
 		includeNotInMenu = 1
 	}
 }
+
+tt_content.menu_subpages.dataProcessing {
+
+	// Verschieben des Processors auf eine hoehere Position -> damit Flexforms (= Position 90) bereits ausgewertet wurden
+	10 >
+	200 = Ps14\Site\DataProcessing\MenuProcessor
+	200 {
+		special = directory
+		special.value.field = pages
+	}
+}

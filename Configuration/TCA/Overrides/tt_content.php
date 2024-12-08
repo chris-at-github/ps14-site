@@ -49,6 +49,17 @@
 
 	$GLOBALS['TCA']['tt_content']['types']['ps14_downloads']['columnsOverrides']['tx_site_wkhtmltopdf_enabled']['onChange'] = 'reload';
 
+	// ---------------------------------------------------------------------------------------------------------------------
+	// Menu Subpages
+	// Flexform
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+		'*',
+		'FILE:EXT:ps14_site/Configuration/FlexForms/Modules/MenuSubpages.xml',
+		'menu_subpages'
+	);
+
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'pi_flexform', 'menu_subpages', 'after:pages');
+
 
 	/*
 

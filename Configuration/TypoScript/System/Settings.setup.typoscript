@@ -4,3 +4,12 @@ plugin.tx_ps14foundation.settings {
 		individualProduct = {$pages.individualProduct}
 	}
 }
+
+plugin.tx_ps14site_menusubpages.settings {
+	sorting {
+		default = LLL:EXT:ps14_site/Resources/Private/Language/locallang_plugin.xlf:menu-subpages.flexform.sorting.default
+		title = LLL:EXT:ps14_site/Resources/Private/Language/locallang_plugin.xlf:menu-subpages.flexform.sorting.title
+	}
+}
+
+module.tx_ps14site_menusubpages.settings < plugin.tx_ps14site_menusubpages.settings

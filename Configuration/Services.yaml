@@ -6,3 +6,6 @@ services:
 
   Ps14\Site\:
     resource: '../Classes/*'
+
+  Ps14\Site\DataProcessing\MenuProcessor:
+    public: true

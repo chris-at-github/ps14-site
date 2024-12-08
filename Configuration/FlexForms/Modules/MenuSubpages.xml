@@ -1,0 +1,32 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<main>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:ps14_site/Resources/Private/Language/locallang_plugin.xlf:flexform.sheet.main</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.sorting type="array">
+						<TCEforms>
+							<label>LLL:EXT:ps14_site/Resources/Private/Language/locallang_plugin.xlf:menu-subpages.flexform.sorting</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<itemsProcFunc>Ps14\Foundation\Service\TcaService->getItemsBySettingsIdentifier</itemsProcFunc>
+								<itemsProcConfig>
+									<extension>Ps14Site</extension>
+									<plugin>menusubpages</plugin>
+									<identifier>sorting</identifier>
+								</itemsProcConfig>
+							</config>
+						</TCEforms>
+					</settings.sorting>
+				</el>
+			</ROOT>
+		</main>
+	</sheets>
+</T3DataStructure>
