@@ -4,7 +4,7 @@
 	<f:if condition="{pages -> f:count()} == 1">
 		<f:then>
 			<f:for each="{pages}" as="page">
-				<div class="row teaser teaser--layout-aside teaser--layout-technology">
+				<div class="teaser teaser--layout-aside teaser--layout-technology">
 					<f:render section="Item" arguments="{page: page, settings: settings}" />
 				</div>
 			</f:for>
@@ -12,7 +12,7 @@
 		<f:else>
 			<ul class="teaser--container">
 				<f:for each="{pages}" as="page">
-					<li class="row teaser teaser--layout-aside teaser--layout-technology">
+					<li class="teaser teaser--layout-aside teaser--layout-technology">
 						<f:render section="Item" arguments="{page: page, settings: settings}" />
 					</li>
 				</f:for>
@@ -22,6 +22,26 @@
 </f:section>
 
 <f:section name="Item">
+	<div class="teaser--media">
+		<f:render partial="Teaser/Layout/Aside" section="Media" arguments="{page: page, settings: settings: '{fo:settings.get(extension: \'Ps14Teaser\', path: \'media.aside\')}'}" />
+	</div>
+
+	<div class="teaser--body">
+		<header class="teaser--title ce-header ce-header--layout-2">
+			<h2>
+				<f:link.page pageUid="{page.uid}">
+					<span class="teaser--title-prefix"><f:translate key="LLL:EXT:ps14_site/Resources/Private/Language/locallang_frontend.xlf:teaser.technology.title-prefix" /></span>
+					<strong class="teaser--title-main">{page.teaserTitle}</strong>
+				</f:link.page>
+			</h2>
+		</header>
+
+		<f:render partial="Teaser/Layout/Aside" section="Abstract" arguments="{page: page, settings: settings}" />
+		<f:link.page class="link--cta teaser--readmore" pageUid="{page.uid}" tabindex="-1"><f:translate key="LLL:EXT:ps14_site/Resources/Private/Language/locallang_frontend.xlf:teaser.technology.readmore" /></f:link.page>
+	</div>
+</f:section>
+
+<f:section name="Item-X">
 	<div class="col-12 col-md-6">
 		<f:render partial="Teaser/Layout/Aside" section="MediaContainer" arguments="{page: page, settings: settings: '{fo:settings.get(extension: \'Ps14Teaser\', path: \'media.aside\')}'}" />
 	</div>

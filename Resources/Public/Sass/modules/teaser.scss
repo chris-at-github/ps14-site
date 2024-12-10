@@ -134,19 +134,59 @@ $tx-teaser-frontend--use-css: true !default;
 	}
 
 	.teaser--layout-technology {
+		& {
+			display: grid;
+			grid-gap: rem(24px);
+			grid-template-columns: 1fr;
+			padding-left: rem(15px);
+			padding-right: rem(15px);
+		}
+
 		.teaser--title {
 			&, h1, h2, h3, h4 {
 				font-size: rem(23px);
 			}
 
-			a {
-				color: $color-grey-darken;
+			&-prefix {
+				display: block;
+				font-size: rem(18px);
+				font-weight: $font-weight-bold;
+				color: $theme-color-primary;
+				text-transform: uppercase;
 			}
 
-			strong {
+			&-main {
+				font-size: rem(40px);
 				font-weight: normal;
-				color: $theme-color-primary;
+				color: $font-color-base;
 			}
+
+			a {
+				& {
+					display: block;
+				}
+
+				&:hover, .focusable &:focus {
+					& {
+						background-size: 0;
+					}
+
+					.teaser--title-main {
+						color: $theme-color-primary;
+					}
+				}
+			}
+		}
+
+		.teaser--media {
+			.media-container {
+				max-width: rem(550px);
+				margin: 0 auto;
+			}
+		}
+
+		.teaser--readmore {
+			margin-top: rem(25px);
 		}
 	}
 
@@ -251,6 +291,16 @@ $tx-teaser-frontend--use-css: true !default;
 				grid-column-gap: rem(30px);
 			}
 		}
+
+		.teaser--layout-technology {
+			& {
+				grid-gap: rem(32px);
+			}
+
+			.teaser--title-main {
+				font-size: rem(48px);
+			}
+		}
 	}
 
 	// ---------------------------------------------------------------------------------------------------------------------
@@ -274,8 +324,9 @@ $tx-teaser-frontend--use-css: true !default;
 		}
 
 		.teaser--layout-technology {
-			.media-container {
-				height: 100%;
+			& {
+				padding-left: rem(30px);
+				padding-right: rem(30px);
 			}
 		}
 
@@ -313,6 +364,58 @@ $tx-teaser-frontend--use-css: true !default;
 		.teaser--layout-aside-reverse {
 			.teaser--body {
 				padding-left: 0;
+				padding-right: rem(30px);
+			}
+		}
+
+		.teaser--layout-technology {
+			& {
+				grid-gap: 0;
+				grid-template-columns: repeat(12, 1fr);
+				min-height: rem(550px);
+			}
+
+			.teaser--media {
+				& {
+					grid-column: 1 / span 8; /* Startet in Spalte 1 und geht über 8 Spalten */
+					grid-row: 1; /* In der ersten Zeile */
+					align-self: end
+				}
+
+				.media-container {
+					max-width: inherit;
+					margin: 0;
+				}
+			}
+
+			.teaser--body {
+				grid-column: 8 / span 5; /* Startet in Spalte 4 und geht über 5 Spalten */
+				grid-row: 1; /* Gleiche Zeile wie der erste Container */
+				align-self: start
+			}
+		}
+	}
+
+	// ---------------------------------------------------------------------------------------------------------------------
+	// >= 1200px
+	@include media-breakpoint-up(xl) {
+		.teaser--layout-technology {
+			& {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.teaser--title {
+				&-main {
+					font-size: rem(64px);
+				}
+
+				& + p {
+					margin-top: rem(25px);
+				}
+			}
+
+			.teaser--body {
 				padding-right: rem(30px);
 			}
 		}
