@@ -23,7 +23,12 @@
 
 <f:section name="Item">
 	<div class="teaser--media">
-		<f:render partial="Teaser/Layout/Aside" section="Media" arguments="{page: page, settings: settings: '{fo:settings.get(extension: \'Ps14Teaser\', path: \'media.aside\')}'}" />
+		<f:if condition="{page.teaserMediaLarge}">
+			<f:render partial="Media/Main" section="Main" arguments="{
+			file: page.teaserMediaLarge.originalResource,
+			settings: '{fo:settings.get(extension: \'Ps14Teaser\', path: \'media.aside\')}'
+		}" />
+		</f:if>
 	</div>
 
 	<div class="teaser--body">
