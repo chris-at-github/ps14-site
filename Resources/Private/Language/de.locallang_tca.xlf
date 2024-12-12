@@ -46,7 +46,7 @@
 				<target>Grauer Container / Transparente Bilder (Technologie)</target>
 			</trans-unit>
 			<trans-unit id="tt_content.variant.teaser.1">
-				<target>Blau (Technologie)</target>
+				<target>Technologie</target>
 			</trans-unit>
 			<trans-unit id="tt_content.variant.powermail.1">
 				<target>Newsletter</target>

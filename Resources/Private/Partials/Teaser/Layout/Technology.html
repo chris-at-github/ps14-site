@@ -4,7 +4,7 @@
 	<f:if condition="{pages -> f:count()} == 1">
 		<f:then>
 			<f:for each="{pages}" as="page">
-				<div class="teaser teaser--layout-aside teaser--layout-technology">
+				<div class="teaser teaser--layout-technology">
 					<f:render section="Item" arguments="{page: page, settings: settings}" />
 				</div>
 			</f:for>
@@ -12,7 +12,7 @@
 		<f:else>
 			<ul class="teaser--container">
 				<f:for each="{pages}" as="page">
-					<li class="teaser teaser--layout-aside teaser--layout-technology">
+					<li class="teaser teaser--layout-technology">
 						<f:render section="Item" arguments="{page: page, settings: settings}" />
 					</li>
 				</f:for>
@@ -26,7 +26,7 @@
 		<f:if condition="{page.teaserMediaLarge}">
 			<f:render partial="Media/Main" section="Main" arguments="{
 			file: page.teaserMediaLarge.originalResource,
-			settings: '{fo:settings.get(extension: \'Ps14Teaser\', path: \'media.aside\')}'
+			settings: '{fo:settings.get(extension: \'Ps14Teaser\', path: \'media.technology\')}'
 		}" />
 		</f:if>
 	</div>

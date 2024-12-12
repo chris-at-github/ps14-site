@@ -238,6 +238,12 @@ tx_powermail.flexForm.addField.settings\.flexform\.main\.cleverreach.config.item
 	}
 
 	TCEFORM.tt_content {
+		layout {
+			addItems {
+				4 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.layout.4
+			}
+		}
+
 		tx_foundation_variant {
 			addItems {
 				1 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.variant.teaser.1

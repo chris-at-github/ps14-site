@@ -190,50 +190,50 @@ $tx-teaser-frontend--use-css: true !default;
 		}
 	}
 
-	.ce-teaser-frontend.ce-frame--variant-1 {
-		.ce-frame--inner {
-			& {
-				position: relative;
-				border-radius: $border-radius-default;
-				color: #fff;
-				overflow: hidden;
-			}
-
-			&:before {
-				content: '';
-				position: absolute;
-				top: 5px; bottom: 0;
-				left: 0; right: 0;
-				background: $theme-color-primary;
-			}
-		}
-
-		.teaser--body {
-			padding: rem(15px 15px 45px 15px);
-		}
-
-		.teaser--title {
-			a, strong {
-				color: #fff;
-			}
-		}
-
-		.teaser--media {
-			& {
-				height: 100%;
-				border-radius: 0;
-			}
-
-			img {
-				height: 100%;
-				object-fit: cover;
-			}
-		}
-
-		.link--cta {
-			@extend %button--inverted;
-		}
-	}
+	//.ce-teaser-frontend.ce-frame--variant-1 {
+	//	.ce-frame--inner {
+	//		& {
+	//			position: relative;
+	//			border-radius: $border-radius-default;
+	//			color: #fff;
+	//			overflow: hidden;
+	//		}
+	//
+	//		&:before {
+	//			content: '';
+	//			position: absolute;
+	//			top: 5px; bottom: 0;
+	//			left: 0; right: 0;
+	//			background: $theme-color-primary;
+	//		}
+	//	}
+	//
+	//	.teaser--body {
+	//		padding: rem(15px 15px 45px 15px);
+	//	}
+	//
+	//	.teaser--title {
+	//		a, strong {
+	//			color: #fff;
+	//		}
+	//	}
+	//
+	//	.teaser--media {
+	//		& {
+	//			height: 100%;
+	//			border-radius: 0;
+	//		}
+	//
+	//		img {
+	//			height: 100%;
+	//			object-fit: cover;
+	//		}
+	//	}
+	//
+	//	.link--cta {
+	//		@extend %button--inverted;
+	//	}
+	//}
 
 	.ce-teaser-frontend.ce-frame--variant-2 {
 		.card--media {
@@ -330,22 +330,22 @@ $tx-teaser-frontend--use-css: true !default;
 			}
 		}
 
-		.ce-teaser-frontend.ce-frame--variant-1 {
-			.ce-frame--inner {
-				&:before {
-					top: 0; left: 5px;
-				}
-			}
-
-			.teaser--body {
-				padding-top: rem(25px);
-				padding-bottom: rem(55px);
-			}
-
-			.link--cta {
-				margin-top: rem(35px);
-			}
-		}
+		//.ce-teaser-frontend.ce-frame--variant-1 {
+		//	.ce-frame--inner {
+		//		&:before {
+		//			top: 0; left: 5px;
+		//		}
+		//	}
+		//
+		//	.teaser--body {
+		//		padding-top: rem(25px);
+		//		padding-bottom: rem(55px);
+		//	}
+		//
+		//	.link--cta {
+		//		margin-top: rem(35px);
+		//	}
+		//}
 	}
 
 	// ---------------------------------------------------------------------------------------------------------------------
