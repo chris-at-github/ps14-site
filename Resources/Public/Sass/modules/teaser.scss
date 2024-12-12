@@ -429,6 +429,47 @@ $tx-teaser-frontend--use-css: true !default;
 		}
 	}
 
+	.teaser--layout-technology {
+		& {
+			grid-gap: 0;
+			grid-template-columns: repeat(12, 1fr);
+			min-height: rem(375px);
+		}
+
+		.teaser--media {
+			& {
+				grid-column: 1 / span 7; /* Startet in Spalte 1 und geht über 8 Spalten */
+				grid-row: 1; /* In der ersten Zeile */
+				align-self: end
+			}
+
+			.media-container {
+				max-width: inherit;
+				margin: 0;
+			}
+		}
+
+		.teaser--title {
+			& {
+				font-size: rem(15px);
+			}
+
+			&-prefix {
+				font-size: rem(14px);
+			}
+
+			&-main {
+				font-size: rem(40px);
+			}
+		}
+
+		.teaser--body {
+			grid-column: 7 / span 6; /* Startet in Spalte 4 und geht über 5 Spalten */
+			grid-row: 1; /* Gleiche Zeile wie der erste Container */
+			align-self: start
+		}
+	}
+
 	//.ce-teaser-frontend--technology {
 	//	.row {
 	//		display: block;
