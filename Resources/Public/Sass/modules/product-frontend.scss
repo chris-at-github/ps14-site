@@ -908,7 +908,7 @@ $tx-product-frontend--layout-show: true !default;
 		}
 	}
 
-	.product--downloads, .product--related, .product--applications, .product--media {
+	.product--downloads, .product--applications, .product--media {
 		display: none;
 	}
 
@@ -1045,5 +1045,25 @@ $tx-product-frontend--layout-show: true !default;
 	//	.technical-feature--title {
 	//		margin-top: 0;
 	//	}
+	}
+
+	.product--related {
+		.card--title {
+			& {
+				pointer-events: none;
+			}
+
+			span:after {
+				display: none;
+			}
+		}
+
+		.readmore-container--toggle {
+			display: none;
+		}
+
+		.readmore-container .card:nth-child(1n+3) {
+			display: flex;
+		}
 	}
 }

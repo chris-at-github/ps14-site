@@ -49,3 +49,17 @@
 		}
 	}
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Print
+@include stylesheet-context($stylesheet-context-print) {
+	.readmore-container {
+		.readmore-container--toggle {
+			display: none;
+		}
+
+		.card {
+			display: flex !important;
+		}
+	}
+}

@@ -476,3 +476,17 @@ a.card--title, .card--title > a {
 		}
 	}
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Print
+@include stylesheet-context($stylesheet-context-print) {
+	a.card--title {
+		& {
+			pointer-events: none;
+		}
+
+		span:after {
+			display: none;
+		}
+	}
+}
