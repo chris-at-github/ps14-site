@@ -1,7 +1,10 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:section name="Container">
 	<div class="sticky--container">
-		<f:render section="PrintPdf" arguments="{_all}" />
+		<f:if condition="{data.tx_site_disable_sticky_pdf} == 0">
+			<f:render section="PrintPdf" arguments="{_all}" />
+		</f:if>
+
 		<f:render section="Contact" arguments="{settings: '{fo:settings.get(extension: \'Ps14Foundation\')}'}" />
 		<f:render section="ToTop" arguments="{_all}" />
 	</div>

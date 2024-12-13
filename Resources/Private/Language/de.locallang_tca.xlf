@@ -38,6 +38,9 @@
 			<trans-unit id="pages.navigation-layout.card">
 				<target>Card</target>
 			</trans-unit>
+			<trans-unit id="pages.disable-sticky.pdf">
+				<target>PDF Druck ausblenden</target>
+			</trans-unit>
 
 			<trans-unit id="tt_content.variant.menu.1">
 				<target>Links mit Pfeilchen</target>

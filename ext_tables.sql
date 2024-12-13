@@ -1,4 +1,11 @@
 #
+# Extend Pages
+#
+CREATE TABLE pages (
+	tx_site_disable_sticky_pdf smallint(5) unsigned DEFAULT '0' NOT NULL
+);
+
+#
 # Extend TtContent
 #
 CREATE TABLE tt_content (
