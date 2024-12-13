@@ -423,6 +423,11 @@ $tx-teaser-frontend--use-css: true !default;
 }
 
 @include stylesheet-context($stylesheet-context-print) {
+	.ce-teaser-frontend,
+	.ce-entityproduct-teaser {
+		page-break-inside: avoid;
+	}
+
 	.teaser--layout-aside {
 		.teaser--media {
 			border-radius: 0;

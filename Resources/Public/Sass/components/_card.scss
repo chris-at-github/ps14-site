@@ -480,6 +480,12 @@ a.card--title, .card--title > a {
 // ---------------------------------------------------------------------------------------------------------------------
 // Print
 @include stylesheet-context($stylesheet-context-print) {
+	.card {
+		break-inside: avoid;
+		page-break-inside: avoid;
+		min-height: rem(240px);
+	}
+
 	a.card--title {
 		& {
 			pointer-events: none;
