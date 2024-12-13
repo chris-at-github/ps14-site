@@ -1,0 +1,285 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Global
+@import "../../../../../ps14_theme/Resources/Public/Sass/variables";
+@import "../../../../../ps14_theme/Resources/Public/Sass/functions";
+@import "../../../../../ps14_theme/Resources/Public/Sass/mixins";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Variablen
+$ps14-icon-text--use-css: true !default;
+$ps14-icon-text--layout-vertical: false !default;
+$ps14-icon-text--layout-horizontal: false !default;
+$ps14-icon-text--layout-inline: false !default;
+
+@if($ps14-icon-text--use-css) {
+
+	:root {
+		--icon-text__size: #{rem(40px)};
+		--icon-text__icon-color: currentColor;
+		--icon-text__header-font-size: #{rem(20px)};
+	}
+
+	// -------------------------------------------------------------------------------------------------------------------
+	// Icon Text Component
+	.icon-text {
+		.icon-text--icon-container {
+			& {
+				position: relative;
+				width: var(--icon-text__size);
+				height: var(--icon-text__size);
+			}
+
+			& + .icon-text--title {
+				margin: rem(20px 0 0 0);
+			}
+		}
+
+		.icon-text--icon {
+			display: flex;
+			width: var(--icon-text__size);
+			height: var(--icon-text__size);
+			fill: var(--icon-text__icon-color);
+		}
+
+		.icon-text--title {
+			&, a, h1, h2, h3, h4, h5, h6 {
+				margin: rem(3px 0 0 0);
+				line-height: 1.4;
+				font-size: var(--icon-text__header-font-size);
+				font-weight: var(--font-weight-semibold);
+				color: var(--color-font);
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				margin: 0;
+			}
+
+			a {
+				&:hover {
+					text-decoration: none;
+				}
+
+				&:hover, .focusable &:focus {
+					color: var(--link__color-active);
+				}
+			}
+		}
+
+		.icon-text--body {
+			& {
+				margin: rem(5px 0 0 0);
+			}
+
+			p, ul {
+				margin: rem(5px 0 0 0);
+			}
+		}
+
+		&[data-uri-target]:hover {
+			&, a, h1, h2, h3, h4, h5, h6 {
+				cursor: pointer;
+				color: var(--link__color-active);
+				text-decoration: none;
+			}
+
+			svg {
+				fill: var(--link__color-active);
+			}
+		}
+	}
+
+	// -------------------------------------------------------------------------------------------------------------------
+	// Icon Text Modul
+	.ce-icon-text {
+		.icon-text--container {
+			margin-top: var(--html-element__spacing-default);
+		}
+
+		.icon-text {
+			display: flex;
+		}
+	}
+
+	.ce-icon-text--center {
+		.icon-text {
+			text-align: center;
+		}
+
+		.icon-text--icon-container {
+			margin: 0 auto;
+		}
+
+		.icon-text--icon {
+			justify-content: center;
+		}
+	}
+
+	// -------------------------------------------------------------------------------------------------------------------
+	// Horizontale Darstellung
+	@if($ps14-icon-text--layout-horizontal) {
+		.ce-icon-text--horizontal {
+			.icon-text {
+				display: flex;
+			}
+
+			.icon-text--icon-container {
+				width: rem(105px);
+				min-width: rem(105px);
+			}
+		}
+	}
+
+	// -------------------------------------------------------------------------------------------------------------------
+	// Inline Darstellung
+	@if($ps14-icon-text--layout-inline) {
+		.ce-icon-text--inline {
+			.icon-text {
+				width: auto;
+				max-width: rem(205px);
+			}
+
+			.icon-text--icon {
+				align-items: flex-end;
+			}
+		}
+	}
+
+	// -------------------------------------------------------------------------------------------------------------------
+	// Vertikale Darstellung
+	@if($ps14-icon-text--layout-vertical) {
+		.ce-icon-text--inline {
+			.icon-text--icon {
+				align-items: flex-end;
+			}
+		}
+	}
+
+	// -------------------------------------------------------------------------------------------------------------------
+	// >= 576px
+	@include media-breakpoint-up(sm) {
+		@if($ps14-icon-text--layout-vertical) {
+			.ce-icon-text--vertical {
+				.icon-text {
+					// @include make-col(6);
+				}
+			}
+		}
+	}
+
+	// -------------------------------------------------------------------------------------------------------------------
+	// >= 768px
+	@include media-breakpoint-up(md) {
+		.ce-icon-text {
+			.icon-text {
+				margin-top: rem(30px);
+			}
+		}
+
+		@if($ps14-icon-text--layout-vertical) {
+			.ce-icon-text--vertical {
+				.icon-text {
+					// @include make-col(4);
+				}
+			}
+		}
+
+		@if($ps14-icon-text--layout-horizontal) {
+			.ce-icon-text--horizontal {
+				.icon-text {
+					// @include make-col(6);
+				}
+
+				.icon-text--content {
+					padding: rem(0 20px 0 0);
+				}
+			}
+		}
+	}
+
+	// -------------------------------------------------------------------------------------------------------------------
+	// >= 992px
+	@include media-breakpoint-up(lg) {
+		@if($ps14-icon-text--layout-horizontal) {
+			.ce-icon-text--horizontal {
+				.icon-text--content {
+					padding: rem(0 30px 0 0);
+				}
+			}
+		}
+
+	}
+}
+
+:root {
+	--icon-text__size: #{rem(35px)};
+	--icon-text__icon-color: var(--color__primary);;
+	--icon-text__header-font-size: #{rem(15px)};
+}
+
+.icon-text {
+	& {
+		align-items: center;
+	}
+
+	.icon-text--icon-container {
+		& {
+			margin-right: rem(15px);
+		}
+
+		& + .icon-text--title {
+			margin: rem(5px 0 0 0);
+		}
+	}
+
+	.icon-text--title {
+		&, a, h1, h2, h3, h4, h5, h6 {
+			line-height: 1.5;
+		}
+	}
+}
+
+.icon-text--container {
+	display: grid;
+	gap: 20px
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+// >= 576px
+@include media-breakpoint-up(sm) {
+	.icon-text--container {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(md) {
+	.icon-text--container {
+		grid-template-columns: 1fr;
+	}
+
+	.ce-icon-text {
+		.icon-text {
+			margin-top: 0;
+		}
+	}
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+// >= 992px
+@include media-breakpoint-up(lg) {
+	.icon-text--container {
+		grid-template-columns: 1fr 1fr;
+		column-gap: 30px;
+	}
+
+	.icon-text {
+		& {
+			align-items: flex-start;
+		}
+
+		.icon-text--icon-container {
+			margin-top: rem(10px);
+		}
+	}
+}
