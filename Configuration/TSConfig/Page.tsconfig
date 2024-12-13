@@ -12,3 +12,15 @@ TCEFORM {
 		}
 	}
 }
+
+[field('CType') === 'ps14_icon_text']
+	TCEFORM {
+		tt_content {
+			tx_foundation_variant {
+				addItems {
+					media-left = Media Left
+				}
+			}
+		}
+	}
+[END]

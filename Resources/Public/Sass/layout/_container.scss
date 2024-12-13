@@ -1,0 +1,64 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Use
+@use 'sass:math';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Container
+.container--variant-media-left {
+	.container__inner {
+		display: grid;
+	}
+
+	.container__body {
+		padding-left: var(--container-spacing-x);
+		padding-right: var(--container-spacing-x);
+	}
+}
+
+.ce-icon-text--media-left {
+	.container__media {
+		display: none;
+	}
+
+	.container__body {
+		padding-top: var(--container-spacing-y--large);
+		padding-bottom: var(--container-spacing-y--large);
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(md) {
+	.container--variant-media-left {
+		.container__inner {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 'container-media container-body';
+		}
+
+		.container__media {
+			& {
+				position: relative;
+				display: block;
+				grid-area: container-media;
+			}
+
+			.image__object {
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.container__body {
+			max-width: calc(var(--container-max-width) / 2);
+			grid-area: container-body;
+			padding-left: var(--container-spacing-x);
+			padding-right: var(--container-spacing-x);
+		}
+	}
+}
+
+
