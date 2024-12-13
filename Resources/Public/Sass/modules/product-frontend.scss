@@ -1048,6 +1048,10 @@ $tx-product-frontend--layout-show: true !default;
 	}
 
 	.product--related {
+		& {
+			page-break-inside: avoid;
+		}
+
 		.card--title {
 			& {
 				pointer-events: none;
