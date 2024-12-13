@@ -41,5 +41,13 @@
 				</f:if>
 			</address>
 		</div>
+		<div class="ce-address-record__media">
+			<f:if condition="{address.image.0}">
+				<f:render partial="Media/Main" section="Rendering" arguments="{
+					file: address.image.0.originalResource,
+					settings: '{fo:settings.get(extension: \'Ps14Foundation\', path: \'content.backgroundMedia\')}'
+				}" />
+			</f:if>
+		</div>
 	</f:section>
 </html>

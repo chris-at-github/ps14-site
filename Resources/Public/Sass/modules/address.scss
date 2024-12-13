@@ -5,8 +5,20 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Module (Default)
 .ce-address-record--default {
+	.container__inner {
+		display: grid;
+		grid-template-areas: 'address-default-body' 'address-default-media';
+		grid-template-columns: 1fr;
+		grid-gap: var(--spacing-600);
+	}
+
 	.ce-address-record__body {
+		grid-area: address-default-body;
 		border-radius: var(--border-radius-medium);
+	}
+
+	.ce-address-record__media {
+		grid-area: address-default-media;
 	}
 
  	.address {
@@ -22,6 +34,40 @@
 		&--street,
 		&--google-maps-link {
 			margin-top: var(--spacing-400);
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(md) {
+	.ce-address-record--default {
+		.container__inner {
+			grid-template-areas: 'address-default-media address-default-body';
+			grid-template-columns: 1fr 1fr;
+			align-items: start;
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(xl) {
+	.ce-address-record--default {
+		.container__inner {
+			//grid-template-areas: 'address-default-media address-default-body';
+			grid-template-columns: repeat(12, 1fr);
+			//align-items: start;
+		}
+
+		.ce-address-record__body {
+			grid-column: 8 / span 3; /* Startet in Spalte 4 und geht über 5 Spalten */
+			grid-row: 1; /* Gleiche Zeile wie der erste Container */
+		}
+
+		.ce-address-record__media {
+			grid-column: 1 / span 7; /* Startet in Spalte 1 und geht über 8 Spalten */
+			grid-row: 1; /* In der ersten Zeile */
 		}
 	}
 }

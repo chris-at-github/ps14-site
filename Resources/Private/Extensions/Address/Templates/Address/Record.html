@@ -3,10 +3,11 @@
 
 	<f:section name="Header" />
 	<f:section name="Main">
-
 		<f:render partial="Address/Layout/{record.tx_foundation_variant -> fo:format.ucFirst()}" section="Main" arguments="{_all}" optional="true">
 			<f:render partial="Address/Layout/Default" section="Main" arguments="{_all}" />
 		</f:render>
-
 	</f:section>
+
+	<!-- wird direkt im Address/Layout/Default Partial verarbeitet -->
+	<f:section name="BackgroundMedia" />
 </html>
