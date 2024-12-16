@@ -1,0 +1,34 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// tt_content Definition
+tt_content {
+	ps14_site_sketch =< lib.contentElement
+	ps14_site_sketch {
+		templateName = Sketch.html
+		layoutRootPaths {
+			10 = EXT:ps14_site/Resources/Private/Extensions/Sketch/Layouts/
+		}
+
+		templateRootPaths {
+			10 = EXT:ps14_site/Resources/Private/Extensions/Sketch/Templates/
+		}
+
+		partialRootPaths {
+			10 = EXT:ps14_site/Resources/Private/Extensions/Sketch/Partials/
+			20 = EXT:ps14_foundation/Resources/Private/Partials/
+			30 = EXT:ps14_site/Resources/Private/Partials/
+		}
+
+		dataProcessing {
+			200 = Ps14\Foundation\DataProcessing\ModuleProcessor
+			200 {
+				importCss {
+					10 = /assets/css/modules/sketch.css
+				}
+
+				importJs {
+					10 = /assets/js/modules/sketch.js
+				}
+			}
+		}
+	}
+}

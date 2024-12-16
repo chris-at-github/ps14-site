@@ -1,5 +1,22 @@
 @import 'EXT:ps14_foundation/Configuration/TSConfig/Page.tsconfig'
 
+mod.wizards.newContentElement.wizardItems {
+	common {
+		elements {
+			ps14_icon_text {
+				iconIdentifier = ps14-module-icon-text
+				title = SKETCH
+				description = SKETCH_DESCRIPTION
+				tt_content_defValues {
+					CType = ps14_site_sketch
+				}
+			}
+		}
+
+		show := addToList(ps14_site_sketch)
+	}
+}
+
 TCEFORM {
 	tt_content {
 		frame_class {

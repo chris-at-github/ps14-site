@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	<f:section name="Main">
+		<div class="sketch">
+			<ul class="sketch-listing">
+				<f:for each="{elements}" as="floor">
+					<f:if condition="{floor.media.0}">
+						<li class="sketch-listing__item">
+							<button data-type="html" data-target="#sketch-floor--{floor.data.uid}" class="tobii-trigger sketch-listing__button" data-group="sketch-floor">
+								<fo:svg.inline source="{floor.media.0.publicUrl}" class="sketch-listing__thumbnail" />
+								<span class="sketch-listing__title">{floor.data.title}</span>
+							</button>
+						</li>
+					</f:if>
+				</f:for>
+			</ul>
+
+			<div class="sketch__floor-container">
+				<f:for each="{elements}" as="floor">
+					<f:if condition="{floor.media.0}">
+						<div class="sketch-floor" id="sketch-floor--{floor.data.uid}">
+							<f:if condition="{floor.data.title}">
+								<header class="sketch-floor__title">{floor.data.title}</header>
+							</f:if>
+
+							<div class="sketch-floor__body">
+								<div class="sketch-floor__image">
+									<fo:svg.inline source="{floor.media.0.publicUrl}" />
+								</div>
+
+								<f:if condition="{floor.data.description}">
+									<div class="sketch-floor__description ce-bodytext"><f:format.html>{floor.data.description}</f:format.html></div>
+								</f:if>
+							</div>
+						</div>
+					</f:if>
+				</f:for>
+			</div>
+		</div>
+	</f:section>
+</html>

@@ -1,0 +1,118 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Global
+@import "../../../../../ps14_theme/Resources/Public/Sass/variables";
+@import "../../../../../ps14_theme/Resources/Public/Sass/functions";
+@import "../../../../../ps14_theme/Resources/Public/Sass/mixins";
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Variablen
+:root {
+	--floor-listing__background: var(--color__primary-light);
+	--floor-listing__background--active: #e8e4dd;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+.ce-sketch {
+	.ce-header {
+		text-align: center;
+	}
+}
+
+.sketch {
+	& {
+		margin: var(--html-element__spacing-header) 0 0 0;
+	}
+
+	&__floor-container {
+		display: none;
+	}
+}
+
+.sketch-listing {
+	& {
+		display: flex;
+		flex-direction: column;
+		gap: rem(50px);
+	}
+
+	&__item {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button {
+		& {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			gap: rem(20px);
+			border: 0;
+			background: var(--floor-listing__background);
+			cursor: pointer;
+			padding: rem(20px);
+			border-radius: var(--border-radius--default);
+			transition: background var(--transition__duration-default);
+		}
+
+		&:hover {
+			background: var(--floor-listing__background--active);
+		}
+	}
+
+	&__title {
+		font-family: var(--font__family-serif);
+		font-weight: var(--font__weight-bold);
+		transition: color var(--transition__duration-default);
+	}
+
+	&__thumbnail {
+		width: 100%;
+	}
+}
+
+.sketch-floor {
+	& {
+		padding: rem(30px);
+		background: var(--color__primary-light);
+		border-radius: var(--border-radius--large);
+	}
+
+	&__title {
+		--header-2__spacing-top: 0;
+
+		//@include header-2;
+		margin: 0 0 var(--html-element__spacing-header) 0;
+		text-align: center;
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: rem(30px);
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(md) {
+	.sketch-listing {
+		& {
+			flex-direction: row;
+			justify-content: center;
+		}
+
+		&__item {
+			max-width: rem(275px);
+		}
+	}
+
+	.sketch-floor {
+		&__body {
+			grid-template-columns: 2fr 1fr;
+		}
+	}
+}
