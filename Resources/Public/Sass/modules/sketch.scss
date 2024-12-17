@@ -8,8 +8,8 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Variablen
 :root {
-	--floor-listing__background: var(--color__primary-light);
-	--floor-listing__background--active: #e8e4dd;
+	--floor-listing__background: var(--color-secondary-100);
+	--floor-listing__background--active: var(--color-secondary-200);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -77,15 +77,15 @@
 .sketch-floor {
 	& {
 		padding: rem(30px);
-		background: var(--color__primary-light);
-		border-radius: var(--border-radius--large);
+		background: var(--color-secondary-50);
+		border-radius: var(--border-radius-medium);
 	}
 
 	&__title {
 		--header-2__spacing-top: 0;
 
 		//@include header-2;
-		margin: 0 0 var(--html-element__spacing-header) 0;
+		margin: 0 0 var(--ce-spacing-heading) 0;
 		text-align: center;
 	}
 
