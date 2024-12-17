@@ -1,1 +1,13 @@
 @import 'EXT:ps14_hero/Configuration/TypoScript/setup.typoscript'
+
+// ---------------------------------------------------------------------------------------------------------------------
+// tt_content Definition
+tt_content {
+	ps14_hero {
+		dataProcessing {
+			200 {
+				importJs.10 >
+			}
+		}
+	}
+}
