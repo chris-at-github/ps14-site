@@ -6,23 +6,16 @@
 
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Variablen
-:root {
-	--floor-listing__background: var(--color-secondary-100);
-	--floor-listing__background--active: var(--color-secondary-200);
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
 // CSS
 .ce-sketch {
-	.ce-header {
+	.ce-heading__title {
 		text-align: center;
 	}
 }
 
 .sketch {
 	& {
-		margin: var(--html-element__spacing-header) 0 0 0;
+		margin: var(--ce-spacing-heading) 0 0 0;
 	}
 
 	&__floor-container {
@@ -51,22 +44,22 @@
 			justify-content: space-between;
 			gap: rem(20px);
 			border: 0;
-			background: var(--floor-listing__background);
+			background: var(--color-secondary-100);
 			cursor: pointer;
 			padding: rem(20px);
-			border-radius: var(--border-radius--default);
-			transition: background var(--transition__duration-default);
+			border-radius: var(--border-radius-small);
+			transition: background var(--transition-duration-fast);
 		}
 
 		&:hover {
-			background: var(--floor-listing__background--active);
+			background: var(--color-secondary-500);
+			color: var(--color-secondary-100);
 		}
 	}
 
 	&__title {
-		font-family: var(--font__family-serif);
-		font-weight: var(--font__weight-bold);
-		transition: color var(--transition__duration-default);
+		font-weight: var(--font-weight-semibold);
+		transition: color var(--transition-duration-fast);
 	}
 
 	&__thumbnail {
@@ -84,7 +77,8 @@
 	&__title {
 		--header-2__spacing-top: 0;
 
-		//@include header-2;
+		////@include header-2;
+		//@extend .header-2;
 		margin: 0 0 var(--ce-spacing-heading) 0;
 		text-align: center;
 	}
