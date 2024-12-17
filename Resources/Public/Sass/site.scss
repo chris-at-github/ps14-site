@@ -1,1 +1,9 @@
-//@import '../../../../ps14_theme/Resources/Public/Sass/';
+// ---------------------------------------------------------------------------------------------------------------------
+// Global
+@import "../../../../ps14_theme/Resources/Public/Sass/variables";
+@import "../../../../ps14_theme/Resources/Public/Sass/functions";
+@import "../../../../ps14_theme/Resources/Public/Sass/mixins";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Vendors
+@import 'vendors/tobii';

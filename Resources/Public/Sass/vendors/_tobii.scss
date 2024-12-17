@@ -1,0 +1,80 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Package Import
+@import '~@midzer/tobii/src/scss/tobii';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Overwrite Variables
+:root {
+	--tobii-slide-max-width: 98vw;
+	--tobii-slide-max-height: 85vh;
+
+	--tobii-button-background: var(--color__primary-dark);
+	--tobii-button-color: var(--color__primary-light);
+	--tobii-button-size: #{rem(60px)};
+	--tobii-button-svg-size: #{rem(30px)};
+	--tobii-transition-duration: var(--transition__duration-default);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Overwrite
+.tobii__slider {
+	top: 0;
+}
+
+.tobii__slide {
+	.tobii-html {
+		width: var(--container-max-width);
+		max-width: 100%;
+		background: transparent;
+	}
+}
+
+.tobii__btn {
+	& {
+		width: var(--tobii-button-size);
+		height: var(--tobii-button-size);
+		border: 0;
+		border-radius: var(--border-radius--small);
+		opacity: 1;
+	}
+
+	@media screen and (prefers-reduced-motion: no-preference) {
+		transition-property: background;
+		will-change: background;
+	}
+
+	&:hover, .focusable &:focus {
+		--tobii-button-background: var(--color__secondary);
+	}
+
+	& svg {
+		fill: currentColor;
+		stroke: none;
+	}
+
+	&.tobii__btn--previous,
+	&.tobii__btn--next {
+		& {
+			background: var(--tobii-button-background);
+		}
+
+		svg {
+			width: rem(16px);
+			height: var(--tobii-button-svg-size);
+		}
+	}
+
+	&.tobii__btn--close {
+		& {
+			top: 1vw; right: 1vw;
+			width: var(--tobii-button-size);
+			height: var(--tobii-button-size);
+		}
+
+		svg {
+			transform: none;
+			width: var(--tobii-button-svg-size);
+			height: var(--tobii-button-svg-size);
+		}
+	}
+}
