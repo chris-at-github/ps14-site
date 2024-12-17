@@ -3,8 +3,14 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2024-03-147T16:00:00Z" product-name="ps14_site">
 		<header/>
 		<body>
-			<trans-unit id="example.key">
-				<source>Example Key</source>
+			<trans-unit id="lightbox.close">
+				<source>Close</source>
+			</trans-unit>
+			<trans-unit id="lightbox.prev">
+				<source>Previous element</source>
+			</trans-unit>
+			<trans-unit id="lightbox.next">
+				<source>Next element</source>
 			</trans-unit>
 		</body>
 	</file>

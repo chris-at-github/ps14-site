@@ -24,10 +24,6 @@ tt_content {
 				importCss {
 					10 = /assets/css/modules/sketch.css
 				}
-
-				importJs {
-					10 = /assets/js/modules/sketch.js
-				}
 			}
 		}
 	}

@@ -8,11 +8,11 @@
 	--tobii-slide-max-width: 98vw;
 	--tobii-slide-max-height: 85vh;
 
-	--tobii-button-background: var(--color__primary-dark);
-	--tobii-button-color: var(--color__primary-light);
+	--tobii-button-background: var(--color-secondary-500);
+	--tobii-button-color: var(--color-secondary-50);
 	--tobii-button-size: #{rem(60px)};
 	--tobii-button-svg-size: #{rem(30px)};
-	--tobii-transition-duration: var(--transition__duration-default);
+	--tobii-transition-duration: var(--transition-duration-default);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -34,7 +34,7 @@
 		width: var(--tobii-button-size);
 		height: var(--tobii-button-size);
 		border: 0;
-		border-radius: var(--border-radius--small);
+		border-radius: var(--border-radius-small);
 		opacity: 1;
 	}
 
@@ -44,7 +44,8 @@
 	}
 
 	&:hover, .focusable &:focus {
-		--tobii-button-background: var(--color__secondary);
+		--tobii-button-color: var(--color-primary-50);
+		--tobii-button-background: var(--color-primary-500);
 	}
 
 	& svg {
