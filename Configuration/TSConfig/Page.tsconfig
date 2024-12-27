@@ -41,3 +41,16 @@ TCEFORM {
 		}
 	}
 [END]
+
+[field('CType') === 'text']
+	TCEFORM {
+		tt_content {
+			tx_foundation_variant {
+				addItems {
+					media-left = Media Left
+					media-right = Media Right
+				}
+			}
+		}
+	}
+[END]
