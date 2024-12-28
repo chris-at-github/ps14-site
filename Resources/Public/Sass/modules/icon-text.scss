@@ -16,7 +16,7 @@ $ps14-icon-text--layout-inline: false !default;
 	:root {
 		--icon-text__size: #{rem(40px)};
 		--icon-text__icon-color: currentColor;
-		--icon-text__header-font-size: #{rem(20px)};
+		--icon-text__header-font-size: #{rem(16px)};
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------
@@ -29,9 +29,9 @@ $ps14-icon-text--layout-inline: false !default;
 				height: var(--icon-text__size);
 			}
 
-			& + .icon-text--title {
-				margin: rem(20px 0 0 0);
-			}
+			//& + .icon-text--title {
+			//	margin: rem(20px 0 0 0);
+			//}
 		}
 
 		.icon-text--icon {
@@ -43,7 +43,7 @@ $ps14-icon-text--layout-inline: false !default;
 
 		.icon-text--title {
 			&, a, h1, h2, h3, h4, h5, h6 {
-				margin: rem(3px 0 0 0);
+				//margin: rem(3px 0 0 0);
 				line-height: 1.4;
 				font-size: var(--icon-text__header-font-size);
 				font-weight: var(--font-weight-semibold);
@@ -92,7 +92,7 @@ $ps14-icon-text--layout-inline: false !default;
 	// Icon Text Modul
 	.ce-icon-text {
 		.icon-text--container {
-			margin-top: var(--html-element__spacing-default);
+			margin-top: var(--ce-spacing-element);
 		}
 
 		.icon-text {
@@ -153,61 +153,6 @@ $ps14-icon-text--layout-inline: false !default;
 			}
 		}
 	}
-
-	// -------------------------------------------------------------------------------------------------------------------
-	// >= 576px
-	@include media-breakpoint-up(sm) {
-		@if($ps14-icon-text--layout-vertical) {
-			.ce-icon-text--vertical {
-				.icon-text {
-					// @include make-col(6);
-				}
-			}
-		}
-	}
-
-	// -------------------------------------------------------------------------------------------------------------------
-	// >= 768px
-	@include media-breakpoint-up(md) {
-		.ce-icon-text {
-			.icon-text {
-				margin-top: rem(30px);
-			}
-		}
-
-		@if($ps14-icon-text--layout-vertical) {
-			.ce-icon-text--vertical {
-				.icon-text {
-					// @include make-col(4);
-				}
-			}
-		}
-
-		@if($ps14-icon-text--layout-horizontal) {
-			.ce-icon-text--horizontal {
-				.icon-text {
-					// @include make-col(6);
-				}
-
-				.icon-text--content {
-					padding: rem(0 20px 0 0);
-				}
-			}
-		}
-	}
-
-	// -------------------------------------------------------------------------------------------------------------------
-	// >= 992px
-	@include media-breakpoint-up(lg) {
-		@if($ps14-icon-text--layout-horizontal) {
-			.ce-icon-text--horizontal {
-				.icon-text--content {
-					padding: rem(0 30px 0 0);
-				}
-			}
-		}
-
-	}
 }
 
 :root {
@@ -218,18 +163,19 @@ $ps14-icon-text--layout-inline: false !default;
 
 .icon-text {
 	& {
+		gap: var(--spacing-500);
 		align-items: center;
 	}
 
-	.icon-text--icon-container {
-		& {
-			margin-right: rem(15px);
-		}
-
-		& + .icon-text--title {
-			margin: rem(5px 0 0 0);
-		}
-	}
+	//.icon-text--icon-container {
+	//	& {
+	//		margin-right: rem(15px);
+	//	}
+	//
+	//	& + .icon-text--title {
+	//		margin: rem(5px 0 0 0);
+	//	}
+	//}
 
 	.icon-text--title {
 		&, a, h1, h2, h3, h4, h5, h6 {
@@ -240,7 +186,7 @@ $ps14-icon-text--layout-inline: false !default;
 
 .icon-text--container {
 	display: grid;
-	gap: 20px
+	gap: var(--spacing-500);
 }
 
 // -------------------------------------------------------------------------------------------------------------------
@@ -258,11 +204,11 @@ $ps14-icon-text--layout-inline: false !default;
 		grid-template-columns: 1fr;
 	}
 
-	.ce-icon-text {
-		.icon-text {
-			margin-top: 0;
-		}
-	}
+	//.ce-icon-text {
+	//	.icon-text {
+	//		margin-top: 0;
+	//	}
+	//}
 }
 
 // -------------------------------------------------------------------------------------------------------------------
@@ -270,16 +216,16 @@ $ps14-icon-text--layout-inline: false !default;
 @include media-breakpoint-up(lg) {
 	.icon-text--container {
 		grid-template-columns: 1fr 1fr;
-		column-gap: 30px;
+		row-gap: var(--spacing-500)
 	}
 
-	.icon-text {
-		& {
-			align-items: flex-start;
-		}
-
-		.icon-text--icon-container {
-			margin-top: rem(10px);
-		}
-	}
+	//.icon-text {
+	//	& {
+	//		align-items: flex-start;
+	//	}
+	//
+	//	.icon-text--icon-container {
+	//		margin-top: rem(10px);
+	//	}
+	//}
 }
