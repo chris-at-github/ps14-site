@@ -1,0 +1,21 @@
+@import '~tiny-slider/src/tiny-slider';
+
+.tns-outer {
+	& > button {
+		display: none;
+	}
+}
+
+.tns-inner, .tns-slider {
+	height: 100%;
+}
+
+.tns-item {
+	height: 100%;
+}
+
+.tns-slider {
+	--image-object-fit: cover;
+	--image-width: 100%;
+	--image-height: 100%;
+}

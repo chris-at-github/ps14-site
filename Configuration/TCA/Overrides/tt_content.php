@@ -2,6 +2,10 @@
 
 (function() {
 
+	// -------------------------------------------------------------------------------------------------------------------
+	// Anpassung TYPO3 Text Modul
+	$GLOBALS['TCA']['tt_content']['types']['text']['columnsOverrides']['tx_foundation_background_media']['config']['maxitems'] = 99;
+
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
 		array(
 			'Sketch', // 'LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:hero.title',

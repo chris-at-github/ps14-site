@@ -11,7 +11,27 @@
     <f:render section="{data.tx_foundation_variant -> fo:format.pascalCase()}" arguments="{_all}" optional="true">
       <f:render partial="Content/Bodytext" arguments="{bodytext: data.bodytext}" />
     </f:render>
-   </f:section>
+  </f:section>
+
+  <f:section name="BackgroundMedia">
+    <f:if condition="{data.tx_foundation_variant} == 'default'">
+      <f:then>
+        <f:render partial="Content/BackgroundMedia" section="Main" arguments="{_all}" />
+      </f:then>
+      <f:else>
+        <f:if condition="{background_media}">
+          <div class="container__media container__media--slider">
+            <f:for each="{background_media}" as="media">
+              <f:render partial="Media/Main" section="Rendering" arguments="{
+                file: media,
+                settings: '{fo:settings.get(extension: \'Ps14Foundation\', path: \'content.backgroundMedia\')}'
+              }" />
+            </f:for>
+          </div>
+        </f:if>
+      </f:else>
+    </f:if>
+  </f:section>
 
   <f:section name="MediaLeft">
     <div class="container__body">
