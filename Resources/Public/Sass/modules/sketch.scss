@@ -25,9 +25,12 @@
 
 .sketch-listing {
 	& {
-		display: flex;
-		flex-direction: column;
-		gap: rem(50px);
+		//display: flex;
+		//flex-direction: column;
+		//gap: rem(50px);
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--spacing-600);
 	}
 
 	&__item {
@@ -52,8 +55,14 @@
 		}
 
 		&:hover {
-			background: var(--color-secondary-500);
-			color: var(--color-secondary-100);
+			& {
+				background: var(--color-secondary-500);
+				color: var(--color-secondary-100);
+			}
+
+			.sketch-listing__thumbnail {
+				color: var(--color-secondary-100);
+			}
 		}
 	}
 
@@ -64,6 +73,7 @@
 
 	&__thumbnail {
 		width: 100%;
+		color: var(--color-secondary-500);
 	}
 }
 
@@ -83,6 +93,10 @@
 		text-align: center;
 	}
 
+	&__image {
+		color: var(--color-secondary-500);
+	}
+
 	&__body {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -91,22 +105,31 @@
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
-// >= 768px
-@include media-breakpoint-up(md) {
+// >= 576px
+@include media-breakpoint-up(sm) {
 	.sketch-listing {
 		& {
-			flex-direction: row;
-			justify-content: center;
-		}
-
-		&__item {
-			max-width: rem(275px);
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
+}
 
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(md) {
 	.sketch-floor {
 		&__body {
 			grid-template-columns: 2fr 1fr;
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 992px
+@include media-breakpoint-up(lg) {
+	.sketch-listing {
+		& {
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 }
