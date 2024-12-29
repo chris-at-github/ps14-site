@@ -9,12 +9,6 @@ page {
 	includeJSFooter {
 		application = /assets/js/site.js
 		application.forceOnTop = 1
-
-		tobii = /assets/js/vendors/tobii.js
-		tobii.forceOnTop = 1
-
-		tns = /assets/js/vendors/tiny-slider.js
-		tns.forceOnTop = 1
 	}
 
 #	// Eigene Farbangaben

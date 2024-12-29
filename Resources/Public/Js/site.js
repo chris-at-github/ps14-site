@@ -1,5 +1,14 @@
 // ---------------------------------------------------------------------------------------------------------------------
+// Vendors
+// require('tiny-slider/dist/tiny-slider');
+// require('@midzer/tobii/dist/tobii');
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap
+require('./bootstrap/tobii');
+require('./bootstrap/media-slider');
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Components
-require('./components/tobii');
-require('./components/media-slider');
 require('./components/bootstrap/collapse');

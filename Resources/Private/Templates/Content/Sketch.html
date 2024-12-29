@@ -3,11 +3,11 @@
 
 	<f:section name="Main">
 		<div class="sketch">
-			<ul class="sketch-listing tobii-group">
+			<ul class="sketch-listing">
 				<f:for each="{elements}" as="floor">
 					<f:if condition="{floor.media.0}">
 						<li class="sketch-listing__item">
-							<button data-type="html" data-target="#sketch-floor--{floor.data.uid}" class="tobii-group__item sketch-listing__button" data-group="sketch-floor">
+							<button data-type="html" data-target="#sketch-floor--{floor.data.uid}" class="tobii-opener sketch-listing__button" data-group="sketch-floor">
 								<fo:svg.inline source="{floor.media.0.publicUrl}" class="sketch-listing__thumbnail" />
 								<span class="sketch-listing__title">{floor.data.title}</span>
 							</button>
