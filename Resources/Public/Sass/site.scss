@@ -5,6 +5,13 @@
 @import "../../../../ps14_theme/Resources/Public/Sass/mixins";
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Components
+@import "../../../../ps14_theme/Resources/Public/Sass/components/grid";
+@import "../../../../ps14_theme/Resources/Public/Sass/components/readmore-container";
+@import "../../../../ps14_theme/Resources/Public/Sass/components/collapse";
+@import "../../../../ps14_theme/Resources/Public/Sass/components/accordion";
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Vendors
 @import 'vendors/tobii';
 @import 'vendors/tiny-slider';

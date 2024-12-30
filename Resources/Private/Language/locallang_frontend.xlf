@@ -12,6 +12,10 @@
 			<trans-unit id="lightbox.next">
 				<source>Next element</source>
 			</trans-unit>
+
+			<trans-unit id="images.readmore">
+				<source>more images</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
