@@ -30,7 +30,7 @@
 		//gap: rem(50px);
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: var(--spacing-600);
+		gap: rem(32px);
 	}
 
 	&__item {
@@ -100,7 +100,7 @@
 	&__body {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: rem(30px);
+		gap: rem(32px);
 	}
 }
 
