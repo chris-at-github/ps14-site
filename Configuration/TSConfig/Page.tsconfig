@@ -28,6 +28,25 @@ TCEFORM {
 			}
 		}
 	}
+
+	tx_powermail_domain_model_form {
+		css {
+			removeItems = layout1, layout2, layout3, nolabel
+			addItems {
+				default = Default
+			}
+		}
+	}
+
+	tx_powermail_domain_model_page {
+		css {
+			removeItems = layout1, layout2, layout3, nolabel
+			addItems {
+				default = Default
+				space-before = Space Before
+			}
+		}
+	}
 }
 
 [field('CType') === 'ps14_icon_text']
