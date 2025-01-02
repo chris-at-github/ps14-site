@@ -1,7 +1,7 @@
 {namespace vh=In2code\Powermail\ViewHelpers}
 
 <div class="form__item form__item--date form__item-{field.marker} form__item--width-{field.columnWidth} powermail_fieldwrap powermail_fieldwrap_type_input powermail_fieldwrap_{field.marker} {field.css} {settings.styles.framework.fieldAndLabelWrappingClasses}">
-	<f:render partial="Form/FieldLabel" arguments="{_all}" />
+	<f:render partial="Form/FieldLabel" section="Default" arguments="{_all}" />
 	<f:form.textfield
 			type="{vh:validation.fieldTypeFromValidation(field:field)}"
 			property="{field.marker}"
