@@ -7,6 +7,10 @@ import {tns} from 'tiny-slider/src/tiny-slider';
 		if(typeof(tns) === 'function') {
 			document.querySelectorAll('.container--variant-media-left, .container--variant-media-right').forEach(function(node, index) {
 
+				if(node.querySelectorAll('.container__media-item').length <= 1) {
+					return;
+				}
+
 				// 	// Event CeGallery_BeforeSliderInitialize ausfuehren
 				// 	xna.fireEvent('CeGallery_BeforeSliderInitialize', {node: node});
 				//
@@ -17,7 +21,7 @@ import {tns} from 'tiny-slider/src/tiny-slider';
 				// navigation = null;
 
 				let slider = tns({
-					container: node.querySelector('.container__media'),
+					container: node.querySelector('.container__media-group'),
 					// 		center: false,
 					// 		loop: false,
 					autoWidth: false,
@@ -34,7 +38,7 @@ import {tns} from 'tiny-slider/src/tiny-slider';
 					onInit: function() {
 
 						// CSS Lazyload durch setzen der Klasse slider--initialized
-						// node.querySelector('.container__media--slider').classList.add('slider--initialized');
+						node.querySelector('.slider').classList.add('slider-initialized');
 
 						// Autoplay Button entfernen
 						// node.querySelector('button[data-action="stop"]').remove();

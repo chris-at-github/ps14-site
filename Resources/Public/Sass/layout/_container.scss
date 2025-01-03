@@ -11,8 +11,17 @@
 	}
 
 	.container__body {
-		padding-left: var(--container-spacing-x);
-		padding-right: var(--container-spacing-x);
+		align-self: center;
+		//padding-left: var(--container-spacing-x);
+		//padding-right: var(--container-spacing-x);
+
+		padding: var(--container-spacing-y--medium) var(--container-spacing-x);
+	}
+}
+
+.container--variant-media-right {
+	.container__body {
+		justify-self: end;
 	}
 }
 
