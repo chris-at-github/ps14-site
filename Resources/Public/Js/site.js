@@ -9,3 +9,4 @@ require('./bootstrap/images-readmore');
 require('./components/bootstrap/collapse');
 require('./components/readmore-container');
 require('./components/datepicker');
+require('./components/number-steps');
