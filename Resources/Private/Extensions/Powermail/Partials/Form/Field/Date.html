@@ -3,7 +3,8 @@
 <div class="form__item form__item--date form__item-{field.marker} form__item--width-{field.columnWidth} powermail_fieldwrap powermail_fieldwrap_type_date powermail_fieldwrap_{field.marker} {field.css} {settings.styles.framework.fieldAndLabelWrappingClasses}">
 	<f:render partial="Form/FieldLabel" section="Default" arguments="{_all}" />
 	<f:form.textfield
-		type="{field.datepickerSettingsOptimized}"
+		type="text"
+		placeholder="{f:translate(key: 'LLL:EXT:ps14_powermail/Resources/Private/Language/locallang_frontend.xlf:field.date.placeholder')}"
 		id="form__field--{field.marker}"
 		property="{field.marker}"
 		value="{vh:misc.prefillField(field:field, mail:mail)}"
