@@ -1,15 +1,19 @@
 {namespace vh=In2code\Powermail\ViewHelpers}
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:vh="http://typo3.org/ns/In2code/Powermail/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
 	<f:section name="Default">
-		<label for="form__field--{field.marker}" class="form__label {settings.styles.framework.labelClasses}">
-			<f:render section="Body" arguments="{_all}" />
-		</label>
+		<f:if condition="{field.css} != 'nolabel'">
+			<label for="form__field--{field.marker}" class="form__label {settings.styles.framework.labelClasses}">
+				<f:render section="Body" arguments="{_all}" />
+			</label>
+		</f:if>
 	</f:section>
 
 	<f:section name="Standalone">
-		<label class="form__label {settings.styles.framework.labelClasses}">
-			<f:render section="Body" arguments="{_all}" />
-		</label>
+		<f:if condition="{field.css} != 'nolabel'">
+			<label class="form__label {settings.styles.framework.labelClasses}">
+				<f:render section="Body" arguments="{_all}" />
+			</label>
+		</f:if>
 	</f:section>
 
 	<f:section name="Body">

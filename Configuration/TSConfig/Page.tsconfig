@@ -43,7 +43,8 @@ TCEFORM {
 			removeItems = layout1, layout2, layout3, nolabel
 			addItems {
 				default = Default
-				space-before = Space Before
+				space-before-default = Space Before Default
+				space-before-medium = Space Before Medium
 			}
 		}
 	}
