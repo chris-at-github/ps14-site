@@ -3,7 +3,7 @@
 <div class="form__item form__item--checkbox form__item-{field.marker} form__item--width-{field.columnWidth} powermail_fieldwrap powermail_fieldwrap_type_check powermail_fieldwrap_{field.marker} {field.css} {settings.styles.framework.fieldAndLabelWrappingClasses}">
 	<f:render partial="Form/FieldLabel" section="Standalone" arguments="{_all}" />
 
-	<div class="form__checkbox-container {settings.styles.framework.fieldWrappingClasses}">
+	<div class="form__checkbox-group {settings.styles.framework.fieldWrappingClasses}">
 		<f:for each="{field.modifiedSettings}" as="setting" iteration="index">
 			<div class="form__checkbox {settings.styles.framework.checkClasses} {vh:validation.errorClass(field:field, class:'powermail_field_error')}">
 				<f:form.checkbox
