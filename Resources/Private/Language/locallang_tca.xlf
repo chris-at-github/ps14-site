@@ -12,6 +12,10 @@
 			<trans-unit id="tt_content.hue.secondary-800">
 				<source>Brown (Dark)</source>
 			</trans-unit>
+
+			<trans-unit id="tt_content.space.huge">
+				<source>Huge</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -12,6 +12,10 @@
 			<trans-unit id="tt_content.hue.secondary-800">
 				<target>Braun (Dunkel)</target>
 			</trans-unit>
+
+			<trans-unit id="tt_content.space.huge">
+				<target>Huge</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

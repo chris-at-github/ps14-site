@@ -27,6 +27,18 @@ TCEFORM {
 				secondary-800 = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.hue.secondary-800
 			}
 		}
+
+		space_before_class {
+			addItems {
+				huge = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.space.huge
+			}
+		}
+
+		space_after_class {
+			addItems {
+				huge = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.space.huge
+			}
+		}
 	}
 
 	tx_powermail_domain_model_form {
