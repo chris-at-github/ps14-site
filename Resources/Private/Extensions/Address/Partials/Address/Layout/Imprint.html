@@ -39,6 +39,12 @@
 					<f:render partial="Components/Address" section="RegisteredOffice" arguments="{address: address}" />
 				</div>
 			</f:if>
+
+			<f:if condition="{settings.display.imprintTarget}">
+				<div class="address__item address__item--imprint-link">
+					<f:translate key="LLL:EXT:ps14_address/Resources/Private/Language/locallang_frontend.xlf:imprint-link" />: <f:link.typolink parameter="{settings.display.imprintTarget}">{f:uri.typolink(parameter: settings.display.imprintTarget, absolute: 1)}</f:link.typolink>
+				</div>
+			</f:if>
 		</div>
 	</f:section>
 </html>
