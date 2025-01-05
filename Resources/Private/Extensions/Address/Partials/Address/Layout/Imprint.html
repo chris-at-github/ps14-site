@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<div class="address address--imprint">
+			<f:if condition="{settings.display.name} == 1">
+				<f:render partial="Components/Address" section="Name" arguments="{address: address}" />
+			</f:if>
+
+			<f:if condition="{settings.display.location} == 1">
+				<div class="address__item-group">
+					<f:if condition="{address.address}">
+						<div class="address__item address__item--street">{address.address}</div>
+					</f:if>
+					<f:if condition="{address.zip} && {address.city}">
+						<div class="address__item-group address__item-group--zip-city">
+							<span class="address__item address__item--zip">{address.zip}</span>
+							<span class="address__item address__item--city">{address.city}</span>
+						</div>
+					</f:if>
+				</div>
+			</f:if>
+
+			<f:if condition="{settings.display.contact} == 1">
+				<div class="address__item-group">
+					<f:render partial="Components/Address" section="Phone" arguments="{_all}" />
+					<f:render partial="Components/Address" section="Mail" arguments="{_all}" />
+				</div>
+			</f:if>
+
+			<f:if condition="{address.vatNumber} || {address.directors}">
+				<div class="address__item-group">
+					<f:render partial="Components/Address" section="Directors" arguments="{address: address}" />
+					<f:render partial="Components/Address" section="VatNumber" arguments="{address: address}" />
+				</div>
+			</f:if>
+
+			<f:if condition="{address.registeredOffice} || {address.commercialRegister}">
+				<div class="address__item-group">
+					<f:render partial="Components/Address" section="CommercialRegister" arguments="{address: address}" />
+					<f:render partial="Components/Address" section="RegisteredOffice" arguments="{address: address}" />
+				</div>
+			</f:if>
+		</div>
+	</f:section>
+</html>

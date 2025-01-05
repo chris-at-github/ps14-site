@@ -38,6 +38,17 @@
 	}
 }
 
+.ce-address-record--imprint {
+	.address__name {
+		margin-top: var(--spacing-400);
+		font-weight: var(--font-weight-semibold);
+	}
+
+	.address > .address__item-group {
+		margin-top: var(--spacing-400);
+	}
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // >= 768px
 @include media-breakpoint-up(md) {
