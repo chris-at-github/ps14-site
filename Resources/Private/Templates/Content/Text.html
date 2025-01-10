@@ -26,7 +26,8 @@
                 <f:render partial="Media/Main" section="Rendering" arguments="{
                 file: media,
                 settings: '{fo:settings.get(extension: \'Ps14Foundation\', path: \'content.backgroundMedia\')}',
-                cssClass: 'container__media-item'
+                cssClass: 'container__media-item',
+                lazyload: data.image_lazyload
               }" />
               </f:for>
             </div>
