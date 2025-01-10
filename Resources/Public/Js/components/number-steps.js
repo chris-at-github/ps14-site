@@ -11,11 +11,13 @@ import { format, parse } from 'date-fns';
 				buttonPlus.type = 'button';
 				buttonPlus.classList.add('form__number-steps');
 				buttonPlus.classList.add('form__number-steps--plus');
+				buttonPlus.setAttribute('aria-label', site.l10n.numberSteps.plus);
 
 			const buttonMinus = document.createElement('button');
 				buttonMinus.type = 'button';
 				buttonMinus.classList.add('form__number-steps');
 				buttonMinus.classList.add('form__number-steps--minus');
+				buttonMinus.setAttribute('aria-label', site.l10n.numberSteps.minus);
 
 			item.appendChild(buttonPlus);
 			item.appendChild(buttonMinus);

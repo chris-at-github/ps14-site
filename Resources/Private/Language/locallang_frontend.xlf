@@ -16,6 +16,17 @@
 			<trans-unit id="images.readmore">
 				<source>more images</source>
 			</trans-unit>
+
+			<trans-unit id="number-steps.minus">
+				<source>Reduce the number</source>
+			</trans-unit>
+			<trans-unit id="number-steps.plus">
+				<source>Increase the number</source>
+			</trans-unit>
+
+			<trans-unit id="datepicker.label">
+				<source>Select a date</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

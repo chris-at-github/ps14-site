@@ -16,6 +16,17 @@
 			<trans-unit id="images.readmore">
 				<target>weitere Fotos</target>
 			</trans-unit>
+
+			<trans-unit id="number-steps.minus">
+				<target>Anzahl verringern</target>
+			</trans-unit>
+			<trans-unit id="number-steps.plus">
+				<target>Anzahl erhöhen</target>
+			</trans-unit>
+
+			<trans-unit id="datepicker.label">
+				<target>Datum auswählen</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
