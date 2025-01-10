@@ -40,6 +40,13 @@ import {tns} from 'tiny-slider/src/tiny-slider';
 						// CSS Lazyload durch setzen der Klasse slider--initialized
 						node.querySelector('.slider').classList.add('slider-initialized');
 
+						node.querySelectorAll('.slider--navigation li').forEach(function(item) {
+							const ariaControls = item.getAttribute('aria-controls');
+							const button = item.querySelector('button');
+
+							button.setAttribute('aria-controls', ariaControls);
+							item.removeAttribute('aria-controls');
+						});
 						// Autoplay Button entfernen
 						// node.querySelector('button[data-action="stop"]').remove();
 
