@@ -60,15 +60,15 @@
 		& {
 			display: flex;
 			justify-content: center;
-			gap: rem(4px);
+			gap: rem(8px);
 			margin: 0;
 			padding: var(--spacing-400);
 		}
 
 		li {
 			& {
-				width: rem(13px);
-				height: rem(13px);
+				width: rem(16px);
+				height: rem(16px);
 				padding: 0;
 				line-height: 0;
 			}
@@ -97,8 +97,8 @@
 			content: '';
 			display: block;
 			top: 0;
-			width: rem(13px);
-			height: rem(13px);
+			width: rem(16px);
+			height: rem(16px);
 			border: 2px solid var(--color-primary-400);
 			border-radius: 50%;
 			background: var(--color-secondary-50);
