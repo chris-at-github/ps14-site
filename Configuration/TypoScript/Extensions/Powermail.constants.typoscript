@@ -1,1 +1,15 @@
 @import 'EXT:ps14_powermail/Configuration/TypoScript/constants.typoscript'
+
+plugin.tx_powermail {
+	settings {
+
+		// Im Reiter 'Mail to User' muss nur der Betreff ausgefuellt werden
+		sender.default.senderName = Haus Schnetzer
+		sender.default.senderEmail = info@haus-schnetzer.at
+
+		// Im Reiter 'Mail to Receiver' muessen weiterhin alle Felder ausgefuellt werden -> nur die E-Mail Header werden
+		// korrekt befuellt
+		receiver.overwrite.senderName = Haus Schnetzer
+		receiver.overwrite.senderEmail = info@haus-schnetzer.at
+	}
+}
