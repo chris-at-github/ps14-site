@@ -95,8 +95,8 @@
 
 		img {
 			display: block;
-			max-width: 100%;
-			max-height: 100%;
+			width: 100%;
+			height: 100%;
 			object-fit: cover;
 		}
 	}
@@ -106,5 +106,26 @@
 		justify-self: center;
 		align-self: center;
 		z-index: 20;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Print
+@include stylesheet-context($stylesheet-context-print) {
+	.video {
+		& {
+			display: none;
+		}
+
+		&--preview-image {
+			display: block;
+			pointer-events: none;
+			cursor: default;
+		}
+	}
+
+	.video__play-button,
+	.video__preview-play-button {
+		display: none;
 	}
 }
