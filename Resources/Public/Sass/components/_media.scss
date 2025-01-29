@@ -117,10 +117,16 @@
 			display: none;
 		}
 
-		&--preview-image {
-			display: block;
-			pointer-events: none;
-			cursor: default;
+		&:has(.video__preview) {
+			& {
+				display: block;
+				pointer-events: none;
+				cursor: default;
+			}
+
+			.video__source {
+				display: none;
+			}
 		}
 	}
 
