@@ -542,14 +542,16 @@ $tx-product-frontend--layout-show: true !default;
 				}
 			}
 
-			.product--technical-data table {
-				& {
-					width: auto;
-					min-width: percentage(10 / 12);
-				}
+			.product--technical-data {
+				table {
+					& {
+						width: auto;
+						min-width: percentage(10 / 12);
+					}
 
-				&[data-columns-count='4'], &[data-columns-count='5'], &[data-columns-count='6'], &[data-columns-count='7'], &[data-columns-count='8'] {
-					width: 100%;
+					&[data-columns-count='4'], &[data-columns-count='5'], &[data-columns-count='6'], &[data-columns-count='7'], &[data-columns-count='8'] {
+						width: 100%;
+					}
 				}
 			}
 
@@ -921,9 +923,17 @@ $tx-product-frontend--layout-show: true !default;
 			page-break-inside: avoid;
 		}
 
+		.table {
+			width: max-content !important;
+		}
+
 		table {
 			width: 100%;
 			font-size: 12px;
+		}
+
+		th, td {
+			width: auto !important;
 		}
 	}
 
