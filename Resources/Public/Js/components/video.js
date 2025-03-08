@@ -9,6 +9,8 @@
 			const player = container.querySelector('.video__source');
 			const playButton = container.querySelector('.video__play-button');
 
+			let playerInitialized = false;
+
 			player.addEventListener('click', (event) => {
 				if(player.hasAttribute('controls') === false) {
 					if(player.paused === true) {
@@ -29,9 +31,19 @@
 				});
 			}
 
+			player.addEventListener('canplay', function resetOnload() {
+				player.currentTime = 0;
+				player.removeEventListener('canplay', resetOnload); // Eventlistener entfernen, um Mehrfachaufrufe zu vermeiden
+			});
+
 			player.addEventListener('play', (event) => {
 				container.classList.add('video--played');
 				container.classList.remove('video--paused');
+
+				if(playerInitialized === false) {
+					playerInitialized = true;
+					player.currentTime = 0;
+				}
 
 				if(container.classList.contains('video--preview-image')) {
 					container.classList.remove('video--preview-image');

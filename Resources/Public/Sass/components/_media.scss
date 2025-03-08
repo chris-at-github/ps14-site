@@ -73,6 +73,12 @@
 			opacity: 0;
 		}
 	}
+
+	&--autoplay {
+		.video__preview-play-button {
+			display: none;
+		}
+	}
 }
 
 .video__preview {
