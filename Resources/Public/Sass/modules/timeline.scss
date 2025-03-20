@@ -131,6 +131,12 @@ $ce-history--layout-default: true !default;
 			}
 		}
 
+		.ce-timeline--no-date {
+			.ce-history-item__date {
+				display: none;
+			}
+		}
+
 		// -------------------------------------------------------------------------------------------------------------------
 		// >= 576px
 		@include media-breakpoint-up(sm) {
@@ -170,6 +176,18 @@ $ce-history--layout-default: true !default;
 			.ce-history-item__content {
 				flex: 1;
 				padding: rem(0 0 0 70px);
+			}
+
+			.ce-timeline--no-date {
+				.ce-history__indicator {
+					left: rem(18px);
+				}
+
+				.ce-history-item {
+					&:before {
+						left: rem(11px);
+					}
+				}
 			}
 		}
 	}

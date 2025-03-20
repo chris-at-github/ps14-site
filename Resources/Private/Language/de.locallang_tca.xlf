@@ -54,6 +54,9 @@
 			<trans-unit id="tt_content.variant.powermail.1">
 				<target>Newsletter</target>
 			</trans-unit>
+			<trans-unit id="tt_content.variant.timeline.no-date">
+				<target>Ohne Datum</target>
+			</trans-unit>
 			<trans-unit id="tt_content.layout.1">
 				<target>Eingerückt Rechts</target>
 			</trans-unit>

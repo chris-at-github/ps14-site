@@ -56,6 +56,9 @@
 			<trans-unit id="tt_content.variant.powermail.1">
 				<source>Newsletter</source>
 			</trans-unit>
+			<trans-unit id="tt_content.variant.timeline.no-date">
+				<source>Without Date</source>
+			</trans-unit>
 			<trans-unit id="tt_content.layout.1">
 				<source>Indent Right</source>
 			</trans-unit>

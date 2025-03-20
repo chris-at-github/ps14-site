@@ -276,3 +276,13 @@ tx_powermail.flexForm.addField.settings\.flexform\.main\.cleverreach.config.item
 		}
 	}
 [END]
+
+[field('CType') === 'ps14_timeline']
+	TCEFORM.tt_content {
+		tx_foundation_variant {
+			addItems {
+				no-date = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:tt_content.variant.timeline.no-date
+			}
+		}
+	}
+[END]
