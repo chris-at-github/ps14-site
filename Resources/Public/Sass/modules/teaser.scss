@@ -35,6 +35,10 @@ $tx-teaser-frontend--use-css: true !default;
 		}
 
 		.teaser--layout-aside {
+			.teaser--title h1 {
+				font-size: rem(40px);
+			}
+
 			.teaser--media {
 				& {
 					display: block;
@@ -307,12 +311,32 @@ $tx-teaser-frontend--use-css: true !default;
 	// >= 768px
 	@include media-breakpoint-up(md) {
 		.teaser--layout-aside {
+			.teaser--title h1 {
+				font-size: rem(52px);
+			}
+
 			.teaser--body {
 				padding-left: rem(15px);
 			}
 
 			.teaser--sub-navigation-layout-columns ul {
 				grid-template-columns: 1fr;
+			}
+
+			.teaser--body-center {
+				& {
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: baseline;
+					justify-content: center;
+				}
+
+				.teaser--title {
+					&, h1, h2, h3, h4 {
+						margin-top: 0;
+					}
+				}
 			}
 		}
 
