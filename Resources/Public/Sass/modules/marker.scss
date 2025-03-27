@@ -44,6 +44,19 @@ $ce-marker--layout-above: true !default;
 				}
 			}
 
+			.marker--legend-slider {
+				& {
+					display: block;
+					margin: rem(5px 0 0 0);
+					padding: 0;
+					list-style: none;
+				}
+
+				& > li {
+					padding: 0;
+				}
+			}
+
 			.marker--legend-item-index {
 				& {
 					position: absolute;
@@ -83,6 +96,73 @@ $ce-marker--layout-above: true !default;
 					margin-top: rem(10px);
 				}
 			}
+
+			.slider--marker-legend {
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-gap: rem(20px);
+				margin: rem(20px 0 0 0);
+			}
+
+			.slider--navigation-legend {
+				ul {
+					display: flex;
+					gap: rem(8px);
+					margin: 0;
+					padding: 0;
+					list-style: none;
+				}
+
+				li {
+					margin: 0;
+					padding: 0;
+				}
+
+				button {
+					& {
+						position: relative;
+						width: rem(35px);
+						height: rem(35px);
+						line-height: rem(35px);
+						text-align: center;
+						font-weight: $font-weight-bold;
+						border: 0;
+						background: transparent;
+						color: $theme-color-secondary;
+						cursor: pointer;
+						transition: color $transition-duration;
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 1px; left: 0;
+						z-index: -1;
+						width: 100%;
+						height: 100%;
+						border: 2px solid $theme-color-secondary;
+						background: #fff;
+						border-radius: 50%;
+						transition: background $transition-duration;
+					}
+				}
+
+				.tns-nav-active button, button:hover, button:focus-visible {
+					& {
+						color: #fff;
+					}
+
+					&:before {
+						background: $theme-color-secondary;
+					}
+				}
+			}
+		}
+
+		.ce-marker {
+			.ce-header + .marker {
+				margin-top: $spacing-small;
+			}
 		}
 
 		// -------------------------------------------------------------------------------------------------------------------
@@ -101,9 +181,16 @@ $ce-marker--layout-above: true !default;
 		// >= 992px
 		@include media-breakpoint-up(lg) {
 			@if($ce-marker--layout-aside) {
-				.marker--layout-default {
+				.marker--layout-default,
+				.marker--layout-image-aside-slider {
 					.marker--legend {
 						margin-top: rem(5px);
+					}
+				}
+
+				.marker--layout-image-aside-slider {
+					.slider--marker-legend {
+						margin: rem(5px 0 0 0);
 					}
 				}
 			}

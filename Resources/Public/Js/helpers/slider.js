@@ -63,3 +63,19 @@ xna.fixSliderNavigation = function(node, navigation) {
 		});
 	}
 };
+
+/**
+ * Aria Attribute in der Navigation bereinigen
+ *
+ * @param {Element} node
+ * @param {Element} container
+ */
+xna.fixSliderSliderHeight = function(node, container) {
+	let maxHeight = 0;
+	node.querySelectorAll('.tns-item').forEach(function(item) {
+		if(item.offsetHeight > maxHeight) {
+			maxHeight = item.offsetHeight;
+			container.style.minHeight = item.offsetHeight + 'px';
+		}
+	});
+};
