@@ -38,7 +38,9 @@
 </f:section>
 
 <f:section name="ListingItem">
-	<li class="marker--legend-item-x">
+	<li class="marker--legend-item">
+		<div class="marker--legend-item-index">{iterator.cycle}</div>
+
 		<f:if condition="{element.title}">
 			<div class="marker--legend-item-title">
 				<f:render partial="Header/Header" arguments="{header: element.title, layout: headerLayout}" />

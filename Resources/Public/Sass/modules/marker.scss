@@ -55,6 +55,10 @@ $ce-marker--layout-above: true !default;
 				& > li {
 					padding: 0;
 				}
+
+				.marker--legend-item-index {
+					display: none;
+				}
 			}
 
 			.marker--legend-item-index {
@@ -220,28 +224,45 @@ $ce-marker--layout-above: true !default;
 		}
 
 		.marker--legend {
+			margin-top: 20px !important;
+		}
+
+		.marker--legend-item {
+			page-break-inside: avoid;
+		}
+
+		.marker--legend-item-index {
 			& {
-				//list-style-type: none;
-				//margin: 0 !important;
-				//padding: 0 !important;
+				width: 32px;
+				height: 32px;
+				line-height: 32px;
 			}
 
-			.marker--legend-item {
-				page-break-inside: avoid;
+			&:before {
+				border: 16px solid $theme-color-secondary;
+				background: none;
+				color: #fff !important;
+			}
+		}
+
+		.marker--legend-slider {
+			& {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				margin: 20px 0 0 0;
+			}
+
+			& > li {
+				position: relative;
+				min-height: 35px;
+				padding: 0 0 0 50px;
+				left: 0 !important;
+				opacity: 1 !important;
 			}
 
 			.marker--legend-item-index {
-				& {
-					width: 32px;
-					height: 32px;
-					line-height: 32px;
-				}
-
-				&:before {
-					border: 16px solid $theme-color-secondary;
-					background: none;
-					color: #fff !important;
-				}
+				display: block;
 			}
 		}
 	}
