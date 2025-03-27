@@ -72,6 +72,10 @@ $stylesheet-context: 'screen' !default;
 		& > *:first-child, .ce-header > *:first-child {
 			margin-top: 0;
 		}
+
+		&-vertical-center {
+			align-self: center;
+		}
 	}
 
 	.ce-textmedia--content + .ce-textmedia--media {
