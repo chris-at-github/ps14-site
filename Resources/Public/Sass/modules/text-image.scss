@@ -66,6 +66,7 @@ $stylesheet-context: 'screen' !default;
 		flex-direction: row;
 		margin-left: -15px;
 		margin-right: -15px;
+		gap: $spacing-default;
 	}
 
 	.ce-textmedia--content {
@@ -93,6 +94,10 @@ $stylesheet-context: 'screen' !default;
 // >= 768px
 @include media-breakpoint-up(md) {
 	.ce-textmedia--grid {
+		& {
+			gap: 0;
+		}
+
 		&.ce-textmedia--arrangement-after.ce-textmedia--media-position-left,
 		&.ce-textmedia--arrangement-before.ce-textmedia--media-position-right {
 			flex-direction: row-reverse;
