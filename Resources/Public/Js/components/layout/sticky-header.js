@@ -22,7 +22,7 @@
 			const stickyHeaderOffset= getComputedStyle(document.body).getPropertyValue('--sticky-header--offset');
 			const targetElement = document.querySelector(event.detail.targetSelector);
 
-			if(targetElement !== null && parseInt(stickyHeaderOffset) !== 0) {
+			if(targetElement !== null) {
 				setTimeout(function() {
 					window.scroll(0, (targetElement.offsetTop - parseInt(stickyHeaderOffset)));
 				}, 0);
