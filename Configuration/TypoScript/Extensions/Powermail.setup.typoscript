@@ -1,8 +1,5 @@
 @import 'EXT:powermail/Configuration/TypoScript/Main/setup.typoscript'
 
-// @see: https://www.forestlake.de/2018/07/12/powermail-link-in-label/
-plugin.tx_powermail.settings.setup.misc.htmlForLabels = 1
-
 plugin.tx_powermail {
 	view {
 		layoutRootPaths {
@@ -17,6 +14,34 @@ plugin.tx_powermail {
 			10 = EXT:ps14_site/Resources/Private/Extensions/Powermail/Partials/
 			20 = EXT:ps14_foundation/Resources/Private/Partials/
 			30 = EXT:ps14_site/Resources/Private/Partials/
+		}
+	}
+
+	settings.setup {
+
+		// @see: https://www.forestlake.de/2018/07/12/powermail-link-in-label/
+		misc.htmlForLabels = 1
+
+		excludeFromPowermailAllMarker {
+			confirmationPage {
+				excludeFromMarkerNames = dataprotection
+				excludeFromFieldTypes = password, captcha
+			}
+
+			submitPage {
+				excludeFromMarkerNames = dataprotection
+				excludeFromFieldTypes = password, captcha
+			}
+
+			receiverMail {
+				excludeFromMarkerNames = dataprotection
+				excludeFromFieldTypes = password, captcha
+			}
+
+			senderMail {
+				excludeFromMarkerNames = dataprotection
+				excludeFromFieldTypes = password, captcha
+			}
 		}
 	}
 }
