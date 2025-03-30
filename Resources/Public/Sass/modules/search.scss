@@ -144,8 +144,8 @@ $stylesheet-context: 'screen' !default;
 	a {
 		& {
 			display: block;
-			background: $theme-color-primary;
-			color: #fff;
+			background: #fff;
+			color: $theme-color-primary;
 			width: rem(34px);
 			height: rem(34px);
 			border: 2px solid $theme-color-primary;
@@ -154,19 +154,20 @@ $stylesheet-context: 'screen' !default;
 			line-height: rem(30px);
 			font-weight: $font-weight-base;
 			transition: all $transition-duration;
+			cursor: pointer;
 		}
 
 		&:hover, .focusable &:focus {
-			background: #fff;
-			color: $theme-color-primary;
+			background: $theme-color-primary;
+			color: #fff;
 			font-weight: $font-weight-bold;
 		}
 	}
 
 	.current {
 		display: block;
-		background: #fff;
-		color: $theme-color-primary;
+		background: $theme-color-primary;
+		color: #fff;
 		width: rem(34px);
 		height: rem(34px);
 		border: 2px solid $theme-color-primary;
@@ -180,15 +181,19 @@ $stylesheet-context: 'screen' !default;
 	.prev, .next {
 		svg {
 			position: relative;
-			fill: #fff;
+			fill: $theme-color-primary;
 			width: rem(9px);
 			height: rem(15px);
 			transition: fill $transition-duration;
 		}
 
 		&:hover, .focusable &:focus {
+			& {
+				background: $theme-color-primary;
+			}
+
 			svg {
-				fill: $theme-color-primary;
+				fill: #fff;
 			}
 		}
 	}
