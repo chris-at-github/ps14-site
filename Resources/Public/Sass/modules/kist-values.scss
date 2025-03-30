@@ -267,6 +267,10 @@ $ce-kist-values--use-css: true !default;
 		.ce-kist-values--icons {
 			--kist-values__item-icon-size: #{rem(48px)};
 
+			.ce-kist-values__container {
+				grid-template-columns: 1fr;
+			}
+
 			.ce-kist-values__item {
 				button {
 					display: flex;
@@ -309,6 +313,12 @@ $ce-kist-values--use-css: true !default;
 				grid-template-columns: 1fr 1fr 1fr;
 			}
 
+			.ce-kist-values--icons {
+				.ce-kist-values__container {
+					grid-template-columns:  1fr 1fr 1fr;
+				}
+			}
+
 			.ce-kist-values__modal-container {
 				.modal[aria-hidden='false'] {
 					grid-template-columns: 165px 1fr;
@@ -341,6 +351,12 @@ $ce-kist-values--use-css: true !default;
 		@include media-breakpoint-up(md) {
 			.ce-kist-values__container {
 				grid-template-columns: 1fr 1fr 1fr 1fr;
+			}
+
+			.ce-kist-values--icons {
+				.ce-kist-values__container {
+					grid-template-columns:  1fr 1fr 1fr 1fr;
+				}
 			}
 
 			.ce-kist-values__modal-container {
