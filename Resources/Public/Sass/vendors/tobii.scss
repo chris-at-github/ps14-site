@@ -36,8 +36,14 @@
 		}
 
 		figure > figcaption {
-			padding: rem(10px);
+			width: max-content;
+			margin: rem(30px) auto 0 auto;
+			padding: rem(3px 18px);
+			background: $theme-color-primary;
 			text-align: center;
+			font-weight: 700;
+			color: #fff;
+			border-radius: 3px;
 		}
 	}
 

@@ -165,7 +165,8 @@
 					let lightbox = new Tobii({
 						theme: 'tobii--theme-technical-drawing',
 						selector: '.product--technical-drawing',
-						captionAttribute: 'title',
+						captionsSelector: 'self',
+						captionAttribute: 'data-title',
 						counter: false,
 						zoom: false,
 						nav: true,
