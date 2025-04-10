@@ -2,6 +2,14 @@
 	--video-ratio: 16 / 9;
 }
 
+.image {
+	&--responsive {
+		img, svg {
+			@extend %image-responsive;
+		}
+	}
+}
+
 .video {
 	& {
 		position: relative;
