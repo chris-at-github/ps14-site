@@ -2,7 +2,10 @@
 
 plugin.tx_powermail {
 	settings {
-		spamshield.enable = 0
+		spamshield {
+			enable = 1
+			email = pschorr.christian@gmail.com
+		}
 		validation.client = 0
 		db.enable = 0
 
