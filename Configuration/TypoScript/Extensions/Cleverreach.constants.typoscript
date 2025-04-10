@@ -12,7 +12,7 @@ plugin.tx_cleverreach {
 
 [siteLanguage("languageId") == "1"]
 	plugin.tx_cleverreach {
-		formId = 315431
-		groupId = 576512
+		formId = 409389
+		groupId = 635450
 	}
 [END]
