@@ -410,10 +410,16 @@
 				}
 
 				& > li {
-					width: percentage(6 / 12);
-					margin-top: rem(35px);
-					padding-left: 15px;
-					padding-right: 15px;
+					& {
+						width: percentage(6 / 12);
+						margin-top: rem(35px);
+						padding-left: 15px;
+						padding-right: 15px;
+					}
+
+					&.card .card--title {
+						padding: rem(3px 10px);
+					}
 				}
 			}
 
