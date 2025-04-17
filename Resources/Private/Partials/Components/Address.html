@@ -46,6 +46,10 @@
 		</div>
 	</f:if>
 
+	<f:if condition="{address.country}">
+		<div class="address--item address--country">{address.country}</div>
+	</f:if>
+
 	<f:render section="GoogleMapsLink" arguments="{_all}" />
 </f:section>
 
