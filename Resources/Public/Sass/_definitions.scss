@@ -233,6 +233,10 @@ p, ul, ol, table {
 		margin-left: 5px;
 	}
 
+	.address--directors, .address--vat-number, .address--commercial-register, .address--registered-office {
+		margin: rem(15px 0 0 0);
+	}
+
 	.address--opening-hours {
 		dl {
 			margin-top: 0;

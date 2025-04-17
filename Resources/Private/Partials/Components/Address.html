@@ -88,25 +88,37 @@
 
 <f:section name="Directors">
 	<f:if condition="{address.directors}">
-		<div class="address--item address--directors"><f:translate key="LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:address.directors" />: {address.directors}</div>
+		<div class="address--item address--directors">
+			<f:translate key="LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:address.directors" />:<br>
+			{address.directors}
+		</div>
 	</f:if>
 </f:section>
 
 <f:section name="VatNumber">
 	<f:if condition="{address.vatNumber}">
-		<div class="address--item address--vat-number"><f:translate key="LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:address.vatnumber" />: {address.vatNumber}</div>
+		<div class="address--item address--vat-number">
+			<f:translate key="LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:address.vatnumber" />:<br>
+			{address.vatNumber}
+		</div>
 	</f:if>
 </f:section>
 
 <f:section name="CommercialRegister">
 	<f:if condition="{address.commercialRegister}">
-		<div class="address--item address--commercial-register"><f:translate key="LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:address.commercialregister" />: {address.commercialRegister}</div>
+		<div class="address--item address--commercial-register">
+			<f:translate key="LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:address.commercialregister" />:<br>
+			{address.commercialRegister -> f:format.nl2br()}
+		</div>
 	</f:if>
 </f:section>
 
 <f:section name="RegisteredOffice">
 	<f:if condition="{address.registeredOffice}">
-		<div class="address--item address--registered-office"><f:translate key="LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:address.registeredoffice" />: {address.registeredOffice}</div>
+		<div class="address--item address--registered-office">
+			<f:translate key="LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:address.registeredoffice" />: <br>
+			{address.registeredOffice -> f:format.nl2br()}
+		</div>
 	</f:if>
 </f:section>
 
