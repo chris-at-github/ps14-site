@@ -30,7 +30,9 @@ $stylesheet-context: 'screen' !default;
 
 .ce-image--container {
 	display: flex;
+	flex-direction: column;
 	height: 100%;
+	gap: rem(8px);
 }
 
 .ce-image--container-horizontal-center {
@@ -42,11 +44,11 @@ $stylesheet-context: 'screen' !default;
 }
 
 .ce-image--container-vertical-center {
-	align-items: center;
+	justify-content: center;
 }
 
 .ce-image--container-vertical-bottom {
-	align-items: flex-end;
+	justify-content: end;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------

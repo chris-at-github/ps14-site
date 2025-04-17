@@ -75,6 +75,9 @@
 							cssClass: 'ce-image--item'
 						}" />
 					</f:if>
+					<f:if condition="{column.media.description}">
+						<div class="ce-image--caption image-caption">{column.media.description -> f:format.nl2br()}</div>
+					</f:if>
 				</f:for>
 			</f:for>
 		</div>
