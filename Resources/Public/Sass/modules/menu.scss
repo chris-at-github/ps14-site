@@ -36,11 +36,9 @@
 	&.ce-frame--variant-1 {
 		ul {
 			& {
-				margin-top: rem(-5px);
-			}
-
-			li {
-				margin-top: rem(5px);
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-gap: rem(5px);
 			}
 		}
 
