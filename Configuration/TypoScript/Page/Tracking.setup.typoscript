@@ -1,0 +1,16 @@
+page {
+	headerData {
+		1745353055 = TEXT
+		1745353055.value = 1WxlSV
+		1745353055.value ( <script type="text/javascript">
+			// var et_pagename = "";
+			// var et_areas = "";
+			var et_proxy_redirect = "\/\/analytics.kist-escherich.com";
+			</script>
+		)
+
+		1745353056 = TEXT
+		1745353056.value = 1WxlSV
+		1745353056.wrap = <script id="_etLoader" type="text/javascript" charset="UTF-8" data-block-cookies="true" data-secure-code="|" src="//analytics.kist-escherich.com/code/e.js" async></script>
+	}
+}
