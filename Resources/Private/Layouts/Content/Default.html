@@ -27,15 +27,13 @@
 		</f:then>
 		<f:else>
 
-			<div id="c{data.uid}">
-				<f:render section="Header" optional="true">
-					<f:render partial="Header/All" arguments="{_all}" />
-				</f:render>
-				<f:render section="Main" optional="true" />
-				<f:render section="Footer" optional="true">
-					<f:render partial="Footer/All" arguments="{_all}" />
-				</f:render>
-			</div>
+			<f:render section="Header" optional="true">
+				<f:render partial="Header/All" arguments="{_all}" />
+			</f:render>
+			<f:render section="Main" optional="true" />
+			<f:render section="Footer" optional="true">
+				<f:render partial="Footer/All" arguments="{_all}" />
+			</f:render>
 			
 		</f:else>
 	</f:if>
