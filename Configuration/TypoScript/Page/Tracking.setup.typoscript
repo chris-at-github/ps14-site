@@ -14,3 +14,9 @@ page {
 		1745353056.wrap = <script id="_etLoader" type="text/javascript" charset="UTF-8" data-block-cookies="true" data-secure-code="|" src="//analytics.kist-escherich.com/code/e.js" async></script>
 	}
 }
+
+// Kein Tracking in der Entwicklungsumgebung
+[applicationContext == "Development"]
+	page.headerData.1745353055 >
+	page.headerData.1745353056 >
+[END]
