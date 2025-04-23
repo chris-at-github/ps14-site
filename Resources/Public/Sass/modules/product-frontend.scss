@@ -386,6 +386,10 @@ $tx-product-frontend--layout-show: true !default;
 				}
 			}
 
+			.product--technical-drawing-title {
+				display: none;
+			}
+
 			.product--technical-drawing-enlarge {
 				@extend %button--rounded-icon;
 				position: absolute;
@@ -948,6 +952,10 @@ $tx-product-frontend--layout-show: true !default;
 
 		.tab--container, .product--technical-drawing-enlarge {
 			display: none;
+		}
+
+		.product--technical-drawing-title {
+			display: block;
 		}
 
 		.tab--content {
