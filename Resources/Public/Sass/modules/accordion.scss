@@ -91,6 +91,10 @@ $stylesheet-context: 'screen' !default;
 		:root {
 			--accordion--container-space-after: #{rem(65px)};
 		}
+
+		.accordion--container-default {
+			padding-right: percentage(2 / 12);
+		}
 	}
 }
 
