@@ -1,15 +1,13 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
 	<f:render partial="Page/Layout/Header" section="Main" arguments="{_all}" />
 
-	<div id="content--main" role="main" class="ce-content">
+	<main id="content--main" class="ce-content">
 		<f:render section="Main"/>
-	</div>
 
-	<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentProduct')}">
-		<div id="content--product" class="ce-content">
+		<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentProduct')}">
 			<f:render section="Product" />
-		</div>
-	</f:if>
+		</f:if>
+	</main>
 
 	<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentFooter')}">
 		<div id="content--footer" class="ce-content">
