@@ -1,5 +1,5 @@
 {
-	"name": "ps14/site",
+	"name": "ps14/ps14_site",
 	"type": "typo3-cms-extension",
 	"description": "TYPO3 extension for customizing a TYPO3 installation to meet the specific requirements of a customer's website.",
 	"keywords": [
@@ -8,7 +8,7 @@
 	],
 	"homepage": "http://ps14.de/",
 	"require": {
-		"typo3/cms-core": "^12.4"
+		"typo3/cms-core": "^13.4"
 	},
 	"suggest": {
 	},
