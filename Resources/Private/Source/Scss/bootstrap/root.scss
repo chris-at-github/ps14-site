@@ -1,3 +1,6 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
 :root {
 	--color-gray-50: #eeeeee;
 	--color-gray-100: #d4d4d4;
@@ -23,12 +26,40 @@
 	--font-size-tiny: 12px;
 	--font-size-small: 14px;
 	--font-size-default: 16px;
-	--font-size-medium: 16px;
-	--font-size-large: 16px;
-	--font-size-huge: 16px;
+	--font-size-large: 22px;
+	--font-size-huge: 52px;
+
+	--header-font-family: var(--font-family-primary);
+	--header-font-weight: 400;
+	--header-font-color: var(--color-secondary-800);
+	--header-line-height: 1.2;
+	--header-1-font-size: var(--font-size-700);
+	--header-2-font-size: var(--font-size-600);
+	--header-3-font-size: var(--font-size-500);
+	--header-4-font-size: var(--font-size-400);
+	--header-5-font-size: var(--font-size-400);
+	--header-6-font-size: var(--font-size-400);
 
 	--link-color: var(--color-font);
 	--link-underline-color: var(--color-gray-300);
 	--link-active-color: var(--color-gray-900);
 	--link-active-underline-color: var(--color-gray-900);
+
+	--ce-spacing-heading: var(--spacing-400); // Abstand zwischen Elementen zu Ueberschrift
+	--ce-spacing-element: var(--spacing-500); // Abstand zwischen Elementen zu Elementen z.B. p + ul
+	--ce-spacing-block: var(--spacing-600); // Abstand zwischen Elementen zu Sonderelementen z.B. .media-container
+	--ce-indent-text-l: 0; // Einrueckung (links) von Texten und Ueberschriften
+	--ce-indent-text-r: 0; // Einrueckung (links) von Texten und Ueberschriften
+
+	//--page-header-height: {rem(64px)};
+	--page-body-offset: 0;
+
+	--container-max-width: #{rem(1376px)}; // 1280px + 48px + 48px
+	--container-spacing-x: #{rem(24px)};
+	--container-spacing-y--none: 0;
+	--container-spacing-y--small: var(--spacing-500);
+	--container-spacing-y--medium: var(--spacing-600);
+	--container-spacing-y--large: var(--spacing-700);
+	--container-spacing-y--huge: var(--spacing-900);
+	--container-indent-x: 0;
 }

@@ -1,22 +1,31 @@
 @use "sass:math";
 @use "sass:list";
-@use 'sass:meta';
-@use "sass:string";
+@use "sass:meta";
 
-@function remx($values...) {
-	$base-font-size: $font-size-default;
+@function rem($values...) {
+	$base-font-size: 16px;
 	$rem-values: ();
 
 	@each $value in $values {
 		@if $value == 0 or $value == 0px {
-			$rem-values: list.join($rem-values, 0);
-		} @else if meta.type-of($value) == number and not math.is-unitless($value) and (math.unit($value) == px) {
-			$new-rem-value: math.div($value, $font-size-default);
-			$rem-values: list.join($rem-values, #{$new-rem-value}rem);
+			$rem-values: list.append($rem-values, 0);
+		} @else if type-of($value) == 'number' and not math.is-unitless($value) and math.unit($value) == 'px' {
+			$new-rem: math.div($value, $base-font-size);
+			$rem-values: list.append($rem-values, #{$new-rem}rem);
 		} @else {
-			$rem-values: list.join($rem-values, #{$value}rem);
+			$rem-values: list.append($rem-values, #{$value}rem);
 		}
 	}
 
-	@return $rem-values;
+	@if length($rem-values) == 1 {
+		@return nth($rem-values, 1);
+	} @else {
+		@return $rem-values;
+	}
+}
+
+// Beispiel:
+.test {
+	padding: rem(0, 0, 0, 22px);
+	margin: rem(24px);
 }

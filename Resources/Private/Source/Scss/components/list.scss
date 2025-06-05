@@ -1,3 +1,5 @@
+@use "../functions" as *;
+
 .list--default-ul {
 	& {
 		padding: 0;
@@ -7,7 +9,7 @@
 		& {
 			position: relative;
 			list-style: none;
-			padding: remx(0, 0, 0, 22px);
+			padding: rem(0, 0, 0, 22px);
 		}
 
 		&:before {
@@ -27,10 +29,10 @@
 
 .list--default-ol {
 	& {
-		padding: remx(0, 0, 0, 20px);
+		padding: rem(0, 0, 0, 20px);
 	}
 
 	li {
-		padding: remx(0, 0, 0, 3px);
+		padding: rem(0, 0, 0, 3px);
 	}
 }
