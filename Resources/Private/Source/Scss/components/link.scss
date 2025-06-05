@@ -1,0 +1,49 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Variables
+:root {
+	--link-color: var(--color-font);
+	--link-font-weight: var(--font-weight-semibold);
+	--link-box-shadow-color: var(--color-primary-300);
+	--link-box-shadow: 0 -1px 0px 0px inset var(--link-box-shadow-color);
+
+	--link-active-color: var(--color-font);
+	--link-active-box-shadow-color: var(--color-primary-500);
+	--link-active-box-shadow: 0 -2px 0px 0px inset var(--link-active-box-shadow-color);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Defintions
+%link-default {
+	font-weight: var(--link-font-weight);
+	color: var(--link-color);
+	text-decoration: none;
+	box-shadow: var(--link-box-shadow);
+	transition: box-shadow var(--transition-duration-default);
+	will-change: box-shadow;
+}
+
+%link-default-hover {
+	color: var(--link-active-color);
+	box-shadow: var(--link-active-box-shadow);
+}
+
+%link-default-focus {
+	color: var(--link-active-color);
+	box-shadow: var(--link-active-box-shadow);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Classes
+.link {
+	& {
+		@extend %link-default;
+	}
+
+	&:hover {
+		@extend %link-default-hover;
+	}
+
+	&:focus-visible {
+		@extend %link-default-focus;
+	}
+}

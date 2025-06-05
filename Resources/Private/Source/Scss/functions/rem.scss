@@ -1,0 +1,22 @@
+@use "sass:math";
+@use "sass:list";
+@use 'sass:meta';
+@use "sass:string";
+
+@function remx($values...) {
+	$base-font-size: $font-size-default;
+	$rem-values: ();
+
+	@each $value in $values {
+		@if $value == 0 or $value == 0px {
+			$rem-values: list.join($rem-values, 0);
+		} @else if meta.type-of($value) == number and not math.is-unitless($value) and (math.unit($value) == px) {
+			$new-rem-value: math.div($value, $font-size-default);
+			$rem-values: list.join($rem-values, #{$new-rem-value}rem);
+		} @else {
+			$rem-values: list.join($rem-values, #{$value}rem);
+		}
+	}
+
+	@return $rem-values;
+}

@@ -1,4 +1,26 @@
-* {
-	background: #ccc;
-	color: #444;
-}
+// ---------------------------------------------------------------------------------------------------------------------
+// Global
+@use "variables";
+@use "functions";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap
+@use "bootstrap/root";
+@use "bootstrap/normalize";
+@use "bootstrap/font";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Components
+@use "components/header";
+@use "components/link";
+@use "components/list";
+//
+//// ---------------------------------------------------------------------------------------------------------------------
+//// Layout
+////@import "../../../../ps14_theme/Resources/Public/Sass/layout/hue-container";
+////@import "../../../../ps14_theme/Resources/Public/Sass/layout/container";
+////@import "../../../../ps14_theme/Resources/Public/Sass/layout/modules";
+////@import "../../../../ps14_theme/Resources/Public/Sass/layout/navigation";
+@use "layout/container";
+@use "layout/modules";
+@use "layout/main";
