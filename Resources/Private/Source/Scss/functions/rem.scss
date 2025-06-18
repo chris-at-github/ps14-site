@@ -9,7 +9,7 @@
 	@each $value in $values {
 		@if $value == 0 or $value == 0px {
 			$rem-values: list.append($rem-values, 0);
-		} @else if type-of($value) == 'number' and not math.is-unitless($value) and math.unit($value) == 'px' {
+		} @else if meta.type-of($value) == 'number' and not math.is-unitless($value) and math.unit($value) == 'px' {
 			$new-rem: math.div($value, $base-font-size);
 			$rem-values: list.append($rem-values, #{$new-rem}rem);
 		} @else {
@@ -17,15 +17,9 @@
 		}
 	}
 
-	@if length($rem-values) == 1 {
-		@return nth($rem-values, 1);
+	@if list.length($rem-values) == 1 {
+		@return list.nth($rem-values, 1);
 	} @else {
 		@return $rem-values;
 	}
-}
-
-// Beispiel:
-.test {
-	padding: rem(0, 0, 0, 22px);
-	margin: rem(24px);
 }
