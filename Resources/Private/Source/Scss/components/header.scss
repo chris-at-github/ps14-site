@@ -13,6 +13,7 @@
 .header-2 {
   @extend .header-default;
   font-size: var(--header-2-font-size);
+  font-weight: var(--font-weight-normal);
 }
 
 .header-3 {
