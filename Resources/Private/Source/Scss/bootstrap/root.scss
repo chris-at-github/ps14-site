@@ -63,3 +63,11 @@
 	--container-spacing-y--huge: #{rem(64px)};
 	--container-indent-x: 0;
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 992px
+@include media-breakpoint-up(lg) {
+	:root {
+		--container-spacing-x: #{rem(48px)};
+	}
+}
