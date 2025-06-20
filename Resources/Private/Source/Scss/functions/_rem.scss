@@ -7,7 +7,7 @@
 	$rem-values: ();
 
 	@each $value in $values {
-		@if $value == 0 or $value == 0px {
+		@if $value == 0 {
 			$rem-values: list.append($rem-values, 0);
 		} @else if meta.type-of($value) == 'number' and not math.is-unitless($value) and math.unit($value) == 'px' {
 			$new-rem: math.div($value, $base-font-size);
