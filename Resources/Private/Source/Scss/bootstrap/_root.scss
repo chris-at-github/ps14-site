@@ -48,11 +48,11 @@
 	--page-body-offset: 0;
 	--container-max-width: #{rem(936px)}; // 840px + 48px + 48px
 	--container-spacing-x: #{rem(24px)};
-	--container-spacing-y--none: 0;
-	--container-spacing-y--small: #{rem(8px)};
-	--container-spacing-y--medium: #{rem(24px)};
-	--container-spacing-y--large: #{rem(48px)};
-	--container-spacing-y--huge: #{rem(64px)};
+	--container-spacing-y-none: 0;
+	--container-spacing-y-small: #{rem(8px)};
+	--container-spacing-y-medium: #{rem(24px)};
+	--container-spacing-y-large: #{rem(48px)};
+	--container-spacing-y-huge: #{rem(64px)};
 	--container-indent-x: 0;
 }
 
