@@ -21,8 +21,9 @@ a {
 
   &:focus-visible {
     color: var(--link-active-color);
-    //outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
-    //outline-offset: var(--focus-outline-offset);
+
+    // outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
+    // outline-offset: var(--focus-outline-offset);
   }
 }
 

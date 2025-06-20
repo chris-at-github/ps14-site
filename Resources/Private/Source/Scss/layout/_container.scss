@@ -25,7 +25,6 @@
 	// -------------------------------------------------------------------------------------------------------------------
 	// Laufweiten (Layout)
   &--outer {
-
     // 0: keine Einrueckung, maximale Laufweite
     &.container--layout-0 > .container__inner {
       max-width: var(--container-max-width);

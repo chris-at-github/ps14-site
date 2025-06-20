@@ -11,11 +11,9 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, but
 }
 
 :root {
-	-moz-tab-size: 4; // Use a 4-space tab width in all browsers
-	tab-size: 4;
+	tab-size: 4; // Use a 4-space tab width in all browsers
 	-webkit-tap-highlight-color: transparent; // Remove the grey highlight on links in iOS
-	-webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS.
-	text-size-adjust: 100%;
+	text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS.
 }
 
 html {
@@ -71,11 +69,11 @@ button, input, select, textarea {
 }
 
 button, [type='button'], [type='reset'], [type='submit'] {
-	-webkit-appearance: button;
+	appearance: button;
 }
 
 [type='search'] {
-	-webkit-appearance: textfield; // Correct the odd appearance in Chrome, Edge, and Safari.
+	appearance: textfield; // Correct the odd appearance in Chrome, Edge, and Safari.
 	outline-offset: -2px; // Correct the outline style in Safari.
 }
 
@@ -88,16 +86,16 @@ textarea {
 	height: auto;
 }
 
-::-webkit-input-placeholder {
+::input-placeholder {
 	color: inherit; // Correct the text style of placeholders in Chrome, Edge, and Safari.
 }
 
 ::-webkit-search-decoration {
-	-webkit-appearance: none; // Remove the inner padding in Chrome, Edge, and Safari on macOS.
+	appearance: none; // Remove the inner padding in Chrome, Edge, and Safari on macOS.
 }
 
 ::-webkit-file-upload-button {
-	-webkit-appearance: button; // Correct the inability to style upload buttons in iOS and Safari.
+	appearance: button; // Correct the inability to style upload buttons in iOS and Safari.
 	font: inherit; // Change font properties to `inherit` in Safari.
 }
 
@@ -113,7 +111,7 @@ audio, canvas, iframe, img, svg, video {
 }
 
 svg:not([fill]) {
-	fill: currentColor;
+	fill: currentcolor;
 }
 
 iframe {
@@ -130,7 +128,6 @@ table {
 	// Make numbers in tables look like using a monospaced font
 	// @see https://helpx.adobe.com/de/fonts/using/open-type-syntax.html#tnum
 	font-variant-numeric: tabular-nums;
-	font-feature-settings: "tnum";
 	font-feature-settings: "tnum";
 }
 

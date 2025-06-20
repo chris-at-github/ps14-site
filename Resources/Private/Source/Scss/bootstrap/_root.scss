@@ -2,7 +2,7 @@
 @use "../mixins" as *;
 
 :root {
-	--color-gray-50: #eeeeee;
+	--color-gray-50: #eee;
 	--color-gray-100: #d4d4d4;
 	--color-gray-200: #b8b8b8;
 	--color-gray-300: #9b9b9b;
@@ -12,23 +12,18 @@
 	--color-gray-700: #5d5d5d;
 	--color-gray-800: #535353;
 	--color-gray-900: #414141;
-
 	--color-background: #fff;
 	--color-font: var(--color-gray-800);
-
 	--transition-duration-default: 350ms;
-
-	--font-family-primary: 'Nunito Sans', Arial, sans-serif;
+	--font-family-primary: 'Nunito Sans', arial, sans-serif;
 	--font-weight-normal: 400;
 	--font-weight-semibold: 600;
 	--font-line-height: 1.6;
-
 	--font-size-tiny: #{rem(12px)};
 	--font-size-small: #{rem(14px)};
 	--font-size-normal: #{rem(16px)};
 	--font-size-large: #{rem(24px)};
 	--font-size-huge: #{rem(52px)};
-
 	--header-font-family: var(--font-family-primary);
 	--header-font-weight: 600;
 	--header-font-color: var(--color-gray-800);
@@ -39,21 +34,18 @@
 	--header-4-font-size: #{rem(16px)};
 	--header-5-font-size: #{rem(16px)};
 	--header-6-font-size: #{rem(16px)};
-
 	--link-color: var(--color-font);
 	--link-underline-color: var(--color-gray-300);
 	--link-active-color: var(--color-gray-900);
 	--link-active-underline-color: var(--color-gray-900);
-
 	--spacing-heading: #{rem(8px)}; // Abstand zwischen Elementen zu Ueberschrift
 	--spacing-element: #{rem(8px)}; // Abstand zwischen Elementen zu Elementen z.B. p + ul
 	--spacing-block: #{rem(12px)}; // Abstand zwischen Elementen zu Sonderelementen z.B. .media-container
 	--indent-text-l: 0; // Einrueckung (links) von Texten und Ueberschriften
 	--indent-text-r: 0; // Einrueckung (links) von Texten und Ueberschriften
 
-	//--page-header-height: {rem(64px)};
+	// --page-header-height: {rem(64px)};
 	--page-body-offset: 0;
-
 	--container-max-width: #{rem(936px)}; // 840px + 48px + 48px
 	--container-spacing-x: #{rem(24px)};
 	--container-spacing-y--none: 0;
