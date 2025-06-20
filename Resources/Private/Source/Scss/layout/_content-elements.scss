@@ -7,25 +7,25 @@
 .ce-heading {
 	&--layout-1 {
 		.ce-heading__title {
-			@extend .header-1;
+			@extend %header-1;
 		}
 	}
 
 	&--layout-2 {
 		.ce-heading__title  {
-			@extend .header-2;
+			@extend %header-2;
 		}
 	}
 
 	&--layout-3 {
 		.ce-heading__title  {
-			@extend .header-3;
+			@extend %header-3;
 		}
 	}
 
 	&--layout-4 {
 		.ce-heading__title {
-			@extend .header-4;
+			@extend %header-4;
 		}
 	}
 

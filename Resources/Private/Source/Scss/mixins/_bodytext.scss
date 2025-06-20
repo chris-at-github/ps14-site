@@ -4,19 +4,19 @@
 
 @mixin bodytext {
   h1 {
-    @extend .header-1;
+    @extend %header-1;
   }
 
   h2 {
-    @extend .header-2;
+    @extend %header-2;
   }
 
   h3 {
-    @extend .header-3;
+    @extend %header-3;
   }
 
   h4 {
-    @extend .header-4;
+    @extend %header-4;
   }
 
   h1, h2, h3, h4 {
