@@ -34,15 +34,13 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Classes
 .link {
-	& {
-		@extend %link-default;
-	}
+	@extend %link-default;
+}
 
-	&:hover {
-		@extend %link-default-hover;
-	}
+.link:hover {
+	@extend %link-default-hover;
+}
 
-	&:focus-visible {
-		@extend %link-default-focus;
-	}
+.link:focus-visible {
+	@extend %link-default-focus;
 }
