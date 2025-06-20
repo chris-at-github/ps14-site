@@ -1,6 +1,6 @@
 @use "../functions" as *;
 
-.list--default-ul {
+%list--default-ul {
 
 	/* stylelint-disable-next-line no-duplicate-selectors */
 	& {
@@ -27,7 +27,7 @@
 	}
 }
 
-.list--default-ol {
+%list--default-ol {
 
 	/* stylelint-disable-next-line no-duplicate-selectors */
 	& {
