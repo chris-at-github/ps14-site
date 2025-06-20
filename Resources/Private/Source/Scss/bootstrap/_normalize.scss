@@ -41,18 +41,17 @@ hr {
 }
 
 pre {
-	font-family: monospace, monospace; // Correct the inheritance and scaling of font size in all browsers.
+	font-family: monospace, serif; // Correct the inheritance and scaling of font size in all browsers.
 	font-size: 1em; // Correct the odd `em` font sizing in all browsers.
 	overflow: auto; // Prevent overflow of the container in all browsers
 }
 
 code, kbd, samp {
-	font-family: monospace, monospace; // Correct the inheritance and scaling of font size in all browsers.
+	font-family: monospace, serif; // Correct the inheritance and scaling of font size in all browsers.
 	font-size: 1em; // Correct the odd `em` font sizing in all browsers.
 }
 
 abbr[title] {
-	text-decoration: underline;
 	text-decoration: underline dotted;
 }
 
@@ -69,7 +68,7 @@ button, input, select, textarea {
 }
 
 button, [type='button'], [type='reset'], [type='submit'] {
-	appearance: button;
+	appearance: auto;
 }
 
 [type='search'] {
@@ -86,16 +85,12 @@ textarea {
 	height: auto;
 }
 
-::input-placeholder {
-	color: inherit; // Correct the text style of placeholders in Chrome, Edge, and Safari.
-}
-
 ::-webkit-search-decoration {
 	appearance: none; // Remove the inner padding in Chrome, Edge, and Safari on macOS.
 }
 
 ::-webkit-file-upload-button {
-	appearance: button; // Correct the inability to style upload buttons in iOS and Safari.
+	appearance: auto; // Correct the inability to style upload buttons in iOS and Safari.
 	font: inherit; // Change font properties to `inherit` in Safari.
 }
 
