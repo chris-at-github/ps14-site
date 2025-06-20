@@ -3,11 +3,10 @@
 :root {
 	--link-color: var(--color-font);
 	--link-font-weight: var(--font-weight-semibold);
-	--link-box-shadow-color: var(--color-primary-300);
-	--link-box-shadow: 0 -1px 0px 0px inset var(--link-box-shadow-color);
-	--link-active-color: var(--color-font);
-	--link-active-box-shadow-color: var(--color-primary-500);
-	--link-active-box-shadow: 0 -2px 0px 0px inset var(--link-active-box-shadow-color);
+	--link-underline-color: var(--color-gray-200);
+	--link-active-color: #000;
+	--link-active-underline-color: var(--color-gray-900);
+	--link-focus-outline-color: var(--color-gray-900);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -15,20 +14,25 @@
 %link-default {
 	font-weight: var(--link-font-weight);
 	color: var(--link-color);
-	text-decoration: none;
-	box-shadow: var(--link-box-shadow);
-	transition: box-shadow var(--transition-duration-default);
-	will-change: box-shadow;
+	text-decoration: underline;
+	text-decoration-color: var(--link-underline-color);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 4px;
+	transition-property: color, text-decoration;
+	transition-duration: var(--transition-duration-default);
 }
 
 %link-default-hover {
 	color: var(--link-active-color);
-	box-shadow: var(--link-active-box-shadow);
+	text-decoration-color: var(--link-active-underline-color);
 }
 
 %link-default-focus {
 	color: var(--link-active-color);
-	box-shadow: var(--link-active-box-shadow);
+	text-decoration-color: var(--link-active-underline-color);
+	border-radius: 1px;
+	outline: var(--link-focus-outline-color) solid 2px;
+	outline-offset: 3px;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
