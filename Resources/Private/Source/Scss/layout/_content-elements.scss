@@ -43,6 +43,7 @@
 		}
 	}
 
+
 	& + .ce-bodytext {
 		margin-top: var(--spacing-heading);
 	}
@@ -57,7 +58,7 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Einrueckung
 .ce-heading,
-.ce-bodytext {
+.ce-bodytext { /* stylelint-disable-line no-descending-specificity */
 	padding-left: var(--ce-indent-text-l);
 	padding-right: var(--ce-indent-text-r);
 }
