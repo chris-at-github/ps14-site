@@ -88,14 +88,12 @@
 
 					if(typeof(xna.data.productLines[value]) !== 'undefined') {
 
-
-
 						// Laender nach dem sorting (aus PHP) sortieren
 						let countries = Object.values(xna.data.productLines[value].countries);
 
 						if(countries.length !== 0) {
-							countries.sort(function(a,b) {
-								return a.sorting - b.sorting;
+							countries.sort(function(a, b) {
+								return a.sorting.localeCompare(b.sorting, undefined, { numeric: true, sensitivity: 'base' })
 							});
 
 							// neue Laenderauswahl hinzugefuegen
