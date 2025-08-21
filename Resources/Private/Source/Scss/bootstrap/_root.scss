@@ -33,6 +33,7 @@
 	--font-size-normal: #{rem(16px)};
 	--font-size-large: #{rem(24px)};
 	--font-size-huge: #{rem(52px)};
+	--font-size-iconfont: #{rem(18px)};
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Header
@@ -77,6 +78,7 @@
 @include media-breakpoint-up(lg) {
 	:root {
 		--font-size-normal: #{rem(18px)};
+		--font-size-iconfont: #{rem(21px)};
 		--font-line-height: 1.8;
 		--header-1-font-size: #{rem(48px)};
 		--header-2-font-size: #{rem(21px)};
