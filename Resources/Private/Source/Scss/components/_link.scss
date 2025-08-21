@@ -1,4 +1,8 @@
 // ---------------------------------------------------------------------------------------------------------------------
+// Import
+@use "../bootstrap/iconfont" as *;
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Variables
 :root {
 	--link-color: var(--color-font);
@@ -35,6 +39,20 @@
 	outline-offset: 3px;
 }
 
+%link-external {
+	&::before {
+		@extend %icon-font;
+		content: var(--icon-font-arrow-outward);
+	}
+}
+
+%link-download {
+	&::before {
+		@extend %icon-font;
+		content: var(--icon-font-arrow-bar-down);
+	}
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Classes
 .link {
@@ -47,4 +65,12 @@
 
 .link:focus-visible {
 	@extend %link-default-focus;
+}
+
+.link--external {
+	@extend %link-external;
+}
+
+.link--download {
+	@extend %link-download;
 }
