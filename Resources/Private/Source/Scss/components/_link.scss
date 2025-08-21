@@ -49,7 +49,7 @@
 %link-download {
 	&::before {
 		@extend %icon-font;
-		content: var(--icon-font-arrow-bar-down);
+		content: var(--icon-font-arrow-down);
 	}
 }
 
