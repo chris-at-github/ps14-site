@@ -1,3 +1,6 @@
+@use "../functions" as *;
+@forward "../components/link";
+
 // ---------------------------------------------------------------------------------------------------------------------
 // HTML
 body {
@@ -38,4 +41,36 @@ a {
   width: 100%;
   flex: 1;
   z-index: 5;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Footer
+.page__footer {
+  margin: rem(32px 0 8px 0);
+}
+
+.page-footer__inner {
+  display: flex;
+  gap: rem(16px);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Footer Navigation
+.navigation--footer {
+  .navigation__group {
+    display: flex;
+    gap: rem(8px);
+  }
+
+  .navigation-item {
+    @extend %link-default;
+
+    &:hover {
+      @extend %link-default-hover;
+    }
+
+    &:focus-visible {
+      @extend %link-default-focus;
+    }
+  }
 }
