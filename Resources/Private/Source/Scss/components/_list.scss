@@ -19,7 +19,7 @@
 	li::before {
 		content: '';
 		position: absolute;
-		top: 10px; left: 2px;
+		top: 13px; left: 2px;
 		border: 2px solid var(--color-gray-400);
 		border-radius: 1px;
 	}
@@ -50,15 +50,5 @@
 
 	ol li::before {
 		content: counter(ol, lower-latin) ".";
-	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// >= 992px
-@include media-breakpoint-up(lg) {
-	%list--default-ul {
-		li::before {
-			top: 13px;
-		}
 	}
 }

@@ -8,14 +8,14 @@
   @extend %header-default;
 
   font-size: var(--header-1-font-size);
-  font-weight: var(--font-weight-normal);
+  // font-weight: var(--font-weight-normal);
 }
 
 %header-2 {
   @extend %header-default;
 
   font-size: var(--header-2-font-size);
-  font-weight: var(--font-weight-semibold);
+  // font-weight: var(--font-weight-semibold);
 }
 
 %header-3 {
