@@ -1,1 +1,1 @@
-console.log('Hello Ps14 Site');
+import './bootstrap/badge';
