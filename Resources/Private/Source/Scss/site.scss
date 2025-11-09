@@ -1,28 +1,48 @@
-// ---------------------------------------------------------------------------------------------------------------------
-// Global
-@use "variables";
-@use "functions";
-
+// // ---------------------------------------------------------------------------------------------------------------------
+// // Global
+// @use "variables";
+// @use "functions";
+//
+//
+// // ---------------------------------------------------------------------------------------------------------------------
+// // Bootstrap
+// @use "bootstrap/root";
+// @use "bootstrap/normalize";
+@use "bootstrap/font";
+// @use "bootstrap/iconfont";
+//
+// // ---------------------------------------------------------------------------------------------------------------------
+// // Components
+// @use "components/header";
+// @use "components/link";
+// @use "components/list";
+//
+// //// ---------------------------------------------------------------------------------------------------------------------
+// //// Layout
+// //// @import "../../../../ps14_theme/Resources/Public/Sass/layout/hue-container";
+// //// @import "../../../../ps14_theme/Resources/Public/Sass/layout/container";
+// //// @import "../../../../ps14_theme/Resources/Public/Sass/layout/modules";
+// //// @import "../../../../ps14_theme/Resources/Public/Sass/layout/navigation";
+// @use "layout/container";
+// @use "layout/content-elements";
+// @use "layout/main";
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Bootstrap
-@use "bootstrap/root";
-@use "bootstrap/normalize";
-@use "bootstrap/font";
-@use "bootstrap/iconfont";
+@use "ps14-uikit/scss/bootstrap/root";
+@use "ps14-uikit/scss/bootstrap/normalize";
+// @use "ps14-uikit/scss/bootstrap/font";
+@use "ps14-uikit/scss/bootstrap/typography";
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
-@use "components/header";
-@use "components/link";
-@use "components/list";
+@use "ps14-uikit/scss/components/component";
+@use "ps14-uikit/scss/components/link";
+@use "ps14-uikit/scss/components/button";
+@use "ps14-uikit/scss/components/form";
 
-//// ---------------------------------------------------------------------------------------------------------------------
-//// Layout
-//// @import "../../../../ps14_theme/Resources/Public/Sass/layout/hue-container";
-//// @import "../../../../ps14_theme/Resources/Public/Sass/layout/container";
-//// @import "../../../../ps14_theme/Resources/Public/Sass/layout/modules";
-//// @import "../../../../ps14_theme/Resources/Public/Sass/layout/navigation";
-@use "layout/container";
-@use "layout/content-elements";
-@use "layout/main";
+// ---------------------------------------------------------------------------------------------------------------------
+// Layout
+@use "ps14-uikit/scss/layout/container";
+@use "ps14-uikit/scss/layout/content-element";
+@use "ps14-uikit/scss/layout/main";
