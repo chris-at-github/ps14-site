@@ -2,7 +2,7 @@
 // Bootstrap
 @use "ps14-uikit/scss/bootstrap/root";
 @use "ps14-uikit/scss/bootstrap/normalize";
-// @use "ps14-uikit/scss/bootstrap/font";
+@use "ps14-uikit/scss/bootstrap/font";
 @use "ps14-uikit/scss/bootstrap/typography";
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -30,7 +30,7 @@
 // // Bootstrap
 // @use "bootstrap/root";
 // @use "bootstrap/normalize";
-@use "bootstrap/font";
+// @use "bootstrap/font";
 // @use "bootstrap/iconfont";
 //
 // // ---------------------------------------------------------------------------------------------------------------------
