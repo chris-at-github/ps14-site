@@ -1,0 +1,39 @@
+// -------------------------------------------------------------------------------------------------------------------
+// Definitions
+@mixin display-default {
+	font-family: var(--display-font-family);
+	font-weight: var(--display-font-weight);
+	line-height: var(--display-line-height);
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+// Display classes
+.display-1 {
+	@include display-default;
+	font-size: var(--display-1-font-size);
+}
+
+.display-2 {
+	@include display-default;
+	font-size: var(--display-2-font-size);
+}
+
+.display-3 {
+	@include display-default;
+	font-size: var(--display-3-font-size);
+}
+
+.display-4 {
+	@include display-default;
+	font-size: var(--display-3-font-size);
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+// Text classes
+.text-small {
+	font-size: var(--font-size-small);
+}
+
+.text-large {
+	font-size: var(--font-size-large);
+}

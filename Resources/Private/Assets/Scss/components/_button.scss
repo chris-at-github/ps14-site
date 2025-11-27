@@ -1,0 +1,103 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Variables
+:root {
+	--button-height: 39px;
+	--button-padding: 0 24px;
+	--button-color: var(--color-font);
+	--button-font-weight: var(--font-weight-semibold);
+	--button-background: transparent;
+
+	--button-interactive-color: var(--color-font);
+	--button-interactive-background: var(--color-gray-100);
+	--button-focus-color-outline: var(--color-focus-outline);
+
+	--button-icon-size: var(--button-height);
+	--button-icon-object-size: 16px;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Defintion
+@mixin button-default {
+	min-height: var(--button-height);
+	display: inline-flex;
+	align-items: center;
+	padding: var(--button-padding);
+	font-weight: var(--button-font-weight);
+	color: var(--button-color);
+	background: var(--button-background);
+	cursor: pointer;
+	border: 0;
+	border-radius: var(--border-radius-default);
+	text-decoration: none;
+}
+
+@mixin button-default-interactive {
+	color: var(--button-interactive-color);
+	background: var(--button-interactive-background);
+}
+
+@mixin button-default-focus {
+	outline: 3px solid var(--button-focus-color-outline);
+	outline-offset: 0;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Classes
+.button {
+	@include button-default;
+
+	&:disabled,
+	&.is--disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+}
+
+.button:hover {
+	@include button-default-interactive;
+}
+
+.button:focus-visible {
+	@include button-default-interactive;
+	@include button-default-focus;
+}
+
+.button--default {
+	--button-background: var(--color-gray-100);
+	--button-interactive-color: var(--color-gray-50);
+	--button-interactive-background: var(--color-gray-900);
+}
+
+.button--primary {
+	--button-color: var(--color-gray-50);
+	--button-background: var(--color-gray-800);
+	--button-interactive-color: var(--color-gray-50);
+	--button-interactive-background: var(--color-gray-900);
+}
+
+.button__icon {
+	width: var(--button-icon-object-size);
+	height: var(--button-icon-object-size);
+	flex-shrink: 0;
+}
+
+.button--icon {
+	width: var(--button-icon-size);
+	height: var(--button-icon-size);
+	padding: 0;
+	justify-content: center;
+}
+
+.button--icon-prefix,
+.button--icon-suffix {
+	gap: 12px;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Button Group
+.button-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}

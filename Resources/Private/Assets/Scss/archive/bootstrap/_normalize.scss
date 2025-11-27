@@ -51,6 +51,14 @@ code, kbd, samp {
 	font-size: 1em; // Correct the odd `em` font sizing in all browsers.
 }
 
+abbr[title] {
+	text-decoration: underline dotted;
+}
+
+ul {
+	list-style: none;
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Forms
 button, input, select, textarea {
@@ -95,6 +103,10 @@ img, video {
 
 audio, canvas, iframe, img, svg, video {
 	vertical-align: top;
+}
+
+svg:not([fill]) {
+	fill: currentcolor;
 }
 
 iframe {

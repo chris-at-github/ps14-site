@@ -1,0 +1,68 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Variables
+:root {
+	--form-field-height: 39px;
+	--form-field-padding: 0 8px;
+	--form-field-background: transparent;
+	--form-field-border-color: var(--color-gray-200);
+	--form-field-focus-color: var(--color-gray-900);
+	--form-field-focus-color-border: var(--color-gray-600);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS Classes Default
+.form--default {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.form-item {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-label {
+	font-weight: var(--font-weight-semibold);
+}
+
+.form-label__required {
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-normal);
+}
+
+.form-field--default {
+	display: flex;
+	min-height: var(--form-field-height);
+	padding: var(--form-field-padding);
+	background: var(--form-field-background);
+	box-shadow: 0 0 0 1px var(--form-field-border-color);
+	border: 0;
+	border-radius: var(--border-radius-default);
+}
+
+.form-field--default:focus,
+.form-field--default:focus-visible {
+	color: var(--form-field-focus-color);
+	box-shadow: 0 0 0 2px var(--form-field-focus-color-border);
+	outline: 3px solid var(--color-focus-outline);
+	outline-offset: 2px;
+}
+
+.form-field--textarea {
+	--form-field-height: 93px;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS Checkbox | Radio
+.form-item--checkbox,
+.form-item--radio {
+	flex-direction: row;
+	gap: 8px;
+}
+
+.form-field--checkbox,
+.form-field--radio {
+	margin: 8px 0 0 0;
+	align-self: start;
+}

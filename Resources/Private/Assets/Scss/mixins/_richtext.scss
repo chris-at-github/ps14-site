@@ -1,0 +1,48 @@
+@use "../bootstrap/typography" as *;
+@use "../components/link" as *;
+
+@mixin richtext {
+	h1 {
+		@extend .display-1;
+	}
+
+	h2 {
+		@extend .display-2;
+	}
+
+	h3 {
+		@extend .display-3;
+	}
+
+	h4 {
+		@extend .display-4;
+	}
+
+	h1, h2, h3, h4 {
+		& + p, & + ul, & + ol, & + table {
+			margin-top: var(--spacing-heading);
+		}
+	}
+
+	p, ul, ol, table {
+		& + p, & + ul, & + ol, & + table {
+			margin-top: var(--spacing-element);
+		}
+
+		& + h2, & + h3, & + h4 {
+			margin-top: var(--spacing-element);
+		}
+	}
+
+	a {
+		@include link-default;
+	}
+
+	a:hover {
+		@include link-default-hover;
+	}
+
+	a:focus-visible {
+		@include link-default-focus;
+	}
+}

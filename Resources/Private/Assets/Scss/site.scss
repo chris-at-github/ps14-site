@@ -1,24 +1,24 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Bootstrap
-@use "ps14-uikit/scss/bootstrap/root";
-@use "ps14-uikit/scss/bootstrap/normalize";
-@use "ps14-uikit/scss/bootstrap/font";
-@use "ps14-uikit/scss/bootstrap/typography";
+@use "bootstrap/root";
+@use "bootstrap/normalize";
+@use "bootstrap/font";
+@use "bootstrap/typography";
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
-@use "ps14-uikit/scss/components/component";
-@use "ps14-uikit/scss/components/link";
-@use "ps14-uikit/scss/components/button";
-@use "ps14-uikit/scss/components/form";
-@use "ps14-uikit/scss/components/badge";
-@use "ps14-uikit/scss/components/card";
+@use "components/component";
+@use "components/link";
+@use "components/button";
+@use "components/form";
+@use "components/badge";
+@use "components/card";
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
-@use "ps14-uikit/scss/layout/container";
-@use "ps14-uikit/scss/layout/content-element";
-@use "ps14-uikit/scss/layout/main";
+@use "layout/container";
+@use "layout/content-element";
+@use "layout/main";
 
 // // ---------------------------------------------------------------------------------------------------------------------
 // // Global
