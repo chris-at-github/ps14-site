@@ -1,0 +1,9 @@
+[field('CType') === 'header']
+	TCAdefaults.tt_content {
+		header_layout = 1
+	}
+
+	TCEFORM.tt_content {
+		subheader.disabled = 0
+	}
+[END]
