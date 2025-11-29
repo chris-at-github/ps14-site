@@ -1,3 +1,56 @@
 .component-container {
 	margin-top: var(--spacing-heading);
 }
+
+.component-color-group {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	gap: 8px;
+}
+
+.component-color-group__item {
+	flex: 1;
+	aspect-ratio: 1;
+}
+
+.component-color-group__item--neutral-50 {
+	background: var(--color-neutral-50);
+}
+
+.component-color-group__item--neutral-100 {
+	background: var(--color-neutral-100);
+}
+
+.component-color-group__item--neutral-200 {
+	background: var(--color-neutral-200);
+}
+
+.component-color-group__item--neutral-300 {
+	background: var(--color-neutral-300);
+}
+
+.component-color-group__item--neutral-400 {
+	background: var(--color-neutral-400);
+}
+
+.component-color-group__item--neutral-500 {
+	background: var(--color-neutral-500);
+}
+
+.component-color-group__item--neutral-600 {
+	background: var(--color-neutral-600);
+}
+
+.component-color-group__item--neutral-700 {
+	background: var(--color-neutral-700);
+}
+
+.component-color-group__item--neutral-800 {
+	background: var(--color-neutral-800);
+}
+
+.component-color-group__item--neutral-900 {
+	background: var(--color-neutral-900);
+}

@@ -7,3 +7,10 @@
 		subheader.disabled = 0
 	}
 [END]
+
+[field('CType') === 'div']
+	TCAdefaults.tt_content {
+		space_before_class = large
+		space_after_class = large
+	}
+[END]
