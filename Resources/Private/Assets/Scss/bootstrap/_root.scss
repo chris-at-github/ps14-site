@@ -33,8 +33,9 @@
 	--color-gray-700: #5d5d5d;
 	--color-gray-800: #535353;
 	--color-gray-900: #414141;
+
 	--color-background: #fff;
-	--color-font: var(--color-gray-800);
+	--color-font: var(--color-neutral-800);
 	--color-focus-outline: rgba(185, 185, 185, 0.65);
 
 	// -------------------------------------------------------------------------------------------------------------------
@@ -52,7 +53,6 @@
 	// Display (Header)
 	--display-font-family: var(--font-family-default);
 	--display-font-weight: 500;
-	--display-font-color: var(--color-gray-800);
 	--display-line-height: 1.2;
 	--display-1-font-size: 28px;
 	--display-2-font-size: 21px;
