@@ -1,5 +1,9 @@
 .component-container {
-	margin-top: var(--spacing-heading);
+	margin-top: var(--spacing-element);
+}
+
+.component-container__title {
+	margin-bottom: var(--spacing-heading);
 }
 
 .component-color-group {
@@ -13,6 +17,46 @@
 .component-color-group__item {
 	flex: 1;
 	aspect-ratio: 1;
+}
+
+.component-color-group__item--primary-50 {
+	background: var(--color-primary-50);
+}
+
+.component-color-group__item--primary-100 {
+	background: var(--color-primary-100);
+}
+
+.component-color-group__item--primary-200 {
+	background: var(--color-primary-200);
+}
+
+.component-color-group__item--primary-300 {
+	background: var(--color-primary-300);
+}
+
+.component-color-group__item--primary-400 {
+	background: var(--color-primary-400);
+}
+
+.component-color-group__item--primary-500 {
+	background: var(--color-primary-500);
+}
+
+.component-color-group__item--primary-600 {
+	background: var(--color-primary-600);
+}
+
+.component-color-group__item--primary-700 {
+	background: var(--color-primary-700);
+}
+
+.component-color-group__item--primary-800 {
+	background: var(--color-primary-800);
+}
+
+.component-color-group__item--primary-900 {
+	background: var(--color-primary-900);
 }
 
 .component-color-group__item--neutral-50 {
