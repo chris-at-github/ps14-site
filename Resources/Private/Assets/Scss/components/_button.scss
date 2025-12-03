@@ -8,7 +8,7 @@
 	--button-background: transparent;
 
 	--button-interactive-color: var(--color-font);
-	--button-interactive-background: var(--color-gray-100);
+	--button-interactive-background: var(--color-neutral-100);
 	--button-focus-color-outline: var(--color-focus-outline);
 
 	--button-icon-size: var(--button-height);
@@ -64,16 +64,16 @@
 }
 
 .button--default {
-	--button-background: var(--color-gray-100);
-	--button-interactive-color: var(--color-gray-50);
-	--button-interactive-background: var(--color-gray-900);
+	--button-background: var(--color-neutral-200);
+	--button-interactive-color: var(--color-neutral-50);
+	--button-interactive-background: var(--color-neutral-800);
 }
 
 .button--primary {
-	--button-color: var(--color-gray-50);
-	--button-background: var(--color-gray-800);
-	--button-interactive-color: var(--color-gray-50);
-	--button-interactive-background: var(--color-gray-900);
+	--button-color: var(--color-neutral-800);
+	--button-background: var(--color-primary-500);
+	--button-interactive-color: var(--color-neutral-50);
+	--button-interactive-background: var(--color-neutral-800);
 }
 
 .button__icon {
