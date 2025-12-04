@@ -6,7 +6,7 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3Fluid\Fluid\Core\Component\AbstractComponentCollection;
 use TYPO3Fluid\Fluid\View\TemplatePaths;
 
-class ComponentCollection extends AbstractComponentCollection
+class ComponentCollection extends \Ps14\Component\Component\ComponentCollection
 {
     public function getTemplatePaths(): TemplatePaths {
         $templatePaths = new TemplatePaths();

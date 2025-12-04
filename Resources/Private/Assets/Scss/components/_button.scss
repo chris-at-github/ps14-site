@@ -1,15 +1,15 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Variables
 :root {
-	--button-height: 39px;
+	--button-height: 41px;
 	--button-padding: 0 24px;
-	--button-color: var(--color-font);
-	--button-font-weight: var(--font-weight-semibold);
-	--button-background: transparent;
+	--button-font-color: var(--color-font);
+	--button-background-color: transparent;
+	--button-border-color: transparent;
 
-	--button-interactive-color: var(--color-font);
-	--button-interactive-background: var(--color-neutral-100);
-	--button-focus-color-outline: var(--color-focus-outline);
+	--button-interactive-font-color: var(--color-font);
+	--button-interactive-background-color: var(--color-neutral-100);
+	--button-interactive-border-color: var(--color-neutral-100);
 
 	--button-icon-size: var(--button-height);
 	--button-icon-object-size: 16px;
@@ -22,23 +22,34 @@
 	display: inline-flex;
 	align-items: center;
 	padding: var(--button-padding);
-	font-weight: var(--button-font-weight);
-	color: var(--button-color);
-	background: var(--button-background);
+	font-weight: var(--font-weight-semibold);
+	color: var(--button-font-color);
+	background: var(--button-background-color);
 	cursor: pointer;
 	border: 0;
+	border-color: var(--button-border-color);
 	border-radius: var(--border-radius-default);
 	text-decoration: none;
 }
 
+@mixin button-default-outline {
+	--button-background-color: transparent;
+	--button-interactive-font-color: var(--color-neutral-900);
+	--button-interactive-background-color: transparent;
+	--button-interactive-border-color: var(--color-neutral-800);
+
+	border: 2px solid var(--button-border-color);
+}
+
 @mixin button-default-interactive {
-	color: var(--button-interactive-color);
-	background: var(--button-interactive-background);
+	color: var(--button-interactive-font-color);
+	background: var(--button-interactive-background-color);
+	border-color: var(--button-interactive-border-color);
 }
 
 @mixin button-default-focus {
-	outline: 3px solid var(--button-focus-color-outline);
-	outline-offset: 0;
+	outline: 2px solid var(--color-focus-outline);
+	outline-offset: 2px;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -64,16 +75,34 @@
 }
 
 .button--default {
-	--button-background: var(--color-neutral-200);
-	--button-interactive-color: var(--color-neutral-50);
-	--button-interactive-background: var(--color-neutral-800);
+	--button-background-color: var(--color-neutral-200);
+	--button-interactive-font-color: var(--color-neutral-50);
+	--button-interactive-background-color: var(--color-neutral-800);
 }
 
 .button--primary {
-	--button-color: var(--color-neutral-800);
-	--button-background: var(--color-primary-500);
-	--button-interactive-color: var(--color-neutral-50);
-	--button-interactive-background: var(--color-neutral-800);
+	--button-font-color: var(--color-neutral-800);
+	--button-background-color: var(--color-primary-500);
+	--button-interactive-font-color: var(--color-neutral-50);
+	--button-interactive-background-color: var(--color-neutral-800);
+}
+
+.button--default-outline,
+.button--primary-outline {
+	--button-background-color: transparent;
+	--button-interactive-font-color: var(--color-neutral-900);
+	--button-interactive-background-color: transparent;
+	--button-interactive-border-color: var(--color-neutral-800);
+
+	border: 2px solid var(--button-border-color);
+}
+
+.button--default-outline {
+	--button-border-color: var(--color-neutral-300);
+}
+
+.button--primary-outline {
+	--button-border-color: var(--color-primary-500);
 }
 
 .button__icon {
