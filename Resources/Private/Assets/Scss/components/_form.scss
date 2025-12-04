@@ -45,8 +45,8 @@
 .form-field--default:focus-visible {
 	color: var(--form-field-focus-color);
 	box-shadow: 0 0 0 2px var(--form-field-focus-color-border);
-	outline: 3px solid var(--color-focus-outline);
-	outline-offset: 2px;
+	outline: 0px solid var(--color-focus-outline);
+	outline-offset: 4px;
 }
 
 .form-field--textarea {

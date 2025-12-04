@@ -29,7 +29,7 @@
 @mixin link-default-focus {
 	color: var(--link-active-color);
 	text-decoration-color: var(--link-active-underline-color);
-	outline: 2px solid var(--link-focus-outline-color);
+	outline: 1px solid var(--link-focus-outline-color);
 	outline-offset: 3px;
 }
 

@@ -36,8 +36,8 @@
 }
 
 @mixin badge-default-focus {
-	outline: 3px solid var(--badge-focus-color-outline);
-	outline-offset: 0;
+	outline: 1px solid var(--badge-focus-color-outline);
+	outline-offset: 2px;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
