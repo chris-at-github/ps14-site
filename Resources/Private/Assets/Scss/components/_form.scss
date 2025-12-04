@@ -1,12 +1,12 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Variables
 :root {
-	--form-field-height: 39px;
+	--form-field-height: 41px;
 	--form-field-padding: 0 8px;
 	--form-field-background: transparent;
-	--form-field-border-color: var(--color-gray-200);
-	--form-field-focus-color: var(--color-gray-900);
-	--form-field-focus-color-border: var(--color-gray-600);
+	--form-field-border-color: var(--color-neutral-200);
+	--form-field-focus-font-color: var(--color-neutral-900);
+	--form-field-focus-border-color: var(--color-neutral-500);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -43,10 +43,9 @@
 
 .form-field--default:focus,
 .form-field--default:focus-visible {
-	color: var(--form-field-focus-color);
-	box-shadow: 0 0 0 2px var(--form-field-focus-color-border);
-	outline: 0px solid var(--color-focus-outline);
-	outline-offset: 4px;
+	color: var(--form-field-focus-font-color);
+	box-shadow: 0 0 0 2px var(--form-field-focus-border-color);
+	outline: 0;
 }
 
 .form-field--textarea {
@@ -59,10 +58,19 @@
 .form-item--radio {
 	flex-direction: row;
 	gap: 8px;
+
+	&:focus-within {
+		outline: 1px solid var(--form-field-focus-border-color);
+		outline-offset: 2px;
+	}
 }
 
 .form-field--checkbox,
 .form-field--radio {
 	margin: 8px 0 0 0;
 	align-self: start;
+	accent-color: var(--color-neutral-300);
+	outline: 0;
+	border-radius: 0;
+	border: 0;
 }
