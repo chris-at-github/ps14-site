@@ -2,7 +2,7 @@
 // Variables
 :root {
 	--button-height: 41px;
-	--button-padding: 0 24px;
+	--button-padding: 0 32px;
 	--button-font-color: var(--color-font);
 	--button-background-color: transparent;
 	--button-border-color: transparent;
@@ -48,7 +48,7 @@
 }
 
 @mixin button-default-focus {
-	outline: 2px solid var(--color-focus-outline);
+	outline: 1px solid var(--color-focus-outline);
 	outline-offset: 2px;
 }
 
