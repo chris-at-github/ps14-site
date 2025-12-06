@@ -14,7 +14,7 @@
 .form--default {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: 24px;
 }
 
 .form-item {
@@ -29,6 +29,7 @@
 .form-label__required {
 	font-size: var(--font-size-small);
 	font-weight: var(--font-weight-normal);
+	color: var(--color-muted);
 }
 
 .form-field--default {
@@ -50,6 +51,27 @@
 
 .form-field--textarea {
 	--form-field-height: 93px;
+}
+
+.form-field--error {
+	--form-field-border-color: var(--color-error);
+	--form-field-focus-border-color: var(--color-error);
+}
+
+.form-description {
+	margin: 0 0 4px 0;
+	font-size: var(--font-size-small);
+	color: var(--color-muted);
+}
+
+.form-error {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	list-style: none;
+	margin: 8px 0 0 0;
+	font-size: var(--font-size-small);
+	color: var(--color-error);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
