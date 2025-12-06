@@ -6,7 +6,7 @@
 	--form-field-background: transparent;
 	--form-field-border-color: var(--color-neutral-200);
 	--form-field-focus-font-color: var(--color-neutral-900);
-	--form-field-focus-border-color: var(--color-neutral-500);
+	--form-field-interactive-border-color: var(--color-neutral-500);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -42,10 +42,14 @@
 	border-radius: var(--border-radius-default);
 }
 
+.form-field--default:hover {
+	box-shadow: 0 0 0 1px var(--form-field-interactive-border-color);
+}
+
 .form-field--default:focus,
 .form-field--default:focus-visible {
 	color: var(--form-field-focus-font-color);
-	box-shadow: 0 0 0 2px var(--form-field-focus-border-color);
+	box-shadow: 0 0 0 2px var(--form-field-interactive-border-color);
 	outline: 0;
 }
 
@@ -55,7 +59,7 @@
 
 .form-field--error {
 	--form-field-border-color: var(--color-error);
-	--form-field-focus-border-color: var(--color-error);
+	--form-field-interactive-border-color: var(--color-error);
 }
 
 .form-description {
@@ -82,7 +86,7 @@
 	gap: 8px;
 
 	&:focus-within {
-		outline: 1px solid var(--form-field-focus-border-color);
+		outline: 1px solid var(--form-field-interactive-border-color);
 		outline-offset: 2px;
 	}
 }
