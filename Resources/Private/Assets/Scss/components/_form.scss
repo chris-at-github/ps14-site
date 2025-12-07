@@ -7,6 +7,8 @@
 	--form-field-border-color: var(--color-neutral-200);
 	--form-field-focus-font-color: var(--color-neutral-900);
 	--form-field-interactive-border-color: var(--color-neutral-500);
+
+
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -24,6 +26,7 @@
 
 .form-label {
 	font-weight: var(--font-weight-semibold);
+	color: var(--color-font);
 }
 
 .form-label__required {
@@ -53,6 +56,12 @@
 	outline: 0;
 }
 
+.is--focusable .form-field--default:focus,
+.is--focusable .form-field--default:focus-visible {
+	outline: 1px solid var(--color-focus-outline);
+	outline-offset: 4px;
+}
+
 .form-field--textarea {
 	--form-field-height: 93px;
 }
@@ -78,25 +87,83 @@
 	color: var(--color-error);
 }
 
+:root {
+	--form-field-checkbox-padding: 0 0 0 32px;
+	--form-field-checkbox-size: 20px;
+	--form-field-checkbox-active-size: 18px;
+	--form-field-checkbox-active-background-color: var(--color-neutral-900);
+	--form-field-checkbox-active-icon-color: var(--color-neutral-100);
+	--form-field-checkbox-active-icon-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' %3E%3Cpath d='M389-235 163-460l84-85 142 142 324-323 84 84-408 407Z'/%3E%3C/svg%3E");
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // CSS Checkbox | Radio
 .form-item--checkbox,
 .form-item--radio {
-	flex-direction: row;
-	gap: 8px;
+	position: relative;
 
-	&:focus-within {
-		outline: 1px solid var(--form-field-interactive-border-color);
-		outline-offset: 2px;
+	.form-field {
+		position: absolute;
+		opacity: 0;
+
+		&:checked {
+			& + .form-label {
+				&:before {
+					background: var(--form-field-checkbox-active-background-color);
+					box-shadow: 0 0 0 1px var(--form-field-interactive-border-color);
+				}
+
+				&:after {
+					top: 5px; left: 2px;
+					z-index: 20;
+					width: var(--form-field-checkbox-active-size);
+					height: var(--form-field-checkbox-active-size);
+					mask-image: var(--form-field-checkbox-active-icon-image);
+					background: var(--form-field-checkbox-active-icon-color);
+				}
+			}
+		}
+
+		&:disabled {
+			& + .form-label {
+				cursor: not-allowed;
+				pointer-events: none;
+				opacity: 0.5;
+			}
+		}
 	}
-}
 
-.form-field--checkbox,
-.form-field--radio {
-	margin: 8px 0 0 0;
-	align-self: start;
-	accent-color: var(--color-neutral-300);
-	outline: 0;
-	border-radius: 0;
-	border: 0;
+	.form-field--error {
+		& + .form-label {
+			--color-font: var(--color-error);
+			--form-field-border-color: var(--color-error);
+			--form-field-interactive-border-color: var(--color-error);
+		}
+	}
+
+	.form-label {
+		display: inline-flex;
+		position: relative;
+		padding: var(--form-field-checkbox-padding);
+
+		&:before, &:after {
+			position: absolute;
+			content: '';
+			display: block;
+		}
+
+		&:before {
+			top: 4px; left: 1px;
+			z-index: 10;
+			width: var(--form-field-checkbox-size);
+			height: var(--form-field-checkbox-size);
+			box-shadow: 0 0 0 1px var(--form-field-border-color);
+		}
+
+		&:hover {
+			&:before {
+				box-shadow: 0 0 0 1px var(--form-field-interactive-border-color);
+			}
+		}
+	}
 }
