@@ -221,6 +221,10 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Form Group
+.form-item-group {
+	border: 0;
+}
+
 .form-item-group__choices {
 	display: flex;
 	flex-direction: column;
