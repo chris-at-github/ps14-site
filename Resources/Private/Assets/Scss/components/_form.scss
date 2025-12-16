@@ -26,6 +26,10 @@
 	flex-direction: column;
 }
 
+.form-item--disabled {
+	pointer-events: none;
+}
+
 .form-label {
 	font-weight: var(--font-weight-semibold);
 	color: var(--color-font);
@@ -62,6 +66,12 @@
 .is--focusable .form-field--default:focus-visible {
 	outline: 1px solid var(--color-focus-outline);
 	outline-offset: 4px;
+}
+
+.form-field--default:disabled {
+	cursor: not-allowed;
+	pointer-events: none;
+	opacity: 0.5;
 }
 
 .form-field--textarea {
