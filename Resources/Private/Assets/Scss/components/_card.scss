@@ -4,9 +4,9 @@
 	--card-container-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
 	--card-background-color: tranparent;
-	--card-border-color: var(--color-gray-100);
+	--card-border-color: transparent;
 	--card-font-color: var(--color-font);
-	--card-interactive-border-color: var(--color-gray-600);
+	--card-interactive-border-color: tranparent;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -15,10 +15,15 @@
 	display: grid;
 	gap: 16px;
 	grid-template-columns: var(--card-container-template-columns);
+	list-style: none;
 }
 
-.card-container--two-column {
-	--card-container-template-columns: repeat(2, 1fr);
+.card-container--layout-1-1 {
+	--card-container-template-columns: 1fr;
+
+	@container (min-width: 530px) {
+		--card-container-template-columns: 1fr 1fr;
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -96,4 +101,15 @@
 .card__action {
 	display: flex;
 	justify-content: center;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Variants
+.card--neutral {
+	--card-background-color: var(--color-neutral-200);
+}
+
+.card--neutral-outline {
+	--card-border-color: var(--color-neutral-200);
+	--card-interactive-border-color: var(--color-neutral-600);
 }
