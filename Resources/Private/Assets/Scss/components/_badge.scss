@@ -7,7 +7,7 @@
 	--badge-background: transparent;
 
 	--badge-interactive-color: var(--color-font);
-	--badge-interactive-background: var(--color-gray-100);
+	--badge-interactive-background: var(--color-neutral-100);
 	--badge-focus-color-outline: var(--color-focus-outline);
 
 	--badge-icon-object-size: 20px;
@@ -63,9 +63,9 @@
 }
 
 .badge--default {
-	--badge-background: var(--color-gray-100);
-	--badge-interactive-color: var(--color-gray-50);
-	--badge-interactive-background: var(--color-gray-900);
+	--badge-background: var(--color-neutral-200);
+	--badge-interactive-color: var(--color-neutral-50);
+	--badge-interactive-background: var(--color-neutral-900);
 }
 
 .badge__icon {
