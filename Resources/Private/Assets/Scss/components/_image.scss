@@ -1,0 +1,40 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Variables
+:root {
+	--image-container-icon-size: 48px;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Container
+.image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Images
+.image-container--picture {
+	position: relative;
+
+	.image-container__source {
+		position: absolute;
+		top: 0;	left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.image-container--icon {
+	.image-container__source {
+		width: var(--image-container-icon-size);
+		height: var(--image-container-icon-size);
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Ratios
+.image-container--ratio-16-9 {
+	aspect-ratio: 16 / 9;
+}

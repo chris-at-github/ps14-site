@@ -58,26 +58,6 @@
 	}
 }
 
-.card__image {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	aspect-ratio: 16 / 9;
-	margin: 8px;
-	border-radius: var(--border-radius-default);
-
-	&--icon {
-		padding: 16px;
-		color: var(--card-font-color);
-		background: var(--color-gray-50);
-	}
-}
-
-.card__image-svg {
-	width: 64px;
-	height: 64px;
-}
-
 .card__body {
 	display: flex;
 	flex-direction: column;
