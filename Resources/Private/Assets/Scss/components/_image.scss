@@ -23,6 +23,10 @@
 	--image-container-image-ratio: 1 / 1;
 }
 
+.image-container--ratio-4-3 {
+	--image-container-image-ratio: 4 / 3;
+}
+
 .image-container--ratio-16-9 {
 	--image-container-image-ratio: 16 / 9;
 }
