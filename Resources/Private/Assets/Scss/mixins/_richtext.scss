@@ -1,5 +1,6 @@
 @use "../bootstrap/typography" as *;
 @use "../components/link" as *;
+@use "../components/list" as *;
 
 @mixin richtext {
 	h1 {
