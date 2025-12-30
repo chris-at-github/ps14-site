@@ -1,6 +1,7 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Variables
 :root {
+	--image-container-image-ratio: auto;
 	--image-container-icon-size: 48px;
 }
 
@@ -13,16 +14,32 @@
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Ratios
+.image-container--ratio {
+	aspect-ratio: var(--image-container-image-ratio);
+}
+
+.image-container--ratio-1-1 {
+	--image-container-image-ratio: 1 / 1;
+}
+
+.image-container--ratio-16-9 {
+	--image-container-image-ratio: 16 / 9;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Images
 .image-container--picture {
-	position: relative;
+	&.image-container--ratio {
+		position: relative;
 
-	.image-container__source {
-		position: absolute;
-		top: 0;	left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+		.image-container__source {
+			position: absolute;
+			top: 0;	left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 }
 
@@ -31,10 +48,4 @@
 		width: var(--image-container-icon-size);
 		height: var(--image-container-icon-size);
 	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Ratios
-.image-container--ratio-16-9 {
-	aspect-ratio: 16 / 9;
 }
