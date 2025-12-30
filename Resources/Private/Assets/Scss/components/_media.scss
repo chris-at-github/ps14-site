@@ -1,0 +1,83 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Variables
+:root {
+	--media-container-media-ratio: auto;
+	--media-container-icon-size: 48px;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Container
+.media-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+}
+
+.media-container__ratio {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	aspect-ratio: var(--media-container-media-ratio);
+}
+
+.media-container__ratio + .media-container__description,
+.media-container__ratio + .media-container__copyright {
+	margin: 4px 0 0 0;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Components
+.media-description {
+	font-size: var(--font-size-small);
+	line-height: 1.4;
+	color: var(--color-muted);
+}
+
+.media-copyright {
+	display: flex;
+	font-size: var(--font-size-small);
+	color: var(--color-muted);
+}
+
+.media-copyright__value + .media-copyright__value {
+	&::before {
+		margin: 0 3px;
+		content: '/';
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Ratio
+.media-container--ratio-1-1 {
+	--media-container-media-ratio: 1 / 1;
+}
+
+.media-container--ratio-4-3 {
+	--media-container-media-ratio: 4 / 3;
+}
+
+.media-container--ratio-16-9 {
+	--media-container-media-ratio: 16 / 9;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Images
+.media-container--picture {
+	.media-container__ratio {
+		.media-container__source {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.media-container--icon {
+	.media-container__source {
+		width: var(--media-container-icon-size);
+		height: var(--media-container-icon-size);
+	}
+}
