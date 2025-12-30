@@ -7,6 +7,8 @@
 :root {
 	--card-container-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
+	--card-template-columns: 1fr;
+	--card-template-area: "image" "body" "actions";
 	--card-background-color: tranparent;
 	--card-border-color: transparent;
 	--card-font-color: var(--color-font);
@@ -24,12 +26,21 @@
 	list-style: none;
 }
 
-.card-container--layout-1-1 {
+.card-container > .card-container__item,
+.card-container > li {
+	container-type: inline-size;
+}
+
+.card-container--layout-horizontal-2 {
 	--card-container-template-columns: 1fr;
 
 	@container (min-width: 530px) {
 		--card-container-template-columns: 1fr 1fr;
 	}
+}
+
+.card-container--layout-vertical {
+	--card-container-template-columns: 1fr;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -38,8 +49,9 @@
 	border-radius: var(--border-radius-default);
 	box-shadow: 0 0 0 1px var(--card-border-color);
 	overflow: hidden;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-areas: var(--card-template-area);
+	grid-template-columns: var(--card-template-columns);
 	background: var(--card-background-color);
 }
 
@@ -70,6 +82,10 @@
 	}
 }
 
+.card__image {
+	grid-area: image;
+}
+
 .card__body {
 	display: flex;
 	flex-direction: column;
@@ -77,6 +93,7 @@
 	flex-grow: 1;
 	padding: 16px 16px;
 	color: var(--card-font-color);
+	grid-area: body;
 }
 
 .card__title {
@@ -93,6 +110,7 @@
 	gap: 8px;
 	padding: 16px 16px;
 	list-style: none;
+	grid-area: actions;
 }
 
 .card__action {
@@ -110,4 +128,46 @@
 .card--neutral-outline {
 	--card-border-color: var(--color-neutral-200);
 	--card-interactive-border-color: var(--color-neutral-600);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Layouts
+// Horizontal: Image, Body, Actions
+.card--layout-horizontal-im-bo-ac {
+	--card-template-columns: 1fr;
+
+	@container (min-width: 450px) {
+		--card-template-area: "image body" "image actions";
+		--card-template-columns: minmax(100px, 1fr) 2fr;
+	}
+
+	@container (min-width: 800px) {
+		--card-template-area: "image body actions";
+		--card-template-columns: 175px 1fr minmax(min-content, 275px);
+	}
+
+	.card__image {
+		max-width: 100%;
+		height: 100%;
+	}
+}
+
+// Horizontal: Image, Body
+.card--layout-horizontal-im-bo {
+	--card-template-columns: 1fr;
+
+	@container (min-width: 450px) {
+		--card-template-area: "image body";
+		--card-template-columns: minmax(100px, 1fr) 2fr;
+	}
+
+	@container (min-width: 800px) {
+		--card-template-area: "image body";
+		--card-template-columns: 175px 1fr;
+	}
+
+	.card__image {
+		max-width: 100%;
+		height: 100%;
+	}
 }
