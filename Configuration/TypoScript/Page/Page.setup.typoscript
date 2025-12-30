@@ -39,17 +39,6 @@ page {
 		}
 
 		dataProcessing {
-			140 = Ps14\Foundation\DataProcessing\PageResourceProcessor
-			140 {
-				inlineCss {
-					10 = /assets/css/site-inline.css
-				}
-
-				inlineJs {
-					10 = assets/js/site-inline.js
-				}
-			}
-
 			150 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
 
 			// Navigationen
