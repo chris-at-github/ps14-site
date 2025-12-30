@@ -86,6 +86,11 @@
 	grid-area: image;
 }
 
+.card__image--icon {
+	--icon-container-size: 100%;
+	--icon-size: 48px;
+}
+
 .card__body {
 	display: flex;
 	flex-direction: column;
