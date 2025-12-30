@@ -1,3 +1,5 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Component
 .component-container {
 	margin-top: var(--spacing-element);
 }
@@ -6,6 +8,8 @@
 	margin-bottom: var(--spacing-heading);
 }
 
+// ---------------------------------------------------------------------------------------------------------------------
+// Colors
 .component-color-group {
 	margin: 0;
 	padding: 0;
@@ -97,4 +101,12 @@
 
 .component-color-group__item--neutral-900 {
 	background: var(--color-neutral-900);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Icons
+.component-container--icons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
 }
