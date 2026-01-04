@@ -11,7 +11,8 @@
 		"typo3/cms-core": "^13.4"
 	},
 	"suggest": {
-		"ps14/ps14_foundation": "^13.0"
+		"ps14/ps14_foundation": "^13.0",
+		"ps14/ps14_image": "^13.0"
 	},
 	"autoload": {
 		"psr-4": {
