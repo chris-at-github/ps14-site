@@ -8,9 +8,11 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Container
 .media-container {
+
+	// damit spannt sich der Container nur so breit wie das Bild
+	width: fit-content;
 	display: flex;
 	flex-direction: column;
-	container-type: inline-size;
 }
 
 .media-container__source + .media-container__description,
@@ -24,6 +26,10 @@
 	font-size: var(--font-size-small);
 	line-height: 1.4;
 	color: var(--color-muted);
+
+	// hat keine eigene Breite, sondern orientiert sich an der Breite des Containers
+	width: 0;
+	min-width: 100%;
 }
 
 .media-copyright {
@@ -56,8 +62,9 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Images
-.media-container--picture.media-container--ratio {
-	.media-container__source {
+.media-container--picture {
+	&.media-container--ratio .media-container__source {
+		display: block;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
