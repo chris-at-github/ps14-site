@@ -1,0 +1,25 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Variables
+:root {
+	--media-group-rows: 1fr;
+	--media-group-columns: 1fr;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Media Group
+.media-group {
+	display: grid;
+	gap: 24px;
+	grid-template-rows: var(--media-group-rows);
+	grid-template-columns: var(--media-group-columns);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Alignment
+.media-group--horizontal-center {
+	justify-items: center;
+}
+
+.media-group--horizontal-right {
+	justify-items: end;
+}
