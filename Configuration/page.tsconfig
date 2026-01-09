@@ -14,3 +14,9 @@
 		space_after_class = large
 	}
 [END]
+
+[field('CType') === 'image']
+	TCEFORM.tt_content {
+		imageborder.disabled = 1
+	}
+[END]
