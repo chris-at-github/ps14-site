@@ -9,13 +9,10 @@
 // Container
 .media-container {
 
-	// // damit spannt sich der Container nur so breit wie das Bild
+	// damit spannt sich der Container nur so breit wie das Bild
 	width: fit-content;
 	display: flex;
 	flex-direction: column;
-	// display: table;
-	// width: 1px; /* Winziger Wert als Fallback, 'min-content' erledigt den Rest */
-	// min-width: 100%; /* Optional: Falls das Bild kleiner als der Text sein könnte */
 }
 
 .media-container__source + .media-container__description,

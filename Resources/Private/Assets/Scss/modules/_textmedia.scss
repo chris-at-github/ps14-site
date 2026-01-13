@@ -1,8 +1,6 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Variables
 :root {
-	// --media-group-rows: 1fr;
-	// --media-group-columns: 1fr;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -17,7 +15,8 @@
 	align-items: flex-start;
 }
 
-.media-group--column-2 {
+.media-group--column-2,
+.media-group--column-3 {
 	flex-wrap: wrap;
 
 	@container (min-width: 530px) {
