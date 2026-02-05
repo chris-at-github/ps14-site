@@ -54,8 +54,21 @@
 </f:section>
 
 <f:section name="GoogleMapsLink">
-	<f:if condition="{address.latitude} && {address.longitude}">
-		<div class="address--item address--google-maps-link"><a href="https://www.google.com/maps/place/{address.latitude},{address.longitude}" target="_blank"><f:translate key="LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:address.google-maps-link" /></a></div>
+	<f:if condition="{address.mapsLink}">
+		<f:then>
+			<div class="address--item address--google-maps-link">
+				<f:link.external uri="{address.mapsLink}" target="_blank" rel="noopener">
+					<f:translate key="LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:address.maps-link" />
+				</f:link.external>
+			</div>
+		</f:then>
+		<f:else if="{address.latitude} && {address.longitude}">
+			<div class="address--item address--google-maps-link">
+				<a href="https://www.google.com/maps/place/{address.latitude},{address.longitude}" target="_blank" rel="noopener">
+					<f:translate key="LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_frontend.xlf:address.maps-link" />
+				</a>
+			</div>
+		</f:else>
 	</f:if>
 </f:section>
 
