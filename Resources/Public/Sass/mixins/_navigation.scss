@@ -348,24 +348,23 @@
 				grid-template-columns: 1fr 1fr;
 				grid-template-rows: 1fr 1fr;
 				grid-template-areas:
-				'item-electrostatic item-cleaning'
-				'item-thermal-bonding item-cleaning';
-			}
-
-			& > ul > li:nth-last-child(3) {
-				grid-area: item-electrostatic;
-				//background: blue;
+				'item-electrostatic item-cleaning';
 			}
 
 			& > ul > li:nth-last-child(2) {
-				grid-area: item-cleaning;
-				//background: orange;
+				grid-area: item-electrostatic;
+				// background: blue;
 			}
 
 			& > ul > li:nth-last-child(1) {
-				grid-area: item-thermal-bonding;
-				//background: green;
+				grid-area: item-cleaning;
+				// background: orange;
 			}
+
+			// & > ul > li:nth-last-child(1) {
+			// 	grid-area: item-thermal-bonding;
+			// 	//background: green;
+			// }
 
 			& > ul > li > ul {
 				& > li {
@@ -455,9 +454,23 @@
 
 			.navigation--container-layout-product .navigation--container-inner {
 				& > ul {
-					grid-template-columns: 1fr 1fr 1fr;
+					grid-template-columns: 1fr 2fr;
 					grid-template-rows: 1fr;
-					grid-template-areas: "item-electrostatic item-cleaning item-thermal-bonding"
+				}
+
+				& > ul > li:nth-last-child(1) {
+					// grid-area: item-cleaning;
+					// background: orange;
+
+					& > ul {
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						grid-gap: rem(15px);
+					}
+
+					& > ul > li + li {
+						margin-top: rem(15px);
+					}
 				}
 			}
 		}
@@ -481,9 +494,9 @@
 		}
 	}
 
-	//& > ul > li:nth-child(1) > .navigation--container-outer {
-	//	display: block;
-	//}
+	// & > ul > li:nth-child(2) > .navigation--container-outer {
+	// 	display: block;
+	// }
 }
 
 // Mobile Navigation mit Sub-Navigation
