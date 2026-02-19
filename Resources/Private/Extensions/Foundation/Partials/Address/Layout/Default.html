@@ -2,18 +2,18 @@
 <f:section name="Main">
 
 	<address class="address">
-		<f:if condition="{settings.display.name} == 1">
-			<f:render partial="Components/Address" section="Name" arguments="{_all}" />
-		</f:if>
-
 		<f:if condition="{settings.display.description} == 1">
 			<f:render partial="Components/Address" section="Description" arguments="{_all}" />
+		</f:if>
+
+		<f:if condition="{settings.display.name} == 1">
+			<f:render partial="Components/Address" section="Name" arguments="{_all}" />
 		</f:if>
 
 		<div class="row">
 			<div class="col-12 col-md-6 col-lg-4">
 				<f:if condition="{settings.display.location} == 1">
-					<div class="address--item-group">
+					<div class="address--item-group address--item-group--location">
 						<f:if condition="{address.address}">
 							<div class="address--item address--street">{address.address}</div>
 						</f:if>
@@ -60,7 +60,7 @@
 			<div class="col-12 col-md-6 col-lg-8">
 				<f:if condition="{settings.display.openingHours} == 1">
 					<f:if condition="{address.openingHours} || {address.openingHoursDescription}">
-						<div class="address--item-group address--opening-hours">
+						<div class="address--item-group address--item-group--opening-hours address--opening-hours">
 							<f:render partial="Components/Address" section="OpeningHoursDaysGrouped" arguments="{_all}" />
 							<f:render partial="Components/Address" section="OpeningHoursDescription" arguments="{_all}" />
 						</div>

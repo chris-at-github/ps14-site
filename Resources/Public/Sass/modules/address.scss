@@ -12,9 +12,9 @@ $stylesheet-context: 'screen' !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Address
 .ce-address {
-	.address {
+	// .address {
 		@extend %address;
-	}
+	// }
 
 	.address--google-maps-link {
 		svg {
@@ -33,7 +33,7 @@ $stylesheet-context: 'screen' !default;
 		}
 
 		ul {
-			margin-top: rem(10px);
+			margin-top: rem(5px);
 		}
 
 		li {
@@ -65,6 +65,26 @@ $stylesheet-context: 'screen' !default;
 
 	.address--opening-hours-grouped-title {
 		font-weight: $font-weight-bold;
+	}
+}
+
+.ce-address--default {
+	.address--name {
+		margin-top: rem(15px);
+	}
+
+	.address--item-group--location {
+		margin-top: 0;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 767px
+@include media-breakpoint-up(md) {
+	.ce-address--default {
+		.address .address--item-group--opening-hours {
+			margin-top: 0;
+		}
 	}
 }
 
