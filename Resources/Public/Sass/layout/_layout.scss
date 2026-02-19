@@ -157,6 +157,17 @@ a, input, select, textarea, button {
 				fill: #fff;
 			}
 		}
+
+		.address--linkedin {
+			svg {
+				width: 23px;
+				height: 23px;
+			}
+
+			a:hover svg, .focusable a:focus svg {
+				fill: #fff;
+			}
+		}
 	}
 
 	.navigation {
