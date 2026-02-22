@@ -25,6 +25,7 @@ TCEFORM {
 			addItems {
 				product = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:pages.navigation-layout.product
 				card = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:pages.navigation-layout.card
+				largeCard = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:pages.navigation-layout.large-card
 			}
 		}
 	}

@@ -13,17 +13,17 @@ navigation.default {
 
 	settings {
 		picture {
-			width = 280
+			width = 410
 			cropVariant = desktop
 			mediaQueries >
 			mediaQueries {
 				992 {
-					width = 256
+					width = 410
 					cropVariant = desktop
 					mediaQuery = (min-width: 992px)
 				}
 				576 {
-					width = 280
+					width = 290
 					cropVariant = mobile
 					mediaQuery = (min-width: 576px)
 				}

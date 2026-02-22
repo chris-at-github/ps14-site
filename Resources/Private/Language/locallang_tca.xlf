@@ -40,6 +40,9 @@
 			<trans-unit id="pages.navigation-layout.card">
 				<source>Card</source>
 			</trans-unit>
+			<trans-unit id="pages.navigation-layout.large-card">
+				<source>Large Card</source>
+			</trans-unit>
 			<trans-unit id="pages.disable-sticky.pdf">
 				<source>Hide PDF print</source>
 			</trans-unit>

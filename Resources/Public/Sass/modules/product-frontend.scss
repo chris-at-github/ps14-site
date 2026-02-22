@@ -1022,6 +1022,19 @@ $tx-product-frontend--layout-show: true !default;
 			margin: 20px 0 0 0;
 		}
 
+		.table {
+			width: max-content !important;
+		}
+
+		table {
+			width: 100%;
+			font-size: 12px;
+		}
+
+		th, td {
+			width: auto !important;
+			min-width: 0 !important;
+		}
 	}
 
 	.product--system-installation,

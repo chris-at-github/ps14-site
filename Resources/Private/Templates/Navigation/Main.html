@@ -8,7 +8,7 @@
 					<f:render partial="Navigation/Default/Link" section="Main" arguments="{item: item}" />
 
 					<f:if condition="{item.children}">
-						<div class="navigation--container-outer navigation--container-layout-{f:if(condition: item.data.tx_foundation_navigation_layout, then: item.data.tx_foundation_navigation_layout, else: 'default')}">
+						<div class="navigation--container-outer navigation--container-layout-{f:if(condition: item.data.tx_foundation_navigation_layout, then: '{fo:format.sanitize(value: item.data.tx_foundation_navigation_layout)}', else: 'default')}">
 							<div class="navigation--container-background"></div>
 							<div class="navigation--container-inner">
 								<f:render section="{item.data.tx_foundation_navigation_layout -> fo:format.ucFirst()}" optional="1" arguments="{_all}">
@@ -28,6 +28,17 @@
 	</f:section>
 
 	<f:section name="Card">
+		<ul>
+			<f:for each="{item.children}" as="card">
+				<li class="card" data-uri-target="{card.link}">
+					<f:render partial="Components/Card" section="Media" arguments="{media: card.media.0, settings: settings.picture}" />
+					<f:render partial="Components/Card" section="Title" arguments="{title: card.title, link: card.link}" />
+				</li>
+			</f:for>
+		</ul>
+	</f:section>
+
+	<f:section name="LargeCard">
 		<ul>
 			<f:for each="{item.children}" as="card">
 				<li class="card" data-uri-target="{card.link}">
