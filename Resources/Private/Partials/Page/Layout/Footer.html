@@ -22,6 +22,8 @@
 							<f:cObject typoscriptObjectPath="block.contentFooterRight" />
 						</div>
 					</div>
+
+					<f:render section="Logos" arguments="{_all}" />
 				</div>
 			</div>
 
@@ -65,9 +67,8 @@
 									<li class="address--item address--youtube"><f:link.typolink parameter="{address.youtube}"><fo:svg.inline source="assets/svg/youtube.svg" /></f:link.typolink></li>
 								</f:if>
 
-
 								<f:if condition="{address.linkedIn}">
-									<li class="address--item address--youtube"><f:link.typolink parameter="{address.linkedIn}"><fo:svg.inline source="assets/svg/linkedin.svg" /></f:link.typolink></li>
+									<li class="address--item address--linkedin"><f:link.typolink parameter="{address.linkedIn}"><fo:svg.inline source="assets/svg/linkedin.svg" /></f:link.typolink></li>
 								</f:if>
 							</ul>
 						</f:if>
@@ -75,5 +76,33 @@
 				</address>
 			</f:if>
 		</fo:address.entity>
+	</f:section>
+
+	<f:section name="Logos">
+		<div class="page-footer--logos">
+			<ul class="footer--logo-group">
+				<fo:content.entity identifier="tisax-certification">
+					<f:if condition="{content}">
+						<li class="footer--logo-group__item">
+							<f:link.typolink parameter="{content.link}" class="footer--logo">
+								<f:if condition="{content.images.0}">
+									<div class="footer--logo__image">
+										<f:image src="{content.images.0.originalResource.uid}" treatIdAsReference="true" maxWidth="300" loading="lazy" cropVariant="default" />
+									</div>
+								</f:if>
+								<div class="footer--logo__body">
+									<f:if condition="{content.header}">
+										<div class="footer--logo__header">{content.header}</div>
+									</f:if>
+									<f:if condition="{content.bodytext}">
+										<div class="footer--logo__description"><f:format.html>{content.bodytext}</f:format.html></div>
+									</f:if>
+								</div>
+							</f:link.typolink>
+						</li>
+					</f:if>
+				</fo:content.entity>
+			</ul>
+		</div>
 	</f:section>
 </div>
