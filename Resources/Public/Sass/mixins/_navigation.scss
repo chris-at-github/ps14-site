@@ -324,16 +324,11 @@
 		.navigation--container-layout-default .navigation--container-inner {
 			& > ul {
 				& {
-					display: flex;
-					flex-wrap: wrap;
-					width: calc(100% + 20px);
-					margin-left: -10px;
-					margin-right: -10px;
+					display: grid;
+					gap: 0 20px;
+					grid-template-columns: 1fr 1fr;
+					margin: rem(0 -10px);
 					padding: rem(0 0 20px 0);
-				}
-
-				& > li {
-					width: percentage(6 / 12);
 				}
 			}
 		}
@@ -484,7 +479,8 @@
 		}
 	}
 
-	// & > ul > li:nth-child(2) > .navigation--container-outer {
+	// DEVELOPMENT ONLY: Sub-Navigation immer anzeigen
+	// & > ul > li:nth-child(3) > .navigation--container-outer {
 	// 	display: block;
 	// }
 }
