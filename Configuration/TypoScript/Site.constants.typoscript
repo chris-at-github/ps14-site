@@ -22,3 +22,7 @@ pages {
 	# cat=pages; type=int+; label=UID of page for individual product
 	individualProduct = 183
 }
+
+[ApplicationContext == "Production"]
+	config.no_cache = 0
+[end]
