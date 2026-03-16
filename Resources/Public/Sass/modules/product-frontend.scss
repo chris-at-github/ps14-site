@@ -941,6 +941,22 @@ $tx-product-frontend--layout-show: true !default;
 		th, td {
 			width: auto !important;
 		}
+
+		.accordion--container-section {
+			& {
+				break-inside: avoid;
+				page-break-inside: avoid;
+			}
+
+			h3 {
+				break-after: avoid;
+				page-break-after: avoid;
+			}
+		}
+
+		.accordion--container-section + .accordion--container-section {
+			margin-top: 60px;
+		}
 	}
 
 	.product--technical-data-accessories table {
@@ -948,16 +964,12 @@ $tx-product-frontend--layout-show: true !default;
 	}
 
 	.product--technical-drawings {
-		& {
-			page-break-before: always;
-		}
+		// & {
+		// 	page-break-before: always;
+		// }
 
 		.tab--container, .product--technical-drawing-enlarge {
 			display: none;
-		}
-
-		.product--technical-drawing-title {
-			display: block;
 		}
 
 		.tab--content {
@@ -982,6 +994,8 @@ $tx-product-frontend--layout-show: true !default;
 				margin: 0;
 				display: block !important;
 				pointer-events: none;
+				break-inside: avoid;
+				page-break-inside: avoid;
 			}
 
 			img {
@@ -990,6 +1004,12 @@ $tx-product-frontend--layout-show: true !default;
 				//display: inline-block;
 				//
 			}
+		}
+
+		.product--technical-drawing-title {
+			display: block;
+			break-after: avoid;
+			page-break-after: avoid;
 		}
 	}
 

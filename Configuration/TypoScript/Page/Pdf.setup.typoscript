@@ -7,6 +7,10 @@
 			print >
 		}
 
+		includeJSFooter {
+			pdf = /assets/js/site-pdf.js
+		}
+
 		10.dataProcessing.140.inlineCss >
 	}
 

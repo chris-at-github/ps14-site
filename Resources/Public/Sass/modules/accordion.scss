@@ -102,6 +102,15 @@ $stylesheet-context: 'screen' !default;
 // Print
 @include stylesheet-context($stylesheet-context-print) {
 	.accordion {
+		.accordion__item + .accordion__item {
+			margin-top: 20px;
+		}
+
+		.accordion--header {
+			break-after: avoid;
+			page-break-after: avoid;
+		}
+
 		.accordion--header button {
 			& {
 				display: block;
