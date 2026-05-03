@@ -126,6 +126,10 @@ tx_powermail.flexForm.addField.settings\.flexform\.main\.cleverreach.config.item
 	value = optout
 }
 
+tx_powermail.flexForm.addField.settings\.flexform\.main\.ajaxContentProcessing._sheet = main
+tx_powermail.flexForm.addField.settings\.flexform\.main\.ajaxContentProcessing.label = Einzelverarbeitung (nach Versand)
+tx_powermail.flexForm.addField.settings\.flexform\.main\.ajaxContentProcessing.config.type = check
+
 [187 in tree.rootLineIds]
 	mod.web_layout.BackendLayouts {
 		footer {
