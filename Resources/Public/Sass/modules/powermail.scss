@@ -31,8 +31,17 @@ $stylesheet-context: 'screen' !default;
 		}
 
 		.mandatory {
-			color: $theme-color-secondary;
+			color: $theme-color-primary;
 			margin-left: 3px;
+		}
+	}
+
+	.powermail_description {
+		font-size: rem(15px);
+		color: $color-grey;
+
+		& + .powermail_field {
+			margin: $spacing-tiny 0 0 0;
 		}
 	}
 

@@ -5,7 +5,10 @@
 </f:comment>
 
 <f:if condition="{field.css} != 'nolabel'">
-    <label for="{identifier}" class="{settings.styles.framework.labelClasses}" title="{field.description}">
+    <label for="{identifier}" class="{settings.styles.framework.labelClasses}">
         <vh:string.escapeLabels>{field.title}</vh:string.escapeLabels><f:if condition="{field.mandatory}"><span class="mandatory" aria-hidden="true">*</span></f:if>
     </label>
+    <f:if condition="{field.description}">
+        <div class="powermail_description">{field.description}</div>
+    </f:if>
 </f:if>
