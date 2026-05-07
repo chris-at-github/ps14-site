@@ -51,8 +51,8 @@
 	--tabs-radio-indicator: #ababab;
 
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: rem(20px);
+	grid-template-columns: 1fr;
+	gap: rem(10px);
 	margin: 0;
 	max-width: rem(600px);
 
@@ -63,7 +63,8 @@
 
 	.tabs__button {
 		display: grid;
-		grid-template-columns: 1fr 15px;
+		grid-template-columns: 1fr rem(15px);
+		gap: rem(8px);
 		align-items: center;
 		justify-items: start;
 		width: 100%;
@@ -94,6 +95,15 @@
 		}
 	}
 
+	.tabs__button--icon {
+		grid-template-columns: rem(32px) 1fr rem(15px);
+	}
+
+	.tabs__button-icon {
+		width: 100%;
+		height: 100%;
+	}
+
 	.tabs__button-title {
 		text-align: left;
 	}
@@ -103,6 +113,13 @@
 		height: 15px;
 		box-shadow: inset 0 0 0 1.5px var(--tabs-radio-indicator);
 		border-radius: 50%;
+	}
+}
+
+// => 768px
+@include media-breakpoint-up(sm) {
+	.tabs__container--radio {
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
