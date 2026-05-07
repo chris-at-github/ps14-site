@@ -101,7 +101,7 @@ $stylesheet-context: 'screen' !default;
 
 	.ce-powermail-pi1.ce-frame--variant-default {
 		.powermail_fieldwrap {
-			max-width: percentage(9 / 12);
+			max-width: rem(600px);
 		}
 	}
 }

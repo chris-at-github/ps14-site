@@ -45,3 +45,65 @@
 	}
 }
 
+// ---------------------------------------------------------------------------------------------------------------------
+// Tabs Radio
+.tabs__container--radio {
+	--tabs-radio-indicator: #ababab;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: rem(20px);
+	margin: 0;
+	max-width: rem(600px);
+
+	li {
+		margin: 0;
+		padding: 0;
+	}
+
+	.tabs__button {
+		display: grid;
+		grid-template-columns: 1fr 15px;
+		align-items: center;
+		justify-items: start;
+		width: 100%;
+		height: 100%;
+		padding: rem(15px);
+		background: $color-grey-light;
+		border: 0;
+		font-weight: $font-weight-normal;
+		color: $font-color-base;
+
+		&.active {
+			&, &:hover, .focusable &:focus {
+				--tabs-radio-indicator: #{$theme-color-primary};
+			}
+
+			background: $color-grey-light;
+			color: $font-color-base;
+
+			.tabs__button-indicator {
+				box-shadow: inset 0 0 0 4px var(--tabs-radio-indicator);
+			}
+		}
+
+		&:hover, .focusable &:focus {
+			--tabs-radio-indicator: #{$color-grey};
+			background: $color-grey-lighten;
+			color: $font-color-base;
+		}
+	}
+
+	.tabs__button-title {
+		text-align: left;
+	}
+
+	.tabs__button-indicator {
+		width: 15px;
+		height: 15px;
+		box-shadow: inset 0 0 0 1.5px var(--tabs-radio-indicator);
+		border-radius: 50%;
+	}
+}
+
+
