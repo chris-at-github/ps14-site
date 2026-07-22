@@ -1,22 +1,22 @@
 [field('CType') === 'header']
-	TCAdefaults.tt_content {
-		header_layout = 1
-	}
+TCAdefaults.tt_content {
+	header_layout = 1
+}
 
-	TCEFORM.tt_content {
-		subheader.disabled = 0
-	}
-[END]
+TCEFORM.tt_content {
+	subheader.disabled = 0
+}
+[end]
 
 [field('CType') === 'div']
-	TCAdefaults.tt_content {
-		space_before_class = large
-		space_after_class = large
-	}
-[END]
+TCAdefaults.tt_content {
+	space_before_class = large
+	space_after_class = large
+}
+[end]
 
 [field('CType') === 'image']
-	TCEFORM.tt_content {
-		imageborder.disabled = 1
-	}
-[END]
+TCEFORM.tt_content {
+	imageborder.disabled = 1
+}
+[end]

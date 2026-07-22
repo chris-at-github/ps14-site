@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Ueberschreiben des Standard Content Elements
-lib.contentBlock  {
+lib.contentBlock {
 	layoutRootPaths < lib.contentElement.layoutRootPaths
 	partialRootPaths < lib.contentElement.partialRootPaths
 }

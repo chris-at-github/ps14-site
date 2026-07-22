@@ -8,10 +8,11 @@
 	],
 	"homepage": "http://ps14.de/",
 	"require": {
-		"typo3/cms-core": "^13.4"
+		"php": "^8.4",
+		"typo3/cms-core": "^14.3",
+		"ps14/ps14_foundation": "^14.0"
 	},
 	"suggest": {
-		"ps14/ps14_foundation": "^13.0",
 		"ps14/ps14_image": "^13.0"
 	},
 	"autoload": {
@@ -19,7 +20,7 @@
 			"Ps14\\Site\\": "Classes"
 		}
 	},
-	"license": "closed",
+	"license": "proprietary",
 	"authors": [
 		{
 			"name": "Christian Pschorr",

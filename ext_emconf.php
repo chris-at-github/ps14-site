@@ -1,15 +1,5 @@
 <?php
 
-/***************************************************************
- * Extension Manager/Repository config file for ext "sitepackage".
- *
- * Auto generated on 20-08-2020 12:55.
- *
- * Manual updates:
- * Only the data in the array - everything else is removed by next
- * writing. "version" and "dependencies" must not be touched!
- ***************************************************************/
-
 $EM_CONF[$_EXTKEY] = [
 	'title' => 'Ps14 Site',
 	'description' => 'TYPO3 extension for customizing a TYPO3 installation to meet the specific requirements of a customer\'s website.',
@@ -18,13 +8,11 @@ $EM_CONF[$_EXTKEY] = [
 	'author_email' => 'pschorr.christian@gmail.com',
 	'author_company' => '',
 	'state' => 'beta',
-	'uploadfolder' => 0,
-	'clearCacheOnLoad' => 0,
-	'version' => '2.0.1',
+	'version' => '14.0.0',
 	'constraints' => [
 		'depends' => [
-			'typo3' => '12.0.0-12.4.99',
-			'ps14_foundation' => '2.0.0-2.9.99',
+			'typo3' => '14.0.0-14.99.99',
+			'ps14_foundation' => '14.0.0-14.99.99',
 		],
 		'conflicts' => [],
 		'suggests' => [
