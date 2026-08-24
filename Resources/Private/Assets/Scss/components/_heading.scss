@@ -1,50 +1,51 @@
 @use "../mixins/richtext" as *;
 @use "../bootstrap/typography" as *;
+@use "../mixins/utilities" as utility;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Ueberschriften
 .heading {
+	margin-bottom: var(--spacing-heading);
+
+	&:last-child {
+		--spacer-heading: 0;
+	}
+
 	&--layout-1 {
-		.heading__main {
-			@extend .display-1;
-		}
+		@extend .display-1;
 	}
 
 	&--layout-2 {
-		.heading__main  {
-			@extend .display-2;
-		}
+		@extend .display-2;
 	}
 
 	&--layout-3 {
-		.heading__main  {
-			@extend .display-3;
-		}
+		@extend .display-3;
 	}
 
 	&--layout-4 {
-		.heading__main {
-			@extend .display-4;
-		}
+		@extend .display-4;
 	}
 
-	&__title {
-		&--align-left {
-			text-align: left;
-		}
-
-		&--align-center {
-			text-align: center;
-		}
-
-		&--align-right {
-			text-align: right;
-		}
+	&--align-left {
+		text-align: left;
 	}
 
+	&--align-center {
+		text-align: center;
+	}
+
+	&--align-right {
+		text-align: right;
+	}
 
 	& + .richtext {
 		margin-top: var(--spacing-heading);
+	}
+
+	// Silbentrennung erst in schmalen Containern
+	@container (width < 768px) {
+		@include utility.hyphens;
 	}
 }
 
