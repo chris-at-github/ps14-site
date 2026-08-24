@@ -1,4 +1,4 @@
-.container {
+.section {
 	&--outer {
 		padding-left: var(--container-spacing-x);
 		padding-right: var(--container-spacing-x);
@@ -60,42 +60,52 @@
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------
+	// Farben und Theme
+	// Theme: gemeinsame Farbregel fuer alle Theme-Modifier
+	&[class*="section--theme-"] {
+		& > .section__inner {
+			color: var(--color-theme-font);
+			background-color: var(--color-theme-background);
+		}
+	}
+
+	// // Theme: example
+	// &--theme-example {
+	// 	--color-theme-background: var(--color-gray-20);
+	// 	--color-theme-font: var(--color-secondary-120);
+	// }
+
+	// -------------------------------------------------------------------------------------------------------------------
 	// Laufweiten (Layout)
 
 	/* stylelint-disable-next-line no-duplicate-selectors */
 	&--outer {
-		// 0: keine Einrueckung, maximale Laufweite
-		&.container--layout-0 > .container__inner {
-			max-width: var(--container-max-width);
-		}
 
-		// keine Einrueckung, volle Laufweite
-		&.container--layout-1 {
-			padding-left: 0;
-			padding-right: 0;
-
-			& > .container__inner {
-				max-width: 100%;
-			}
+		// 0: Standard Einrueckung, schmale Laufweite
+		&.section--layout-0 > .section__inner {
+			max-width: var(--container-width-default);
 		}
 	}
 }
 
-// -------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 // Sonderregeln
 .page__main {
-	& > .container--space-before-auto:first-child {
+
+	// erstes Element auf der Seite erhält Abstand nach oben (wenn Abstand auf Auto)
+	& > .section--space-before-auto {
 		padding-top: 0.1px;
 
-		.container__inner {
+		.section__inner {
 			margin-top: var(--container-spacing-y-medium);
 		}
 	}
 
-	& > .container--space-after-auto:last-child {
+	// letztes Element auf der Seite erhält Abstand nach unten -> damit es nicht am Footer klebt (wenn Abstand auf Auto)
+	& > .section--space-after-auto:last-child {
 		padding-bottom: 0.1px;
 
-		.container__inner {
+		.section__inner {
 			margin-bottom: var(--container-spacing-y-medium);
 		}
 	}
