@@ -23,6 +23,7 @@
     overflow-wrap: break-word;
 
     /* Silbentrennung aktivieren */
+    /* stylelint-disable-next-line property-no-vendor-prefix -- Safari benoetigt den Prefix weiterhin */
     -webkit-hyphens: auto;
     hyphens: auto;
 

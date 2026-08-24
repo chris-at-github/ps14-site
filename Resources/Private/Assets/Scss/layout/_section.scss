@@ -87,7 +87,6 @@
 
 	/* stylelint-disable-next-line no-duplicate-selectors */
 	&--outer {
-
 		// 0: Standard Einrueckung, schmale Laufweite
 		&.section--layout-0 > .section__inner {
 			max-width: var(--container-width-default);
@@ -110,7 +109,6 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Sonderregeln
 .page__main {
-
 	// erstes Element auf der Seite erhält Abstand nach oben (wenn Abstand auf Auto)
 	& > .section--space-before-auto {
 		padding-top: 0.1px;

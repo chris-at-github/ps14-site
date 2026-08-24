@@ -7,7 +7,6 @@
 	--form-field-border-color: var(--color-neutral-300);
 	--form-field-focus-font-color: var(--color-neutral-900);
 	--form-field-interactive-border-color: var(--color-neutral-500);
-
 	--form-field-choice-active-background-color: var(--color-neutral-900);
 	--form-field-checkbox-active-icon-color: var(--color-neutral-100);
 	--form-field-checkbox-active-icon-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' %3E%3Cpath d='M389-235 163-460l84-85 142 142 324-323 84 84-408 407Z'/%3E%3C/svg%3E");
@@ -84,7 +83,7 @@
 }
 
 .form-description {
-	margin: 0 0 4px 0;
+	margin: 0 0 4px;
 	font-size: var(--font-size-small);
 	color: var(--color-muted);
 }
@@ -94,7 +93,7 @@
 	flex-direction: column;
 	gap: 2px;
 	list-style: none;
-	margin: 4px 0 0 0;
+	margin: 4px 0 0;
 	font-size: var(--font-size-small);
 	color: var(--color-error);
 }
@@ -110,11 +109,11 @@
 
 		&:checked {
 			& + .form-label {
-				&:before {
+				&::before {
 					box-shadow: 0 0 0 1px var(--form-field-interactive-border-color);
 				}
 
-				&:after {
+				&::after {
 					display: block;
 				}
 			}
@@ -149,26 +148,26 @@
 		position: relative;
 		padding: 0 0 0 32px;
 
-		&:before, &:after {
+		&::before, &::after {
 			position: absolute;
 			content: '';
 			display: block;
 		}
 
-		&:before {
+		&::before {
 			top: 4px; left: 1px;
 			z-index: 10;
 			box-shadow: 0 0 0 1px var(--form-field-border-color);
 		}
 
-		&:after {
+		&::after {
 			display: none;
 			top: 5px; left: 2px;
 			z-index: 20;
 		}
 
 		&:hover {
-			&:before {
+			&::before {
 				box-shadow: 0 0 0 1px var(--form-field-interactive-border-color);
 			}
 		}
@@ -179,7 +178,7 @@
 	.form-field {
 		&:checked {
 			& + .form-label {
-				&:before {
+				&::before {
 					background: var(--form-field-choice-active-background-color);
 				}
 			}
@@ -187,12 +186,12 @@
 	}
 
 	.form-label {
-		&:before {
+		&::before {
 			width: 20px;
 			height: 20px;
 		}
 
-		&:after {
+		&::after {
 			top: 5px; left: 2px;
 			mask-image: var(--form-field-checkbox-active-icon-image);
 			background: var(--form-field-checkbox-active-icon-color);
@@ -206,7 +205,7 @@
 	.form-field {
 		&:checked {
 			& + .form-label {
-				&:after {
+				&::after {
 					background: var(--form-field-choice-active-background-color);
 				}
 			}
@@ -214,13 +213,13 @@
 	}
 
 	.form-label {
-		&:before {
+		&::before {
 			border-radius: 50%;
 			width: 19px;
 			height: 19px;
 		}
 
-		&:after {
+		&::after {
 			top: 7px; left: 4px;
 			border-radius: 50%;
 			width: 13px;
@@ -242,7 +241,6 @@
 }
 
 .form-item-group__choices--horizontal {
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 	gap: 4px 24px;
 }

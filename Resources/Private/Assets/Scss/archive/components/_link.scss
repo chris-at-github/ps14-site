@@ -42,6 +42,7 @@
 %link-external {
 	&::before {
 		@extend %icon-font;
+
 		content: var(--icon-font-arrow-outward);
 	}
 }
@@ -49,6 +50,7 @@
 %link-download {
 	&::before {
 		@extend %icon-font;
+
 		content: var(--icon-font-arrow-down);
 	}
 }

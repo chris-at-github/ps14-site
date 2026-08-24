@@ -8,7 +8,6 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Container
 .media-container {
-
 	// damit spannt sich der Container nur so breit wie das Bild
 	width: fit-content;
 	display: flex;
@@ -17,7 +16,7 @@
 
 .media-container__source + .media-container__description,
 .media-container__source + .media-container__copyright {
-	margin: 8px 0 0 0;
+	margin: 8px 0 0;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
