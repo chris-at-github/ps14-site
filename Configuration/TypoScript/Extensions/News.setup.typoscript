@@ -27,7 +27,8 @@ plugin.tx_news {
 		displayDummyIfNoMedia = 0
 		analytics >
 		detail {
-			checkPidOfNewsRecord = 1
+			// Detail-Plugin hat keinen Startpunkt -> ab news 13 wuerde jede News abgelehnt (bis news 11 wurde die Pruefung dann uebersprungen)
+			checkPidOfNewsRecord = 0
 			showSocialShareButtons = 0
 		}
 
