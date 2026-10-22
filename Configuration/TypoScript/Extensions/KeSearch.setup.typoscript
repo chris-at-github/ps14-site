@@ -29,9 +29,10 @@ plugin.tx_kesearch_pi2 {
 plugin.tx_kesearch_pi1.cssFile >
 plugin.tx_kesearch_pi2.cssFile >
 
-tt_content.list.dataProcessing {
-	200 {
-		ke_search_pi1 {
+tt_content.ke_search_pi1 {
+	dataProcessing {
+		200 = Ps14\Foundation\DataProcessing\ModuleProcessor
+		200 {
 			importCss {
 				10 = /assets/css/modules/search.css
 			}
