@@ -43,7 +43,7 @@ $EM_CONF[$_EXTKEY] = [
 			'ke_search' => '6.6.0-6.6.99',
 			'entity_product' => '2.0.0-2.9.99',
 			'ps14_textmedia' => '1.0.0-1.9.99',
-			'warming' => '3.3.5-3.3.99',
+			'warming' => '4.6.0-4.6.99',
 		],
 	],
 ];
