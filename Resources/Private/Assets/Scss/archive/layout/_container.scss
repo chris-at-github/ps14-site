@@ -1,14 +1,14 @@
 .container {
-	&--outer {
-		padding-left: var(--container-spacing-x);
-		padding-right: var(--container-spacing-x);
-	}
+    &--outer {
+        padding-left: var(--container-spacing-x);
+        padding-right: var(--container-spacing-x);
+    }
 
-	&__inner {
-		max-width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
+    &__inner {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
   // -------------------------------------------------------------------------------------------------------------------
   // Text Layout
@@ -70,8 +70,8 @@
     margin-bottom: var(--container-spacing-y-huge);
   }
 
-	// -------------------------------------------------------------------------------------------------------------------
-	// Laufweiten (Layout)
+    // -------------------------------------------------------------------------------------------------------------------
+    // Laufweiten (Layout)
 
   /* stylelint-disable-next-line no-duplicate-selectors */
   &--outer {

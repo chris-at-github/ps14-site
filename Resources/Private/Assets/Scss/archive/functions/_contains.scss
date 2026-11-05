@@ -2,5 +2,5 @@
 
 // @see: https://github.com/sass/sass/issues/543
 @function contains($list, $item) {
-	@return list.index($list, $item) != null;
+    @return list.index($list, $item) != null;
 }

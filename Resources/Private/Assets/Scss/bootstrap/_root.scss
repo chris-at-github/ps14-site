@@ -1,66 +1,66 @@
 :root {
-	// -------------------------------------------------------------------------------------------------------------------
-	// Colors
-	--color-neutral-50:  #fcfbf9;
-	--color-neutral-100: #efeeeb;
-	--color-neutral-200: #dbd9d5;
-	--color-neutral-300: #c2bfb8;
-	--color-neutral-400: #a8a59f;
-	--color-neutral-500: #8f8c87;
-	--color-neutral-600: #77746e;
-	--color-neutral-700: #605d57;
-	--color-neutral-800: #494742;
-	--color-neutral-900: #33322e;
-	--color-background: #fff;
-	--color-font: var(--color-neutral-800);
-	--color-important: var(--color-neutral-900);
-	--color-muted: var(--color-neutral-600);
-	--color-error: #c5261e;
-	--color-focus-outline: var(--color-neutral-700);
+    // -------------------------------------------------------------------------------------------------------------------
+    // Colors
+    --color-neutral-50:  #fcfbf9;
+    --color-neutral-100: #efeeeb;
+    --color-neutral-200: #dbd9d5;
+    --color-neutral-300: #c2bfb8;
+    --color-neutral-400: #a8a59f;
+    --color-neutral-500: #8f8c87;
+    --color-neutral-600: #77746e;
+    --color-neutral-700: #605d57;
+    --color-neutral-800: #494742;
+    --color-neutral-900: #33322e;
+    --color-background: #fff;
+    --color-font: var(--color-neutral-800);
+    --color-important: var(--color-neutral-900);
+    --color-muted: var(--color-neutral-600);
+    --color-error: #c5261e;
+    --color-focus-outline: var(--color-neutral-700);
 
-	// -------------------------------------------------------------------------------------------------------------------
-	// Fonts
-	--font-family-default: 'DM Sans', arial, sans-serif;
-	--font-weight-normal: 400;
-	--font-weight-semibold: 500;
-	--font-weight-bold: 600;
-	--font-line-height: 1.7;
-	--font-size-small: 15px;
-	--font-size-normal: 17px;
-	--font-size-large: 20px;
+    // -------------------------------------------------------------------------------------------------------------------
+    // Fonts
+    --font-family-default: 'DM Sans', arial, sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-semibold: 500;
+    --font-weight-bold: 600;
+    --font-line-height: 1.7;
+    --font-size-small: 15px;
+    --font-size-normal: 17px;
+    --font-size-large: 20px;
 
-	// -------------------------------------------------------------------------------------------------------------------
-	// Display (Header)
-	--display-font-family: var(--font-family-default);
-	--display-font-weight: 500;
-	--display-line-height: 1.2;
-	--display-1-font-size: 28px;
-	--display-2-font-size: 21px;
-	--display-3-font-size: 18px;
-	--display-4-font-size: 18px;
+    // -------------------------------------------------------------------------------------------------------------------
+    // Display (Header)
+    --display-font-family: var(--font-family-default);
+    --display-font-weight: 500;
+    --display-line-height: 1.2;
+    --display-1-font-size: 28px;
+    --display-2-font-size: 21px;
+    --display-3-font-size: 18px;
+    --display-4-font-size: 18px;
 
-	// -------------------------------------------------------------------------------------------------------------------
-	// Spacings
-	--spacing-heading: 8px; // Abstand zwischen Elementen zu Ueberschrift
-	--spacing-element: 16px; // Abstand zwischen Elementen zu Elementen z.B. p + ul
-	--spacing-block: 12px; // Abstand zwischen Elementen zu Sonderelementen z.B. .media-container
+    // -------------------------------------------------------------------------------------------------------------------
+    // Spacings
+    --spacing-heading: 8px; // Abstand zwischen Elementen zu Ueberschrift
+    --spacing-element: 16px; // Abstand zwischen Elementen zu Elementen z.B. p + ul
+    --spacing-block: 12px; // Abstand zwischen Elementen zu Sonderelementen z.B. .media-container
 
-	// -------------------------------------------------------------------------------------------------------------------
-	// Page Header
-	--page-header-height: 0;
-	--page-body-offset: 0;
+    // -------------------------------------------------------------------------------------------------------------------
+    // Page Header
+    --page-header-height: 0;
+    --page-body-offset: 0;
 
-	// -------------------------------------------------------------------------------------------------------------------
-	// Container
-	--container-width-default: 892px; // 940px + 24px + 24px
-	--container-spacing-x: 24px;
-	--container-spacing-y-none: 0;
-	--container-spacing-y-small: 8px;
-	--container-spacing-y-medium: 24px;
-	--container-spacing-y-large: 48px;
-	--container-spacing-y-huge: 64px;
+    // -------------------------------------------------------------------------------------------------------------------
+    // Container
+    --container-width-default: 892px; // 940px + 24px + 24px
+    --container-spacing-x: 24px;
+    --container-spacing-y-none: 0;
+    --container-spacing-y-small: 8px;
+    --container-spacing-y-medium: 24px;
+    --container-spacing-y-large: 48px;
+    --container-spacing-y-huge: 64px;
 
-	// -------------------------------------------------------------------------------------------------------------------
-	// Border Radius
-	--border-radius-default: 0;
+    // -------------------------------------------------------------------------------------------------------------------
+    // Border Radius
+    --border-radius-default: 0;
 }
