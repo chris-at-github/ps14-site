@@ -9,3 +9,7 @@ TCAdefaults.tt_content {
 TCEFORM.tt_content {
   imageborder.types.image.disabled = 1
 }
+
+TCEFORM.pages.tx_foundation_navigation_layout.addItems {
+  card = LLL:EXT:ps14_site/Resources/Private/Language/locallang_tca.xlf:pages.navigation-layout.card
+}
