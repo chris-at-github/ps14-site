@@ -1,22 +1,11 @@
-[field('CType') === 'header']
+// Backend layout with additional footer column (colPos 20), activate if needed:
+// @import 'EXT:ps14_foundation/Configuration/TsConfig/Page/BackendLayouts/DefaultFooter.tsconfig'
+
 TCAdefaults.tt_content {
-  header_layout = 1
+  space_before_class.types.div = large
+  space_after_class.types.div = large
 }
 
 TCEFORM.tt_content {
-  subheader.disabled = 0
+  imageborder.types.image.disabled = 1
 }
-[end]
-
-[field('CType') === 'div']
-TCAdefaults.tt_content {
-  space_before_class = large
-  space_after_class = large
-}
-[end]
-
-[field('CType') === 'image']
-TCEFORM.tt_content {
-  imageborder.disabled = 1
-}
-[end]
