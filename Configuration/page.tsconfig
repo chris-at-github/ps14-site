@@ -1,5 +1,5 @@
-// Backend layout with additional footer column (colPos 20), activate if needed:
-// @import 'EXT:ps14_foundation/Configuration/TsConfig/Page/BackendLayouts/DefaultFooter.tsconfig'
+// Backend layout with additional footer column (colPos 20)
+@import 'EXT:ps14_foundation/Configuration/TsConfig/Page/BackendLayouts/DefaultFooter.tsconfig'
 
 TCAdefaults.tt_content {
   space_before_class.types.div = large

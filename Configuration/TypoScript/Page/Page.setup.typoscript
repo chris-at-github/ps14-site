@@ -24,6 +24,7 @@ page {
       navigationMeta < navigation.meta
       navigationFooter < navigation.footer
       navigationLanguage < navigation.language
+      navigationSocial < navigation.social
     }
 
     dataProcessing {
