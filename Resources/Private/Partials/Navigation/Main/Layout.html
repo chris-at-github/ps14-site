@@ -2,7 +2,7 @@
     <f:section name="Card">
         <ul class="navigation__group navigation__group--cards">
             <f:for each="{item.children}" as="card">
-                <li class="navigation__group-item card{f:if(condition: card.current, then: ' is--active')}">
+                <li class="navigation__group-item card{f:if(condition: card.active, then: ' is--active')}{f:if(condition: card.current, then: ' is--current')}">
                     <f:if condition="{card.current}">
                         <f:then>
                             <a class="card__link" href="{card.link}" aria-current="page">
