@@ -13,3 +13,9 @@
 .print--break-after {
     break-after: page;
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Sichtbarkeit (Inhaltselement -> Erscheinungsbild -> Druck)
+.print--visibility-hidden {
+    display: none;
+}

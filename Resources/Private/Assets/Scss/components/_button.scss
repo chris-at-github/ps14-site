@@ -2,7 +2,7 @@
 // Variables
 :root {
     --button-height: 43px;
-    --button-padding: 0 32px;
+    --button-padding: 0 var(--spacing-32);
     --button-font-color: var(--color-font);
     --button-background-color: transparent;
     --button-border-color: transparent;
@@ -119,7 +119,7 @@
 
 .button--icon-prefix,
 .button--icon-suffix {
-    gap: 12px;
+    gap: var(--spacing-12);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -127,5 +127,5 @@
 .button-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: var(--spacing-8);
 }

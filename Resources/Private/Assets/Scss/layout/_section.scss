@@ -71,8 +71,8 @@
     // Theme: gemeinsame Farbregel fuer alle Theme-Modifier
     &[class*="section--theme-"] {
         & > .section__inner {
-            color: var(--color-theme-font);
-            background-color: var(--color-theme-background);
+            color: var(--color-section-font);
+            background-color: var(--color-section-background);
         }
     }
 
@@ -125,5 +125,13 @@
         .section__inner {
             margin-bottom: var(--container-spacing-y-medium);
         }
+    }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Nur im Druck sichtbar (Inhaltselement -> Erscheinungsbild -> Druck)
+@media screen {
+    .print--visibility-visible {
+        display: none;
     }
 }
