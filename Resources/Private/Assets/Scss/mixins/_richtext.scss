@@ -1,6 +1,7 @@
 @use "../bootstrap/typography" as *;
 @use "../components/link" as *;
 @use "../components/list" as *;
+@use "utilities" as utility;
 
 @mixin richtext {
     h1 {
@@ -64,5 +65,10 @@
 
     strong, b {
         font-weight: var(--font-weight-semibold);
+    }
+
+    // Silbentrennung erst in schmalen Containern
+    @container (width < 768px) {
+        @include utility.hyphens;
     }
 }
