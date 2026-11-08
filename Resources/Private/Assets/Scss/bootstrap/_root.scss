@@ -17,6 +17,7 @@
     --color-muted: var(--color-neutral-600);
     --color-error: #c5261e;
     --color-focus-outline: var(--color-neutral-700);
+    --color-ruler: var(--color-neutral-300);
 
     // -------------------------------------------------------------------------------------------------------------------
     // Fonts
@@ -41,9 +42,25 @@
 
     // -------------------------------------------------------------------------------------------------------------------
     // Spacings
-    --spacing-heading: 8px; // Abstand zwischen Elementen zu Ueberschrift
-    --spacing-element: 16px; // Abstand zwischen Elementen zu Elementen z.B. p + ul
-    --spacing-block: 12px; // Abstand zwischen Elementen zu Sonderelementen z.B. .media-container
+    --spacing-4: 4px;
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-16: 16px;
+    --spacing-20: 20px;
+    --spacing-24: 24px;
+    --spacing-32: 32px;
+    --spacing-40: 40px;
+    --spacing-48: 48px;
+    --spacing-56: 56px;
+    --spacing-64: 64px;
+    --spacing-72: 72px;
+    --spacing-80: 80px;
+    --spacing-96: 96px;
+    --spacing-128: 128px;
+    --spacing-heading: var(--spacing-8); // Abstand zwischen Elementen zu Ueberschrift
+    --spacing-element: var(--spacing-16); // Abstand zwischen Elementen zu Elementen z.B. p + ul
+    --spacing-block: var(--spacing-12); // Abstand zwischen Elementen zu Sonderelementen z.B. .media-container
+    --spacing-section: var(--spacing-24); // Abstand zwischen Abschnitten, z.B. Element zu folgender Ueberschrift im Fliesstext
 
     // -------------------------------------------------------------------------------------------------------------------
     // Page Header
@@ -52,15 +69,16 @@
 
     // -------------------------------------------------------------------------------------------------------------------
     // Container
-    --container-width-default: 892px; // 940px + 24px + 24px
+    --container-width-default: 940px; // max. Breite von .section__inner (zzgl. --container-spacing-x links und rechts)
     --container-spacing-x: 24px;
     --container-spacing-y-none: 0;
-    --container-spacing-y-small: 8px;
-    --container-spacing-y-medium: 24px;
-    --container-spacing-y-large: 48px;
-    --container-spacing-y-huge: 64px;
+    --container-spacing-y-small: var(--spacing-8);
+    --container-spacing-y-medium: var(--spacing-24);
+    --container-spacing-y-large: var(--spacing-48);
+    --container-spacing-y-huge: var(--spacing-64);
 
     // -------------------------------------------------------------------------------------------------------------------
     // Border Radius
+    --border-radius-small: 0;
     --border-radius-default: 0;
 }
